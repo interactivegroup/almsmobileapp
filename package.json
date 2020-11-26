@@ -1,10 +1,10 @@
 {
-  "name": "moodlemobile",
-  "version": "3.9.2",
-  "description": "The official app for Moodle.",
+  "name": "almsmobile",
+  "version": "1.0.0",
+  "description": "The official app for ALMS.",
   "author": {
-    "name": "Moodle Pty Ltd.",
-    "email": "mobile@moodle.com"
+    "name": "Interactive Group Pvt. Ltd.",
+    "email": "support@interactivegrp.com"
   },
   "config": {
     "ionic_webpack": "./config/webpack.config.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moodlehq/moodlemobile2.git"
+    "url": "https://github.com/zaidbinkokab/almsapp.git"
   },
   "license": "Apache-2.0",
   "licenses": [
@@ -44,7 +44,7 @@
     "postionic:build": "npx gulp copy-component-templates",
     "desktop.pack": "npx electron-builder --dir",
     "desktop.dist": "npx electron-builder -p never",
-    "windows.store": "npx electron-windows-store --input-directory .\\desktop\\dist\\win-unpacked --output-directory .\\desktop\\store -a .\\resources\\desktop -m .\\desktop\\assets\\windows\\AppXManifest.xml --package-version 0.0.0.0 --package-name MoodleDesktop"
+    "windows.store": "npx electron-windows-store --input-directory .\\desktop\\dist\\win-unpacked --output-directory .\\desktop\\store -a .\\resources\\desktop -m .\\desktop\\assets\\windows\\AppXManifest.xml --package-version 0.0.0.0 --package-name ALMSDesktop"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -179,7 +179,7 @@
       "cordova-plugin-badge": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-customurlscheme": {
-        "URL_SCHEME": "moodlemobile"
+        "URL_SCHEME": "almsmobile"
       },
       "cordova-plugin-device": {},
       "cordova-plugin-file": {},
@@ -218,8 +218,8 @@
   },
   "main": "desktop/electron.js",
   "build": {
-    "appId": "com.moodle.moodledesktop",
-    "productName": "Moodle Desktop",
+    "appId": "com.alms.almsdesktop",
+    "productName": "ALMS Desktop",
     "files": [
       "desktop/electron.js",
       "www/**/*",
@@ -240,9 +240,9 @@
     },
     "protocols": [
       {
-        "name": "Moodle Mobile URL",
+        "name": "ALMS Mobile URL",
         "schemes": [
-          "moodlemobile"
+          "almsmobile"
         ],
         "role": "Viewer"
       }
@@ -253,7 +253,7 @@
       "category": "public.app-category.education",
       "icon": "resources/desktop/icon.icns",
       "target": "mas",
-      "bundleVersion": "3.9.2",
+      "bundleVersion": "1.0.0",
       "extendInfo": {
         "ElectronTeamID": "2NU57U5PAW"
       }
@@ -274,6 +274,6 @@
     }
   },
   "engines": {
-    "node": "11.x"
+    "node": "12.x"
   }
 }
