@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     bufferFrom = require('buffer-from'),
     exec = require('child_process').exec,
     license = '' +
-        '// (C) Copyright 2015 Moodle Pty Ltd.\n' +
+        '// (C) Copyright 2005 Interactive Group Pvt Ltd.\n' +
         '//\n' +
         '// Licensed under the Apache License, Version 2.0 (the "License");\n' +
         '// you may not use this file except in compliance with the License.\n' +
