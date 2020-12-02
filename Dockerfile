@@ -1,6 +1,6 @@
 # This image is based on the fat node 11 image.
 # We require fat images as neither alpine, or slim, include git binaries.
-FROM node:11
+FROM node:12
 
 # Port 8100 for ionic dev server.
 EXPOSE 8100

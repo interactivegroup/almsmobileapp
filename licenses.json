@@ -1121,13 +1121,13 @@
   },
   "cordova-plugin-wkuserscript@1.0.0": {
     "licenses": "Apache-2.0",
-    "repository": "https://github.com/moodlemobile/cordova-plugin-wkuserscript",
+    "repository": "https://github.com/interactivegroup/almsmobileapp/cordova-plugin-wkuserscript",
     "publisher": "Moodle Pty Ltd",
     "licenseFile": "LICENSE"
   },
   "cordova-plugin-wkwebview-cookies@1.0.0": {
     "licenses": "Apache-2.0",
-    "repository": "https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies",
+    "repository": "https://github.com/interactivegroup/almsmobileapp/cordova-plugin-wkwebview-cookies",
     "publisher": "Moodle Pty Ltd",
     "licenseFile": "LICENSE"
   },
@@ -2859,9 +2859,9 @@
     "url": "https://github.com/ichernev",
     "licenseFile": "LICENSE"
   },
-  "moodlemobile@3.9.2": {
+  "almsmobileapp@1.0.0": {
     "licenses": "Apache-2.0",
-    "repository": "https://github.com/moodlehq/moodlemobile2",
+    "repository": "https://github.com/interactivegroup/almsmobileapp",
     "publisher": "Moodle Pty Ltd.",
     "email": "mobile@moodle.com",
     "licenseFile": "LICENSE",

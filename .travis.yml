@@ -2,7 +2,7 @@ os: linux
 dist: bionic
 group: edge
 language: node_js
-node_js: 11
+node_js: 12
 php: 7.1
 
 android:
@@ -43,7 +43,7 @@ jobs:
     os: linux
     script: npm run build --bailOnLintError true --typeCheckOnLint true
   - stage: mirror
-    if: branch IN (master, integration, desktop) AND repo = moodlehq/moodleapp AND type != cron
+    if: branch IN (master, integration, desktop) AND repo = interactivegroup/almsmobileapp AND type != cron
     os: linux
     script: scripts/mirror.sh
   - stage: prepare
