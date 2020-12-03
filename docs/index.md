@@ -1,5 +1,5 @@
 <details>
-    <summary>Contents</summary>
+    <summary class="toc">Contents</summary>
     <ul>
     <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
     <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
@@ -263,11 +263,11 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
     <p>This <a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/53146394/node-app-fails-to-run-on-mojave-referenceerror-internalbinding-is-not-defined">seems to be</a> an error with 'natives' prior to 1.1.6. I fixed it using <tt>npm install natives@1.1.6</tt>.
     </p>
     <h3><span class="mw-headline" id="npm_update_check_failed">npm update check failed</span></h3>
-    <p>I got the error
-    </p>
-    <pre>│                   npm update check failed                   │
-    │             Try running with sudo or get access             │ 
-    │            to the local update config store via             │
+    <p>I got the error</p>
+    <pre>
+    │                   npm update check failed                     │
+    │             Try running with sudo or get access               │ 
+    │            to the local update config store via               │
     │ sudo chown -R $USER:$(id -gn $USER) C:\Users\username\.config │
     </pre>
     <p>on Windows because I installed too much as admin, and the suggested command does not work on Windows. The is to manually check the ownership of all the files in C:\Users\username\.config\configstore. In my case it was update-notifier-npm.json which got changed to be owned by Administrator.
