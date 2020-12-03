@@ -107,15 +107,13 @@ git checkout integration
 </pre>
 <h2><span class="mw-headline" id="Setup_the_environment">Setup the environment</span></h2>
 <p>Please, note that if you are creating a custom app with a custom URL scheme, you should edit the /package.json and /config.xml files and specify there your custom URL_SCHEME (replacing the existing value) and your <a rel="nofollow" class="external text" href="https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/INSTALLATION.md">GCMPN SENDER_ID</a>.
-</p><p>The following command must be run in the project's root folder:
-</p>
+</p><p>The following command must be run in the project's root folder:</p>
 <pre>npm run setup
 </pre>
 <p>If this fails, you can see what it is doing by looking at the 'scripts' section in package.json. At the moment it is doing <tt>npm install &amp;&amp; npx cordova prepare &amp;&amp; npx gulp</tt> (installing npm dependencies, preparing cordova and running default gulp tasks). That is, running three commands back-to-back, but only carrying on if the previous one succeeds completely. You can try running the three commands separately. If you do, <tt>npm start</tt> (see below) may work, even if <tt>npx cordova prepare</tt> gives errors. You only really need <tt>npx cordova prepare</tt> to work if you are going to go on and build the app for a mobile device or emulator.
 </p>
 <h2><span class="mw-headline" id="Open_the_app_in_the_browser">Open the app in the browser</span></h2>
-</p><p>Then, start the Ionic server:
-</p>
+<p>Then, start the Ionic server:</p>
 <pre>npm start
 </pre>
 <p>Congratulations! Now that you have got to the point where the <tt>npm start</tt> command works, you can start doing development on the app. You only need to read the rest of the page if you want to build packaged versions of the app.
@@ -202,7 +200,7 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 <p>This command will generate the app files and put them inside <i>www</i> folder. If you now want to install that app in a real device you can run "<i>npx cordova run android</i>" or "<i>npx cordova build ios</i>" (please don't use "<i>npx ionic cordova ...</i>" nor "<i>npm start</i>" because it will override your build files!).
 </p>
 <details>
-    <summary class="mw-headline h2" id="Troubleshooting"><h2>Troubleshooting</h2></summary>
+    <summary class="mw-headline" id="Troubleshooting"><h2>Troubleshooting</h2></summary>
     <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
     <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
     </p>
