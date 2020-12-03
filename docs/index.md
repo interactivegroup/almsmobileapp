@@ -20,7 +20,7 @@
         <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
         <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
     <details>
-        <summary class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext">Troubleshooting</summary>
+        <summary class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext">Troubleshooting</span></summary>
         <ul>
         <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
         <li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
