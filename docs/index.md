@@ -51,7 +51,7 @@ However, if you want to be able to to write <a href="/dev/Acceptance_testing_for
 
 <p>Windows tip: ingore any use of the sudo command below. Just use the command without it. Most things work that way. And if they don't, try in a Powershell window that you have opened with 'Run as administrator ...'.
 </p>
-## id="Install_a_browser_for_development">Install a browser for development.
+## Install a browser for development.
 <p>We recommend Chromium browser (Google Chrome open source version) <a rel="nofollow" class="external free" href="https://download-chromium.appspot.com/">https://download-chromium.appspot.com/</a>
 </p>
 <h3><span class="mw-headline" id="Install_git">Install git</span></h3>
