@@ -1,4 +1,4 @@
-<h1><span class="mw-headline" id="Top">Contents</h1>
+<h1><span id="Top">Contents</span></h1>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
