@@ -1,47 +1,47 @@
 <details>
     <summary style="font-size:20px;color:#159957;">Contents</summary>
-        <ul>
-        <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
-        <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
-        <ul>
-        <li class="toclevel-2 tocsection-3"><a href="#Install_a_browser_for_development"><span class="tocnumber">2.1</span> <span class="toctext">Install a browser for development</span></a></li>
-        <li class="toclevel-2 tocsection-4"><a href="#Install_git"><span class="tocnumber">2.2</span> <span class="toctext">Install git</span></a></li>
-        <li class="toclevel-2 tocsection-5"><a href="#Install_Node.js"><span class="tocnumber">2.3</span> <span class="toctext">Install Node.js</span></a></li>
-        <li class="toclevel-2 tocsection-6"><a href="#Windows_only:_Native_build_dependencies"><span class="tocnumber">2.4</span> <span class="toctext">Windows only: Native build dependencies</span></a></li>
-        <li class="toclevel-2 tocsection-7"><a href="#Mac_only:_Push_notifications"><span class="tocnumber">2.5</span> <span class="toctext">Mac only: Push notifications</span></a></li>
-        <li class="toclevel-2 tocsection-8"><a href="#Linux_only:_libsecret"><span class="tocnumber">2.6</span> <span class="toctext">Linux only: libsecret</span></a></li>
-        </ul>
-        </li>
-        <li class="toclevel-1 tocsection-9"><a href="#Clone_the_app_base_code"><span class="tocnumber">3</span> <span class="toctext">Clone the app base code</span></a></li>
-        <li class="toclevel-1 tocsection-10"><a href="#Setup_the_environment"><span class="tocnumber">4</span> <span class="toctext">Setup the environment</span></a></li>
-        <li class="toclevel-1 tocsection-11"><a href="#Open_the_app_in_the_browser"><span class="tocnumber">5</span> <span class="toctext">Open the app in the browser</span></a></li>
-        <li class="toclevel-1 tocsection-12"><a href="#Updating_ionic_and_cordova"><span class="tocnumber">6</span> <span class="toctext">Updating ionic and cordova</span></a></li>
-        <li class="toclevel-1 tocsection-13"><a href="#Updating_plugins"><span class="tocnumber">7</span> <span class="toctext">Updating plugins</span></a></li>
-        <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
-        <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
+    <ul>
+    <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+    <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
+    <ul>
+    <li class="toclevel-2 tocsection-3"><a href="#Install_a_browser_for_development"><span class="tocnumber">2.1</span> <span class="toctext">Install a browser for development</span></a></li>
+    <li class="toclevel-2 tocsection-4"><a href="#Install_git"><span class="tocnumber">2.2</span> <span class="toctext">Install git</span></a></li>
+    <li class="toclevel-2 tocsection-5"><a href="#Install_Node.js"><span class="tocnumber">2.3</span> <span class="toctext">Install Node.js</span></a></li>
+    <li class="toclevel-2 tocsection-6"><a href="#Windows_only:_Native_build_dependencies"><span class="tocnumber">2.4</span> <span class="toctext">Windows only: Native build dependencies</span></a></li>
+    <li class="toclevel-2 tocsection-7"><a href="#Mac_only:_Push_notifications"><span class="tocnumber">2.5</span> <span class="toctext">Mac only: Push notifications</span></a></li>
+    <li class="toclevel-2 tocsection-8"><a href="#Linux_only:_libsecret"><span class="tocnumber">2.6</span> <span class="toctext">Linux only: libsecret</span></a></li>
+    </ul>
+    </li>
+    <li class="toclevel-1 tocsection-9"><a href="#Clone_the_app_base_code"><span class="tocnumber">3</span> <span class="toctext">Clone the app base code</span></a></li>
+    <li class="toclevel-1 tocsection-10"><a href="#Setup_the_environment"><span class="tocnumber">4</span> <span class="toctext">Setup the environment</span></a></li>
+    <li class="toclevel-1 tocsection-11"><a href="#Open_the_app_in_the_browser"><span class="tocnumber">5</span> <span class="toctext">Open the app in the browser</span></a></li>
+    <li class="toclevel-1 tocsection-12"><a href="#Updating_ionic_and_cordova"><span class="tocnumber">6</span> <span class="toctext">Updating ionic and cordova</span></a></li>
+    <li class="toclevel-1 tocsection-13"><a href="#Updating_plugins"><span class="tocnumber">7</span> <span class="toctext">Updating plugins</span></a></li>
+    <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
+    <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
     <details>
-        <summary class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span>
-        <span class="toctext">Troubleshooting</span></a></summary>
-            <ul>
-            <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
-            <li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
-            <li class="toclevel-2 tocsection-19"><a href="#com.android.dex.DexException:_Multiple_dex_files_define_XXX"><span class="tocnumber">10.3</span> <span class="toctext">com.android.dex.DexException: Multiple dex files define XXX</span></a></li>
-            <li class="toclevel-2 tocsection-20"><a href="#Could_not_resolve_all_dependencies_for_configuration_.27:_debugCompile.27."><span class="tocnumber">10.4</span> <span class="toctext">Could not resolve all dependencies for configuration ':_debugCompile'.</span></a></li>
-            <li class="toclevel-2 tocsection-21"><a href="#Could_not_find_com.android.support:support-v4:XXX"><span class="tocnumber">10.5</span> <span class="toctext">Could not find com.android.support:support-v4:XXX</span></a></li>
-            <li class="toclevel-2 tocsection-22"><a href="#ERROR:_In_.3Cdeclare-styleable.3E_FontFamilyFont.2C_unable_to_find_attribute_android:font"><span class="tocnumber">10.6</span> <span class="toctext">ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font</span></a></li>
-            <li class="toclevel-2 tocsection-23"><a href="#Error:_Could_not_find_gradle_wrapper_within_Android_SDK._Might_need_to_update_your_Android_SDK."><span class="tocnumber">10.7</span> <span class="toctext">Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</span></a></li>
-            <li class="toclevel-2 tocsection-24"><a href="#Could_not_find_com.android.support:support-v4:27.1.0"><span class="tocnumber">10.8</span> <span class="toctext">Could not find com.android.support:support-v4:27.1.0</span></a></li>
-            <li class="toclevel-2 tocsection-25"><a href="#Error:_not_found:_make"><span class="tocnumber">10.9</span> <span class="toctext">Error: not found: make</span></a></li>
-            <li class="toclevel-2 tocsection-26"><a href="#Current_working_directory_is_not_a_Cordova-based_project."><span class="tocnumber">10.10</span> <span class="toctext">Current working directory is not a Cordova-based project.</span></a></li>
-            <li class="toclevel-2 tocsection-27"><a href="#ReferenceError:_internalBinding_is_not_defined"><span class="tocnumber">10.11</span> <span class="toctext">ReferenceError: internalBinding is not defined</span></a></li>
-            <li class="toclevel-2 tocsection-28"><a href="#npm_update_check_failed"><span class="tocnumber">10.12</span> <span class="toctext">npm update check failed</span></a></li>
-            <li class="toclevel-2 tocsection-29"><a href="#Unhandled_rejection_Error:_Command_failed:_C:.5Ccygwin64.5Cbin.5Cgit.EXE_..."><span class="tocnumber">10.13</span> <span class="toctext">Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...</span></a></li>
-            <li class="toclevel-2 tocsection-30"><a href="#The_product_name_change_.28.3Cname.3E_tag.29_in_config.xml_is_not_supported_dynamically"><span class="tocnumber">10.14</span> <span class="toctext">The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically</span></a></li>
-            <li class="toclevel-2 tocsection-31"><a href="#Failed_to_install_.27cordova-plugin-file-transfer.27:_CordovaError:_Version_of_installed_plugin:_.22cordova-plugin-file.404.3.3.22_does_not_satisfy_dependency_plugin_requirement_.22cordova-plugin-file.40.3E.3D5.0.0.22."><span class="tocnumber">10.15</span> <span class="toctext">Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3" does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".</span></a></li>
-            <li class="toclevel-2 tocsection-32"><a href="#doc.find_is_not_a_function"><span class="tocnumber">10.16</span> <span class="toctext">doc.find is not a function</span></a></li>
-            <li class="toclevel-2 tocsection-33"><a href="#Mac:_linker_code_failed_with_exit_code_1"><span class="tocnumber">10.17</span> <span class="toctext">Mac: linker code failed with exit code 1</span></a></li>
-            <li class="toclevel-2 tocsection-34"><a href="#Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22"><span class="tocnumber">10.18</span> <span class="toctext">Windows: npm start hangs after "Starting 'watch'"</span></a></li>
-            </ul>
+    <summary class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span>
+    <span class="toctext">Troubleshooting</span></a></summary>
+    <ul>
+    <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
+    <li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
+    <li class="toclevel-2 tocsection-19"><a href="#com.android.dex.DexException:_Multiple_dex_files_define_XXX"><span class="tocnumber">10.3</span> <span class="toctext">com.android.dex.DexException: Multiple dex files define XXX</span></a></li>
+    <li class="toclevel-2 tocsection-20"><a href="#Could_not_resolve_all_dependencies_for_configuration_.27:_debugCompile.27."><span class="tocnumber">10.4</span> <span class="toctext">Could not resolve all dependencies for configuration ':_debugCompile'.</span></a></li>
+    <li class="toclevel-2 tocsection-21"><a href="#Could_not_find_com.android.support:support-v4:XXX"><span class="tocnumber">10.5</span> <span class="toctext">Could not find com.android.support:support-v4:XXX</span></a></li>
+    <li class="toclevel-2 tocsection-22"><a href="#ERROR:_In_.3Cdeclare-styleable.3E_FontFamilyFont.2C_unable_to_find_attribute_android:font"><span class="tocnumber">10.6</span> <span class="toctext">ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font</span></a></li>
+    <li class="toclevel-2 tocsection-23"><a href="#Error:_Could_not_find_gradle_wrapper_within_Android_SDK._Might_need_to_update_your_Android_SDK."><span class="tocnumber">10.7</span> <span class="toctext">Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</span></a></li>
+    <li class="toclevel-2 tocsection-24"><a href="#Could_not_find_com.android.support:support-v4:27.1.0"><span class="tocnumber">10.8</span> <span class="toctext">Could not find com.android.support:support-v4:27.1.0</span></a></li>
+    <li class="toclevel-2 tocsection-25"><a href="#Error:_not_found:_make"><span class="tocnumber">10.9</span> <span class="toctext">Error: not found: make</span></a></li>
+    <li class="toclevel-2 tocsection-26"><a href="#Current_working_directory_is_not_a_Cordova-based_project."><span class="tocnumber">10.10</span> <span class="toctext">Current working directory is not a Cordova-based project.</span></a></li>
+    <li class="toclevel-2 tocsection-27"><a href="#ReferenceError:_internalBinding_is_not_defined"><span class="tocnumber">10.11</span> <span class="toctext">ReferenceError: internalBinding is not defined</span></a></li>
+    <li class="toclevel-2 tocsection-28"><a href="#npm_update_check_failed"><span class="tocnumber">10.12</span> <span class="toctext">npm update check failed</span></a></li>
+    <li class="toclevel-2 tocsection-29"><a href="#Unhandled_rejection_Error:_Command_failed:_C:.5Ccygwin64.5Cbin.5Cgit.EXE_..."><span class="tocnumber">10.13</span> <span class="toctext">Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...</span></a></li>
+    <li class="toclevel-2 tocsection-30"><a href="#The_product_name_change_.28.3Cname.3E_tag.29_in_config.xml_is_not_supported_dynamically"><span class="tocnumber">10.14</span> <span class="toctext">The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically</span></a></li>
+    <li class="toclevel-2 tocsection-31"><a href="#Failed_to_install_.27cordova-plugin-file-transfer.27:_CordovaError:_Version_of_installed_plugin:_.22cordova-plugin-file.404.3.3.22_does_not_satisfy_dependency_plugin_requirement_.22cordova-plugin-file.40.3E.3D5.0.0.22."><span class="tocnumber">10.15</span> <span class="toctext">Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3" does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".</span></a></li>
+    <li class="toclevel-2 tocsection-32"><a href="#doc.find_is_not_a_function"><span class="tocnumber">10.16</span> <span class="toctext">doc.find is not a function</span></a></li>
+    <li class="toclevel-2 tocsection-33"><a href="#Mac:_linker_code_failed_with_exit_code_1"><span class="tocnumber">10.17</span> <span class="toctext">Mac: linker code failed with exit code 1</span></a></li>
+    <li class="toclevel-2 tocsection-34"><a href="#Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22"><span class="tocnumber">10.18</span> <span class="toctext">Windows: npm start hangs after "Starting 'watch'"</span></a></li>
+    </ul>
     </details>
 </details>
 
