@@ -1,14 +1,8 @@
 <style>
 .collapsible {
-  background-color: #777;
-  color: white;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
   border: none;
-  text-align: left;
   outline: none;
-  font-size: 15px;
 }
 
 .active, .collapsible:hover {
@@ -16,10 +10,8 @@
 }
 
 .content {
-  padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
 }
 </style>
 
@@ -41,7 +33,7 @@ for (i = 0; i < coll.length; i++) {
 </script>
 
 <h2><button type="button" class="collapsible">Contents</button></h2>
-<div>
+<div class="content">
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
@@ -62,7 +54,7 @@ for (i = 0; i < coll.length; i++) {
 <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
 <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
 <li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext collapsible">Troubleshooting</span></a>
-<div>
+<div class="content">
 <ul>
 <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
 <li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
@@ -244,7 +236,7 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 </p>
 
 <h3><button type="button" id="Troubleshooting" class="collapsible mw-headline">Troubleshooting</button></h3>
-<div>
+<div class="content">
 <h2><span ></span></h2>
 <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
 <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
