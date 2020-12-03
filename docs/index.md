@@ -200,7 +200,7 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 <p>This command will generate the app files and put them inside <i>www</i> folder. If you now want to install that app in a real device you can run "<i>npx cordova run android</i>" or "<i>npx cordova build ios</i>" (please don't use "<i>npx ionic cordova ...</i>" nor "<i>npm start</i>" because it will override your build files!).
 </p>
 <details>
-    <summary class="mw-headline" id="Troubleshooting"><h2>Troubleshooting</h2></summary>
+    <summary id="Troubleshooting"><h2>Troubleshooting</h2></summary>
     <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
     <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
     </p>
