@@ -197,117 +197,117 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 <pre class="php" style="font-family:monospace;">npm run ionic<span style="color: #339933;">:</span>build <span style="color: #339933;">--</span> <span style="color: #339933;">--</span>prod</pre>
 <p>This command will generate the app files and put them inside <i>www</i> folder. If you now want to install that app in a real device you can run "<i>npx cordova run android</i>" or "<i>npx cordova build ios</i>" (please don't use "<i>npx ionic cordova ...</i>" nor "<i>npm start</i>" because it will override your build files!).
 </p>
-<details>
-    <summary id="Troubleshooting" style="font-size:20px;color:#159957;">Troubleshooting</summary>
-    <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
-    <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
-    </p>
-    <h3><span class="mw-headline" id="Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F">Error: libsass bindings not found. Try reinstalling node-sass?</span></h3>
-    <p>Sometimes running the following command will fix the problem:
-    </p>
-    <pre>npm rebuild node-sass
-    </pre>
-    <p>If the issue persists, please read: <a rel="nofollow" class="external free" href="http://fettblog.eu/gulp-and-node4-first-aid/">http://fettblog.eu/gulp-and-node4-first-aid/</a>, alternatively you must be sure that you installed Node v0.12
-    </p>
-    <h3><span class="mw-headline" id="com.android.dex.DexException:_Multiple_dex_files_define_XXX">com.android.dex.DexException: Multiple dex files define XXX</span></h3>
-    <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
-    </p>
-    <pre> configurations {
-        all*.exclude group: 'com.android.support', module: 'support-v4'
-    }
-    </pre>
-    <h3><span class="mw-headline" id="Could_not_resolve_all_dependencies_for_configuration_.27:_debugCompile.27.">Could not resolve all dependencies for configuration ':_debugCompile'.</span></h3>
-    <p>Open the Android SDK Manager and make sure you have installed: Android Support Repository, Android Support Library, Google Play Services and Google Repository.
-    </p>
-    <h3><span class="mw-headline" id="Could_not_find_com.android.support:support-v4:XXX">Could not find com.android.support:support-v4:XXX</span></h3>
-    <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
-    </p>
-    <pre> configurations.all {
-        resolutionStrategy.force 'com.android.support:support-v4:24.0.0'
-    }
-    </pre>
-    <h3><span class="mw-headline" id="ERROR:_In_.3Cdeclare-styleable.3E_FontFamilyFont.2C_unable_to_find_attribute_android:font">ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font</span></h3>
-    <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
-    </p>
-    <pre>android {
-        compileSdkVersion 26
-        buildToolsVersion "26.0.1"
-    }
-    </pre>
-    <h3><span class="mw-headline" id="Error:_Could_not_find_gradle_wrapper_within_Android_SDK._Might_need_to_update_your_Android_SDK.">Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</span></h3>
-    <p>1. Download Android studio - <a rel="nofollow" class="external free" href="https://developer.android.com/studio/">https://developer.android.com/studio/</a>
-    </p><p>2. Copy the folder android-studio/plugins/android/lib/templates
-    </p><p>3. Paste in the folder android-sdk-folder/Sdk/tools
-    </p>
-    <h3><span class="mw-headline" id="Could_not_find_com.android.support:support-v4:27.1.0">Could not find com.android.support:support-v4:27.1.0</span></h3>
-    <p>Open the file <i>platforms/android/build.gradle</i> and configure like this:
-    </p>
-    <pre> allprojects {
-        repositories {
-            jcenter()
-            maven {
-                url "<a rel="nofollow" class="external free" href="https://maven.google.com">https://maven.google.com</a>"
+    <details>
+        <summary id="Troubleshooting" style="font-size:20px;color:#159957;">Troubleshooting</summary>
+        <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
+        <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
+        </p>
+        <h3><span class="mw-headline" id="Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F">Error: libsass bindings not found. Try reinstalling node-sass?</span></h3>
+        <p>Sometimes running the following command will fix the problem:
+        </p>
+        <pre>npm rebuild node-sass
+        </pre>
+        <p>If the issue persists, please read: <a rel="nofollow" class="external free" href="http://fettblog.eu/gulp-and-node4-first-aid/">http://fettblog.eu/gulp-and-node4-first-aid/</a>, alternatively you must be sure that you installed Node v0.12
+        </p>
+        <h3><span class="mw-headline" id="com.android.dex.DexException:_Multiple_dex_files_define_XXX">com.android.dex.DexException: Multiple dex files define XXX</span></h3>
+        <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
+        </p>
+        <pre> configurations {
+            all*.exclude group: 'com.android.support', module: 'support-v4'
+        }
+        </pre>
+        <h3><span class="mw-headline" id="Could_not_resolve_all_dependencies_for_configuration_.27:_debugCompile.27.">Could not resolve all dependencies for configuration ':_debugCompile'.</span></h3>
+        <p>Open the Android SDK Manager and make sure you have installed: Android Support Repository, Android Support Library, Google Play Services and Google Repository.
+        </p>
+        <h3><span class="mw-headline" id="Could_not_find_com.android.support:support-v4:XXX">Could not find com.android.support:support-v4:XXX</span></h3>
+        <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
+        </p>
+        <pre> configurations.all {
+            resolutionStrategy.force 'com.android.support:support-v4:24.0.0'
+        }
+        </pre>
+        <h3><span class="mw-headline" id="ERROR:_In_.3Cdeclare-styleable.3E_FontFamilyFont.2C_unable_to_find_attribute_android:font">ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font</span></h3>
+        <p>Open the file <i>platforms/android/build.gradle</i> and add this code at the end:
+        </p>
+        <pre>android {
+            compileSdkVersion 26
+            buildToolsVersion "26.0.1"
+        }
+        </pre>
+        <h3><span class="mw-headline" id="Error:_Could_not_find_gradle_wrapper_within_Android_SDK._Might_need_to_update_your_Android_SDK.">Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</span></h3>
+        <p>1. Download Android studio - <a rel="nofollow" class="external free" href="https://developer.android.com/studio/">https://developer.android.com/studio/</a>
+        </p><p>2. Copy the folder android-studio/plugins/android/lib/templates
+        </p><p>3. Paste in the folder android-sdk-folder/Sdk/tools
+        </p>
+        <h3><span class="mw-headline" id="Could_not_find_com.android.support:support-v4:27.1.0">Could not find com.android.support:support-v4:27.1.0</span></h3>
+        <p>Open the file <i>platforms/android/build.gradle</i> and configure like this:
+        </p>
+        <pre> allprojects {
+            repositories {
+                jcenter()
+                maven {
+                    url "<a rel="nofollow" class="external free" href="https://maven.google.com">https://maven.google.com</a>"
+                }
             }
         }
-    }
-    </pre>
-    <h3><span class="mw-headline" id="Error:_not_found:_make">Error: not found: make</span></h3>
-    <p>If you see this error in Ubuntu, run <tt>sudo apt-get install build-essential</tt> and retry.
-    </p>
-    <h3><span class="mw-headline" id="Current_working_directory_is_not_a_Cordova-based_project.">Current working directory is not a Cordova-based project.</span></h3>
-    <p>If you see this error during <tt>npm setup</tt>, run <tt>mkdir www</tt> and retry.
-    </p>
-    <h3><span class="mw-headline" id="ReferenceError:_internalBinding_is_not_defined">ReferenceError: internalBinding is not defined</span></h3>
-    <p>This <a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/53146394/node-app-fails-to-run-on-mojave-referenceerror-internalbinding-is-not-defined">seems to be</a> an error with 'natives' prior to 1.1.6. I fixed it using <tt>npm install natives@1.1.6</tt>.
-    </p>
-    <h3><span class="mw-headline" id="npm_update_check_failed">npm update check failed</span></h3>
-    <p>I got the error</p>
-    <pre>
-    │                   npm update check failed                     │
-    │             Try running with sudo or get access               │ 
-    │            to the local update config store via               │
-    │ sudo chown -R $USER:$(id -gn $USER) C:\Users\username\.config │
-    </pre>
-    <p>on Windows because I installed too much as admin, and the suggested command does not work on Windows. The is to manually check the ownership of all the files in C:\Users\username\.config\configstore. In my case it was update-notifier-npm.json which got changed to be owned by Administrator.
-    </p>
-    <h3><span class="mw-headline" id="Unhandled_rejection_Error:_Command_failed:_C:.5Ccygwin64.5Cbin.5Cgit.EXE_...">Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...</span></h3>
-    <p>You need to heed the advice at <a rel="nofollow" class="external free" href="https://www.npmjs.com/package/npm#installing-on-cygwin">https://www.npmjs.com/package/npm#installing-on-cygwin</a>. Cygwin users are not welcome in the Node world. However, you just need to ensure that Msysgit is on your windows path and that the cygwin bin folder is not. Then always use another shell like Powershell for your ALMS mobile development. (You don't need your Cygwin bin folder on the Windows path. It automatically gets added to the path when you lauch Cygwin bash.)
-    </p>
-    <h3><span class="mw-headline" id="The_product_name_change_.28.3Cname.3E_tag.29_in_config.xml_is_not_supported_dynamically">The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically</span></h3>
-    <p>According to Google, this happens when you create the iOS platform with a certain &lt;name&gt; and then you change that name in config.xml. It's weird that the installation process does that, it should create the platform with the right name unless it was changed manually.
-    </p><p>The solution seems to be removing and adding the iOS platform again:
-    </p>
-    <pre>npx ionic platform remove ios
-    npx ionic platform add ios
-    </pre>
-    <p>Note that this does not seem to prevent <tt>ionic --serve</tt> from serving a working app if you run gulp after <tt>npm run setup</tt> has failed with this error.
-    </p>
-    <h3><span class="mw-headline" id="Failed_to_install_.27cordova-plugin-file-transfer.27:_CordovaError:_Version_of_installed_plugin:_.22cordova-plugin-file.404.3.3.22_does_not_satisfy_dependency_plugin_requirement_.22cordova-plugin-file.40.3E.3D5.0.0.22.">Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3" does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".</span></h3>
-    <p>The <i>cordova-plugin-file</i> version specified in config.xml is 6.0.1, for some reason the installation process installed a wrong version for that plugin. You can manually install the <i>cordova-plugin-file</i> plugin like this:
-    </p>
-    <pre>npx cordova plugin remove cordova-plugin-file
-    npx cordova plugin add cordova-plugin-file@6.0.1
-    </pre>
-    <p>Please notice that if there is any plugin installed that depends on <i>cordova-plugin-file</i> you'll have to remove and re-add them too.
-    </p><p>Note that this does not seem to prevent <tt>npm start</tt> from serving a working app if you run <tt>npx gulp</tt> after <tt>npm run setup</tt> has failed with this error.
-    </p>
-    <h3><span class="mw-headline" id="doc.find_is_not_a_function">doc.find is not a function</span></h3>
-    <p>This happens in some environments, the solution is to run <tt>npx cordova platform add ios</tt> before running <tt>npm run setup</tt> (but you'll need to run <tt>npm install</tt> if you hadn't). If you get this error, you'll need to remove the platforms and plugins folders before running this sequence of commands to fix your environment.
-    </p><p><a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/47404622/edit-config-for-ios-usage-descriptions-doc-find-is-not-a-function">Find more about this in StackOverflow</a>
-    </p>
-    <h3><span class="mw-headline" id="Mac:_linker_code_failed_with_exit_code_1">Mac: linker code failed with exit code 1</span></h3>
-    <p>If you get this error when trying to build the ALMS app with XCode, some dependencies might not have installed correctly.
-    </p><p>Ensure you have followed the <a rel="nofollow" class="external text" href="#Mac_only:_Push_notifications%7C">Mac only: Push notifications</a> steps above (particularly opening the .xcworkspace file rather than the .xcodeproj file). Then run the following:
-    </p>
-    <pre> npm run setup
-    cd platforms/ios
-    pod install
-    </pre>
-    <p>Now try running the build again in XCode.
-    </p>
-    <h3><span class="mw-headline" id="Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22">Windows: <pre>npm start</pre> hangs after "Starting 'watch'"</span></h3>
-    <p>This appears to have happened since the move to npx. Try running the npx commands generated by npm run directly in bash:
-    </p>
-    <pre> npx gulp watch &amp; npx ionic-app-scripts serve -b --devapp --address=0.0.0.0
-    </pre>
-</details>
+        </pre>
+        <h3><span class="mw-headline" id="Error:_not_found:_make">Error: not found: make</span></h3>
+        <p>If you see this error in Ubuntu, run <tt>sudo apt-get install build-essential</tt> and retry.
+        </p>
+        <h3><span class="mw-headline" id="Current_working_directory_is_not_a_Cordova-based_project.">Current working directory is not a Cordova-based project.</span></h3>
+        <p>If you see this error during <tt>npm setup</tt>, run <tt>mkdir www</tt> and retry.
+        </p>
+        <h3><span class="mw-headline" id="ReferenceError:_internalBinding_is_not_defined">ReferenceError: internalBinding is not defined</span></h3>
+        <p>This <a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/53146394/node-app-fails-to-run-on-mojave-referenceerror-internalbinding-is-not-defined">seems to be</a> an error with 'natives' prior to 1.1.6. I fixed it using <tt>npm install natives@1.1.6</tt>.
+        </p>
+        <h3><span class="mw-headline" id="npm_update_check_failed">npm update check failed</span></h3>
+        <p>I got the error</p>
+        <pre>
+        │                   npm update check failed                     │
+        │             Try running with sudo or get access               │ 
+        │            to the local update config store via               │
+        │ sudo chown -R $USER:$(id -gn $USER) C:\Users\username\.config │
+        </pre>
+        <p>on Windows because I installed too much as admin, and the suggested command does not work on Windows. The is to manually check the ownership of all the files in C:\Users\username\.config\configstore. In my case it was update-notifier-npm.json which got changed to be owned by Administrator.
+        </p>
+        <h3><span class="mw-headline" id="Unhandled_rejection_Error:_Command_failed:_C:.5Ccygwin64.5Cbin.5Cgit.EXE_...">Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...</span></h3>
+        <p>You need to heed the advice at <a rel="nofollow" class="external free" href="https://www.npmjs.com/package/npm#installing-on-cygwin">https://www.npmjs.com/package/npm#installing-on-cygwin</a>. Cygwin users are not welcome in the Node world. However, you just need to ensure that Msysgit is on your windows path and that the cygwin bin folder is not. Then always use another shell like Powershell for your ALMS mobile development. (You don't need your Cygwin bin folder on the Windows path. It automatically gets added to the path when you lauch Cygwin bash.)
+        </p>
+        <h3><span class="mw-headline" id="The_product_name_change_.28.3Cname.3E_tag.29_in_config.xml_is_not_supported_dynamically">The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically</span></h3>
+        <p>According to Google, this happens when you create the iOS platform with a certain &lt;name&gt; and then you change that name in config.xml. It's weird that the installation process does that, it should create the platform with the right name unless it was changed manually.
+        </p><p>The solution seems to be removing and adding the iOS platform again:
+        </p>
+        <pre>npx ionic platform remove ios
+        npx ionic platform add ios
+        </pre>
+        <p>Note that this does not seem to prevent <tt>ionic --serve</tt> from serving a working app if you run gulp after <tt>npm run setup</tt> has failed with this error.
+        </p>
+        <h3><span class="mw-headline" id="Failed_to_install_.27cordova-plugin-file-transfer.27:_CordovaError:_Version_of_installed_plugin:_.22cordova-plugin-file.404.3.3.22_does_not_satisfy_dependency_plugin_requirement_.22cordova-plugin-file.40.3E.3D5.0.0.22.">Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3" does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".</span></h3>
+        <p>The <i>cordova-plugin-file</i> version specified in config.xml is 6.0.1, for some reason the installation process installed a wrong version for that plugin. You can manually install the <i>cordova-plugin-file</i> plugin like this:
+        </p>
+        <pre>npx cordova plugin remove cordova-plugin-file
+        npx cordova plugin add cordova-plugin-file@6.0.1
+        </pre>
+        <p>Please notice that if there is any plugin installed that depends on <i>cordova-plugin-file</i> you'll have to remove and re-add them too.
+        </p><p>Note that this does not seem to prevent <tt>npm start</tt> from serving a working app if you run <tt>npx gulp</tt> after <tt>npm run setup</tt> has failed with this error.
+        </p>
+        <h3><span class="mw-headline" id="doc.find_is_not_a_function">doc.find is not a function</span></h3>
+        <p>This happens in some environments, the solution is to run <tt>npx cordova platform add ios</tt> before running <tt>npm run setup</tt> (but you'll need to run <tt>npm install</tt> if you hadn't). If you get this error, you'll need to remove the platforms and plugins folders before running this sequence of commands to fix your environment.
+        </p><p><a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/47404622/edit-config-for-ios-usage-descriptions-doc-find-is-not-a-function">Find more about this in StackOverflow</a>
+        </p>
+        <h3><span class="mw-headline" id="Mac:_linker_code_failed_with_exit_code_1">Mac: linker code failed with exit code 1</span></h3>
+        <p>If you get this error when trying to build the ALMS app with XCode, some dependencies might not have installed correctly.
+        </p><p>Ensure you have followed the <a rel="nofollow" class="external text" href="#Mac_only:_Push_notifications%7C">Mac only: Push notifications</a> steps above (particularly opening the .xcworkspace file rather than the .xcodeproj file). Then run the following:
+        </p>
+        <pre> npm run setup
+        cd platforms/ios
+        pod install
+        </pre>
+        <p>Now try running the build again in XCode.
+        </p>
+        <h3><span class="mw-headline" id="Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22">Windows: <pre>npm start</pre> hangs after "Starting 'watch'"</span></h3>
+        <p>This appears to have happened since the move to npx. Try running the npx commands generated by npm run directly in bash:
+        </p>
+        <pre> npx gulp watch &amp; npx ionic-app-scripts serve -b --devapp --address=0.0.0.0
+        </pre>
+    </details>
