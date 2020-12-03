@@ -1,3 +1,5 @@
+<html>
+<head>
 <style>
 .collapsible {
   cursor: pointer;
@@ -14,6 +16,7 @@
   overflow: hidden;
 }
 </style>
+</head>
 
 <body>
 <script>
@@ -352,3 +355,4 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
         </pre>
     </div>
 </body>
+</html>
