@@ -1,4 +1,4 @@
-#Setting up your development environment for ALMS Mobile App
+# Setting up your development environment for ALMS Mobile App
 - Overview
 - Requirements
     - Install a browser for development
@@ -36,7 +36,7 @@
     - Windows: npm start hangs after "Starting 'watch'"
 - See also
 
-#Overview
+# Overview
 
 <p>The structure of this page is
 </p>
@@ -47,7 +47,7 @@
 However, if you want to be able to to write <a href="/dev/Acceptance_testing_for_the_mobile_app" title="Acceptance testing for the mobile app">automated acceptance tests for the app</a> then you need to follow this page at least as far as getting the <tt>npm start</tt> command to work on this page.
 </p>
 
-#Requirements
+# Requirements
 
 <p>Windows tip: ingore any use of the sudo command below. Just use the command without it. Most things work that way. And if they don't, try in a Powershell window that you have opened with 'Run as administrator ...'.
 </p>
@@ -305,103 +305,3 @@ npx cordova plugin add cordova-plugin-file@6.0.1
 </p>
 <pre> npx gulp watch &amp; npx ionic-app-scripts serve -b --devapp --address=0.0.0.0
 </pre>
-<h2><span class="mw-headline" id="See_also">See also</span></h2>
-<p><a rel="nofollow" class="external free" href="http://ionicframework.com/docs/cli/">http://ionicframework.com/docs/cli/</a>
-</p>
-<!-- 
-NewPP limit report
-Cached time: 20201202140831
-Cache expiry: 86400
-Dynamic content: false
-CPU time usage: 0.032 seconds
-Real time usage: 0.037 seconds
-Preprocessor visited node count: 203/1000000
-Preprocessor generated node count: 306/1000000
-Post‐expand include size: 584/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 3/40
-Expensive parser function count: 0/100
--->
-
-<!-- 
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    4.488      1 - -total
- 49.76%    2.233      1 - Template:Moodle_Mobile
- 46.95%    2.107      1 - Template:Moodle_Mobile_3.5
--->
-
-<!-- Saved in parser cache with key docs_development:pcache:idhash:6170-0!*!0!!en!*!* and timestamp 20201202140831 and revision id 58085
- -->
-</div><div class="printfooter">
-Retrieved from "<a dir="ltr" href="https://interactivegroup.github.io/almsmobileapp/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;oldid=58085">https://interactivegroup.github.io/almsmobileapp/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;oldid=58085</a>"</div>
-		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/dev/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/dev/Category:Mobile" title="Category:Mobile">Mobile</a></li><li><a href="/dev/Category:Moodle_App_3.5" title="Category:Moodle App 3.5">Moodle App 3.5</a></li></ul></div></div>		<!-- end content -->
-				<div class="visualClear"></div>
-	</div>
-</div></div>
-<div id="column-one" class="row-fluid">
-	<div id="p-cactions" class="portlet">
-				<h5>Views</h5>
-		<div class="pBody">
-			<ul><li id="ca-nstab-main" class="selected"><a href="/dev/Setting_up_your_development_environment_for_Moodle_Mobile_2" title="View the content page [ctrl-option-c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="/dev/index.php?title=Talk:Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;action=edit&amp;redlink=1" title="Discussion about the content page [ctrl-option-t]" accesskey="t">Discussion</a></li><li id="ca-viewsource"><a href="/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;action=edit" title="This page is protected.
-You can view its source [ctrl-option-e]" accesskey="e">View source</a></li><li id="ca-history"><a href="/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;action=history" title="Past revisions of this page [ctrl-option-h]" accesskey="h">History</a></li></ul>		</div>
-	</div>
-	<div class="portlet" id="p-personal">
-		<h5>Personal tools</h5>
-		<div class="pBody">
-			<ul><li><a href="/dev/index.php?title=Special:UserLogin&amp;returnto=Setting+up+your+development+environment+for+Moodle+Mobile+2">Log in</a></li></ul>		</div>
-	</div>
-	<div class="portlet bottom-portlet span6" id="p-navigation">
-		<h5>Navigation</h5>
-		<div class="pBody">
-				<ul>
-							<li id="n-mainpage-description"><a href="/dev/Main_Page" title="Visit the main page [ctrl-option-z]" accesskey="z">Main page</a></li>
-							<li id="n-recentchanges"><a href="/dev/Special:RecentChanges" title="A list of recent changes in the wiki [ctrl-option-r]" accesskey="r">Recent changes</a></li>
-							<li id="n-Moodle-Docs-3.10"><a href="https://interactivegroup.github.io/almsmobileapp/310/en">Moodle Docs 3.10</a></li>
-							<li id="n-Docs-overview"><a href="https://interactivegroup.github.io/almsmobileapp/overview/">Docs overview</a></li>
-						</ul>
-				</div>
-	</div>
-	<div class="portlet bottom-portlet span6" id="p-tb">
-		<h5>Tools</h5>
-		<div class="pBody">
-				<ul>
-				<li id="t-whatlinkshere"><a href="/dev/Special:WhatLinksHere/Setting_up_your_development_environment_for_Moodle_Mobile_2" title="A list of all wiki pages that link here [ctrl-option-j]" accesskey="j">What links here</a></li>
-				<li id="t-recentchangeslinked"><a href="/dev/Special:RecentChangesLinked/Setting_up_your_development_environment_for_Moodle_Mobile_2" title="Recent changes in pages linked from this page [ctrl-option-k]" accesskey="k">Related changes</a></li>
-<li id="t-specialpages"><a href="/dev/Special:SpecialPages" title="A list of all special pages [ctrl-option-q]" accesskey="q">Special pages</a></li>
-				<li id="t-print"><a href="/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;printable=yes" rel="alternate" title="Printable version of this page [ctrl-option-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/dev/index.php?title=Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;oldid=58085" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
-		</div>
-	</div>
-<div id="p-search" role="search">
-	<h3><label for="searchInput">Search</label></h3>
-	<form action="/dev/index.php" id="searchform">
-		<div id="simpleSearch">
-						<input name="search" placeholder="Search" title="Search MoodleDocs [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="/dev/skins/moodledocs/images/search-ltr.png?305" alt="Search" width="12" height="13"></button>						<input type="hidden" name="title" value="Special:Search">
-		</div>
-	</form>
-</div>
-</div><!-- end of the left (by default at least) column -->
-<div class="visualClear"></div>
-<div id="footer">
-	<div id="f-poweredbyico">
-		<a href="//www.mediawiki.org/"><img src="/dev/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/dev/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /dev/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>
-	</div>
-	<ul id="f-list">
-		<li id="lastmod"> This page was last modified on 24 November 2020, at 09:56.</li>
-		<li id="copyright">Content is available under <a class="external" rel="nofollow" href="https://interactivegroup.github.io/almsmobileapp/dev/License">GNU General Public License</a> unless otherwise noted.</li>
-		<li id="privacy"><a href="/dev/MoodleDocs:Privacy_policy" title="MoodleDocs:Privacy policy">Privacy</a></li>
-		<li id="about"><a href="/dev/MoodleDocs:About" title="MoodleDocs:About">About the Dev docs</a></li>
-		<li id="disclaimer"><a href="/dev/MoodleDocs:General_disclaimer" title="MoodleDocs:General disclaimer">Disclaimers</a></li>
-	</ul>
-</div>
-</div>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.state({"user":"ready","user.groups":"ready"});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","custom.editortoolbar","ext.moderation.notify","ext.moderation.notify.desktop","skins.moodledocs.bootstrap"]);});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":113});});</script>
-<!-- final footer start -->
-<div id="moodlesitelink"></div>
-<!-- final footer end -->
-
-</div><!-- #page -->
-<!-- google analytics start -->
-<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-72764-4");pageTracker._trackPageview();} catch(err) {}</script>
-<!-- google analytics end -->
-
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"05ab6e1949","applicationID":"84455028","transactionName":"YwBabBRSCEFYAkVaWlpKeVsSWglcFgBSR1xbCxdOD1YR","queueTime":0,"applicationTime":114,"atts":"T0dZGlxIG08=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script><div class="suggestions" style="display: none; font-size: 14px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
