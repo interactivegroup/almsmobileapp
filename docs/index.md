@@ -201,7 +201,7 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 <pre class="php" style="font-family:monospace;">npm run ionic<span style="color: #339933;">:</span>build <span style="color: #339933;">--</span> <span style="color: #339933;">--</span>prod</pre>
 <p>This command will generate the app files and put them inside <i>www</i> folder. If you now want to install that app in a real device you can run "<i>npx cordova run android</i>" or "<i>npx cordova build ios</i>" (please don't use "<i>npx ionic cordova ...</i>" nor "<i>npm start</i>" because it will override your build files!).
 </p>
-<details>
+<h2><details class="mw-headline" id="Troubleshooting"></h2>
     <summary>Troubleshooting</summary>
     <h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
     <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
