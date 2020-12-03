@@ -41,10 +41,8 @@
             <li class="toclevel-2 tocsection-33"><a href="#Mac:_linker_code_failed_with_exit_code_1"><span class="tocnumber">10.17</span> <span class="toctext">Mac: linker code failed with exit code 1</span></a></li>
             <li class="toclevel-2 tocsection-34"><a href="#Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22"><span class="tocnumber">10.18</span> <span class="toctext">Windows: npm start hangs after "Starting 'watch'"</span></a></li>
             </ul>
-            </li>
         </details>
     <li class="toclevel-1 tocsection-35"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
-    </ul>
 </details>
 <h2><span class="mw-headline" id="Overview">Overview</span></h2>
 <p>The structure of this page is
