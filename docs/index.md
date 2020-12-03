@@ -1,169 +1,58 @@
-<html lang="en" dir="ltr" class="client-js" data-lt-installed="true"><head>
-<meta charset="UTF-8"><script type="text/javascript" src="https://bam-cell.nr-data.net/1/05ab6e1949?a=84455028&amp;v=1184.ab39b52&amp;to=YwBabBRSCEFYAkVaWlpKeVsSWglcFgBSR1xbCxdOD1YR&amp;rst=10797&amp;ck=1&amp;ref=https://interactivegroup.github.io/almsmobileapp/dev/Setting_up_your_development_environment_for_Moodle_Mobile_2&amp;ap=114&amp;be=3910&amp;fe=10175&amp;dc=9602&amp;perf=%7B%22timing%22:%7B%22of%22:1606918108309,%22n%22:0,%22f%22:2090,%22dn%22:2348,%22dne%22:2348,%22c%22:2348,%22s%22:2527,%22ce%22:2801,%22rq%22:2816,%22rp%22:3162,%22rpe%22:3210,%22dl%22:3516,%22di%22:9602,%22ds%22:9602,%22de%22:9602,%22dc%22:10174,%22l%22:10174,%22le%22:10215%7D,%22navigation%22:%7B%7D%7D&amp;fp=9367&amp;fcp=9367&amp;at=T0dZGlxIG08%3D&amp;jsonp=NREUM.setToken"></script><script src="https://js-agent.newrelic.com/nr-1184.min.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"05ab6e1949",applicationID:"84455028"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
-<title>Setting up your development environment for Moodle Mobile 2 - MoodleDocs</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Setting_up_your_development_environment_for_Moodle_Mobile_2","wgTitle":"Setting up your development environment for Moodle Mobile 2","wgCurRevisionId":58085,"wgRevisionId":58085,"wgArticleId":6170,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Mobile","Moodle App 3.5"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Setting_up_your_development_environment_for_Moodle_Mobile_2","wgRelevantArticleId":6170,"wgRequestId":"2cc577d4c955cc8a2e8e2efd","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"preview":false,"publish":false}});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
-mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+#Setting up your development environment for ALMS Mobile App
+- Overview
+- Requirements
+    - Install a browser for development
+    - Install git
+    - Install Node.js
+    - Windows only: Native build dependencies
+    - Mac only: Push notifications
+    - Linux only: libsecret
+- Clone the app base code
+- Setup the environment
+- Open the app in the browser
+- Updating ionic and cordova
+- Updating plugins
+- Building for Android and iOS
+- Compiling using AOT
+- Troubleshooting
+    - Strange NPM errors
+    - Error: libsass bindings not found. Try reinstalling node-sass?
+    - com.android.dex.DexException: Multiple dex files define XXX
+    - Could not resolve all dependencies for configuration ':_debugCompile'.
+    - Could not find com.android.support:support-v4:XXX
+    - ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font<
+    - Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.
+    - Could not find com.android.support:support-v4:27.1.0
+    - Error: not found: make
+    - Current working directory is not a Cordova-based project.
+    - ReferenceError: internalBinding is not defined
+    - npm update check failed
+    - Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...
+    - The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically
+    - Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3"
+    does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".
+    - doc.find is not a function
+    - Mac: linker code failed with exit code 1
+    - Windows: npm start hangs after "Starting 'watch'"
+- See also
 
-});mw.loader.load(["mediawiki.page.startup"]);});</script>
-<link rel="stylesheet" href="/dev/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=moodledocs">
-<link rel="stylesheet" href="/dev/skins/moodledocs/devdocs.css?305" media="screen"><link rel="stylesheet" href="/dev/skins/moodledocs/sitebar/sitebar-dev.css?305" media="screen"><link rel="stylesheet" href="/dev/skins/moodledocs/bootstrap-responsive.min.css?305"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300&amp;amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic">
-<style>
-#pending-review{border:3px solid red}
-.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
-.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
-@media screen {
-	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
-@media print {
-	#toc.tochidden,.toctoggle{display:none}}
-.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(/dev/resources/src/mediawiki.action/images/green-checkmark.png?d94f1)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
-#postedit-modqueued a{font-weight:bold}#pending-review{display:inline-block;padding:5px;margin:10px;margin-left:0;font-weight:bold;font-size:120%;text-transform:uppercase}</style><style>
-.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
-<script async="" src="/dev/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=ALMSdocs"></script>
-<meta name="generator" content="MediaWiki 1.27.4">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/favicon-dev.ico">
-<link rel="search" type="application/opensearchdescription+xml" href="/dev/opensearch_desc.php" title="ALMSDocs&nbsp;dev&nbsp;(Development)">
-<link rel="EditURI" type="application/rsd+xml" href="https://interactivegroup.github.io/almsmobileapp/dev/api.php?action=rsd">
-<link rel="copyright" href="https://interactivegroup.github.io/almsmobileapp/dev/License">
-<link rel="alternate" type="application/atom+xml" title="ALMSDocs Atom feed" href="/dev/index.php?title=Special:RecentChanges&amp;feed=atom">
-<script src="/dev/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=ALMSdocs&amp;version=dhA6Pkgz"></script></head>
-<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Setting_up_your_development_environment_for_ALMS_Mobile_ rootpage-Setting_up_your_development_environment_for_ALMS_Mobile_2 skin-ALMSdocs action-view">
-<div id="ALMSsitestopnavbar">
-    <div class="navbar-container">
-        <a class="sitelogo" href="https://alms.aldermin.com/">
-            <img alt="alms.aldermin.com" width="96" height="25" src="/dev/skins/moodledocs/sitebar/pix/logo.png">
-        </a>
-        <ul>
-            <li class="home">
-            <a href="https://alms.aldermin.com"><span>Home</span><span class="placeholder"></span></a>
-            </li>
-            <li class="documentation">
-            <a href="https://alms.aldermin.com"><span>Documentation</span><span class="placeholder"></span></a>
-            </li>
-            <li class="download">
-            <a href="https://alms.aldermin.com"><span>Downloads</span><span class="placeholder"></span></a>
-            </li>
-            <li class="demo">
-            <a href="https://alms.aldermin.com"><span>Demo</span><span class="placeholder"></span></a>
-            </li>
-            <li class="tracker">
-            <a href="https://alms.aldermin.com"><span>Tracker</span><span class="placeholder"></span></a>
-            </li>
-            <li class="development">
-            <a href="https://interactivegroup.github.io/almsmobileapp/"><span>Development</span><span class="placeholder"></span></a>
-            </li>
-            <li class="translation">
-            <a href="https://alms.aldermin.com"><span>Translation</span><span class="placeholder"></span></a>
-            </li>
-            <li class="moodlenet">
-            <a href="https://alms.aldermin.com"><span>Moodle.net</span><span class="placeholder"></span></a>
-            </li>
-            <li class="search">
-            <a href="https://aldermin.com/public/search/"><span>Search</span><span class="placeholder"></span></a>
-            </li>
-        </ul>
-    </div>
-    <div style="clear:both"></div>
-</div>
-<div id="page">
-<!-- header start -->
-<div id="moodlelogo"></div>
-<!-- header end -->
+#Overview
 
-
-<!-- navbar start -->
-<div id="moodlenavbar" class="navbar clearfix" dir="LTR"><div class="breadcrumb"><h2 class="accesshide">You are here</h2><ul><li class="first"><a href="/dev/">Main Page</a></li><li>&nbsp;► Setting up your development environment for Moodle Mobile 2</li></ul></div></div>
-<!-- navbar end -->
-
-<div id="globalWrapper" class="container-fluid">
-<div id="column-content" class="has-sideblock">
-<div id="content">
-	<a id="top"></a>
-
-	<h1 id="firstHeading" class="firstHeading">Setting up your development environment for Moodle Mobile 2</h1>
-	<div id="bodyContent">
-		<div id="contentSub"></div>
-		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
-		<!-- start content -->
-<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="sideblock right" style="width: 18em;">	
-<div class="header"><a href="/dev/Moodle_Mobile" title="Moodle Mobile">Moodle Apps</a></div>	
-<div class="content">
-<ul><li> <a href="/dev/Moodle_Mobile_Customization" title="Moodle Mobile Customization">Moodle Mobile Customization</a></li>
-<li> <strong class="selflink">Setting up your development environment for Moodle Mobile 2</strong></li>
-<li> <a href="/dev/Moodle_Mobile_development_using_Chrome_or_Chromium" title="Moodle Mobile development using Chrome or Chromium">Moodle Mobile development using Chrome or Chromium</a></li>
-<li> <a href="/dev/Mobile_support_for_plugins" title="Mobile support for plugins">Mobile support for plugins</a></li>
-<li> <a href="/dev/Moodle_Mobile_Themes" title="Moodle Mobile Themes">Moodle Mobile Themes</a></li>
-<li> <a href="/dev/Moodle_Mobile_debugging_WS_requests" title="Moodle Mobile debugging WS requests">Moodle Mobile debugging WS requests</a></li>
-<li> <a href="/dev/Moodle_Desktop" title="Moodle Desktop">Moodle Desktop</a></li>
-<li> <a href="/dev/Moodle_Mobile_FAQ" title="Moodle Mobile FAQ">Moodle Mobile FAQ</a></li></ul>
-</div>
-</div>
-<p><span class="small-info-right">Moodle App <span class="text-big new">3.5</span></span>
-</p><p><br>
-Note: These instructions do work (give or take) for the current 3.9.x version of the Moodle Mobile app.
-</p>
-<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
-<ul>
-<li class="toclevel-2 tocsection-3"><a href="#Install_a_browser_for_development"><span class="tocnumber">2.1</span> <span class="toctext">Install a browser for development</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#Install_git"><span class="tocnumber">2.2</span> <span class="toctext">Install git</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Install_Node.js"><span class="tocnumber">2.3</span> <span class="toctext">Install Node.js</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Windows_only:_Native_build_dependencies"><span class="tocnumber">2.4</span> <span class="toctext">Windows only: Native build dependencies</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Mac_only:_Push_notifications"><span class="tocnumber">2.5</span> <span class="toctext">Mac only: Push notifications</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Linux_only:_libsecret"><span class="tocnumber">2.6</span> <span class="toctext">Linux only: libsecret</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-9"><a href="#Clone_the_app_base_code"><span class="tocnumber">3</span> <span class="toctext">Clone the app base code</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Setup_the_environment"><span class="tocnumber">4</span> <span class="toctext">Setup the environment</span></a></li>
-<li class="toclevel-1 tocsection-11"><a href="#Open_the_app_in_the_browser"><span class="tocnumber">5</span> <span class="toctext">Open the app in the browser</span></a></li>
-<li class="toclevel-1 tocsection-12"><a href="#Updating_ionic_and_cordova"><span class="tocnumber">6</span> <span class="toctext">Updating ionic and cordova</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#Updating_plugins"><span class="tocnumber">7</span> <span class="toctext">Updating plugins</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
-<li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext">Troubleshooting</span></a>
-<ul>
-<li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
-<li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#com.android.dex.DexException:_Multiple_dex_files_define_XXX"><span class="tocnumber">10.3</span> <span class="toctext">com.android.dex.DexException: Multiple dex files define XXX</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Could_not_resolve_all_dependencies_for_configuration_.27:_debugCompile.27."><span class="tocnumber">10.4</span> <span class="toctext">Could not resolve all dependencies for configuration ':_debugCompile'.</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#Could_not_find_com.android.support:support-v4:XXX"><span class="tocnumber">10.5</span> <span class="toctext">Could not find com.android.support:support-v4:XXX</span></a></li>
-<li class="toclevel-2 tocsection-22"><a href="#ERROR:_In_.3Cdeclare-styleable.3E_FontFamilyFont.2C_unable_to_find_attribute_android:font"><span class="tocnumber">10.6</span> <span class="toctext">ERROR: In &lt;declare-styleable&gt; FontFamilyFont, unable to find attribute android:font</span></a></li>
-<li class="toclevel-2 tocsection-23"><a href="#Error:_Could_not_find_gradle_wrapper_within_Android_SDK._Might_need_to_update_your_Android_SDK."><span class="tocnumber">10.7</span> <span class="toctext">Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</span></a></li>
-<li class="toclevel-2 tocsection-24"><a href="#Could_not_find_com.android.support:support-v4:27.1.0"><span class="tocnumber">10.8</span> <span class="toctext">Could not find com.android.support:support-v4:27.1.0</span></a></li>
-<li class="toclevel-2 tocsection-25"><a href="#Error:_not_found:_make"><span class="tocnumber">10.9</span> <span class="toctext">Error: not found: make</span></a></li>
-<li class="toclevel-2 tocsection-26"><a href="#Current_working_directory_is_not_a_Cordova-based_project."><span class="tocnumber">10.10</span> <span class="toctext">Current working directory is not a Cordova-based project.</span></a></li>
-<li class="toclevel-2 tocsection-27"><a href="#ReferenceError:_internalBinding_is_not_defined"><span class="tocnumber">10.11</span> <span class="toctext">ReferenceError: internalBinding is not defined</span></a></li>
-<li class="toclevel-2 tocsection-28"><a href="#npm_update_check_failed"><span class="tocnumber">10.12</span> <span class="toctext">npm update check failed</span></a></li>
-<li class="toclevel-2 tocsection-29"><a href="#Unhandled_rejection_Error:_Command_failed:_C:.5Ccygwin64.5Cbin.5Cgit.EXE_..."><span class="tocnumber">10.13</span> <span class="toctext">Unhandled rejection Error: Command failed: C:\cygwin64\bin\git.EXE ...</span></a></li>
-<li class="toclevel-2 tocsection-30"><a href="#The_product_name_change_.28.3Cname.3E_tag.29_in_config.xml_is_not_supported_dynamically"><span class="tocnumber">10.14</span> <span class="toctext">The product name change (&lt;name&gt; tag) in config.xml is not supported dynamically</span></a></li>
-<li class="toclevel-2 tocsection-31"><a href="#Failed_to_install_.27cordova-plugin-file-transfer.27:_CordovaError:_Version_of_installed_plugin:_.22cordova-plugin-file.404.3.3.22_does_not_satisfy_dependency_plugin_requirement_.22cordova-plugin-file.40.3E.3D5.0.0.22."><span class="tocnumber">10.15</span> <span class="toctext">Failed to install 'cordova-plugin-file-transfer': CordovaError: Version of installed plugin: "cordova-plugin-file@4.3.3" does not satisfy dependency plugin requirement "cordova-plugin-file@&gt;=5.0.0".</span></a></li>
-<li class="toclevel-2 tocsection-32"><a href="#doc.find_is_not_a_function"><span class="tocnumber">10.16</span> <span class="toctext">doc.find is not a function</span></a></li>
-<li class="toclevel-2 tocsection-33"><a href="#Mac:_linker_code_failed_with_exit_code_1"><span class="tocnumber">10.17</span> <span class="toctext">Mac: linker code failed with exit code 1</span></a></li>
-<li class="toclevel-2 tocsection-34"><a href="#Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22"><span class="tocnumber">10.18</span> <span class="toctext">Windows: npm start hangs after "Starting 'watch'"</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-35"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
-</ul>
-</div>
-
-<h2><span class="mw-headline" id="Overview">Overview</span></h2>
 <p>The structure of this page is
 </p>
 <ul><li> the first part, up to the point where you get the <tt>npm start</tt> command to work is what you need to be able to do development on the app and test it in a browser.</li>
 <li> the second part is about how to build a version of the app that can be run on a device.</li>
 <li> then at the end is a list of troubleshooting advice. If you encounter a problem that is not already listed, please consider adding it.</li></ul>
 <p>The majority of your development will be done using a browser. You will probably only begin to use an emulator once you need to simulate a real mobile device.
-</p><p>If you are just <a href="/dev/Mobile_support_for_plugins" title="Mobile support for plugins">adding mobile support to plugins</a>, remember that most of your development can be done using the online pre-built version at <a rel="nofollow" class="external free" href="https://mobileapp.moodledemo.net/">https://mobileapp.moodledemo.net/</a> (with Chrome or Chromium). However, if you want to be able to to write <a href="/dev/Acceptance_testing_for_the_mobile_app" title="Acceptance testing for the mobile app">automated acceptance tests for the app</a> then you need to follow this page at least as far as getting the <tt>npm start</tt> command to work on this page.
+However, if you want to be able to to write <a href="/dev/Acceptance_testing_for_the_mobile_app" title="Acceptance testing for the mobile app">automated acceptance tests for the app</a> then you need to follow this page at least as far as getting the <tt>npm start</tt> command to work on this page.
 </p>
-<h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
+
+#Requirements
+
 <p>Windows tip: ingore any use of the sudo command below. Just use the command without it. Most things work that way. And if they don't, try in a Powershell window that you have opened with 'Run as administrator ...'.
 </p>
-<h3><span class="mw-headline" id="Install_a_browser_for_development">Install a browser for development</span></h3>
+## id="Install_a_browser_for_development">Install a browser for development.
 <p>We recommend Chromium browser (Google Chrome open source version) <a rel="nofollow" class="external free" href="https://download-chromium.appspot.com/">https://download-chromium.appspot.com/</a>
-Please, read <a href="/dev/Moodle_Mobile_development_using_Chrome_or_Chromium" title="Moodle Mobile development using Chrome or Chromium">Moodle_Mobile_development_using_Chrome_or_Chromium</a> for more information
 </p>
 <h3><span class="mw-headline" id="Install_git">Install git</span></h3>
 <p><a rel="nofollow" class="external free" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>
