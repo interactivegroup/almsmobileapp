@@ -53,7 +53,7 @@ for (i = 0; i < coll.length; i++) {
 <li class="toclevel-1 tocsection-13"><a href="#Updating_plugins"><span class="tocnumber">7</span> <span class="toctext">Updating plugins</span></a></li>
 <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
 <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext collapsible">Troubleshooting</span></a>
+<li class="toclevel-1 tocsection-16"><a><span class="tocnumber">10</span> <span class="toctext collapsible">Troubleshooting</span></a>
 <div class="content">
 <ul>
 <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
