@@ -1,4 +1,47 @@
-<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2>
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+
+<body>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<h2><button type="button" class="collapsible">Contents</button></h2>
+<div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a>
@@ -18,7 +61,8 @@
 <li class="toclevel-1 tocsection-13"><a href="#Updating_plugins"><span class="tocnumber">7</span> <span class="toctext">Updating plugins</span></a></li>
 <li class="toclevel-1 tocsection-14"><a href="#Building_for_Android_and_iOS"><span class="tocnumber">8</span> <span class="toctext">Building for Android and iOS</span></a></li>
 <li class="toclevel-1 tocsection-15"><a href="#Compiling_using_AOT"><span class="tocnumber">9</span> <span class="toctext">Compiling using AOT</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext">Troubleshooting</span></a>
+<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">10</span> <span class="toctext collapsible">Troubleshooting</span></a>
+<div>
 <ul>
 <li class="toclevel-2 tocsection-17"><a href="#Strange_NPM_errors"><span class="tocnumber">10.1</span> <span class="toctext">Strange NPM errors</span></a></li>
 <li class="toclevel-2 tocsection-18"><a href="#Error:_libsass_bindings_not_found._Try_reinstalling_node-sass.3F"><span class="tocnumber">10.2</span> <span class="toctext">Error: libsass bindings not found. Try reinstalling node-sass?</span></a></li>
@@ -40,6 +84,7 @@
 <li class="toclevel-2 tocsection-34"><a href="#Windows:_npm_start_hangs_after_.22Starting_.27watch.27.22"><span class="tocnumber">10.18</span> <span class="toctext">Windows: npm start hangs after "Starting 'watch'"</span></a></li>
 </ul>
 </li>
+</div>
 <li class="toclevel-1 tocsection-35"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
 </ul>
 </div>
@@ -197,7 +242,10 @@ If the build fails, please run <pre>npx cordova requirements</pre> to check that
 <pre class="php" style="font-family:monospace;">npm run ionic<span style="color: #339933;">:</span>build <span style="color: #339933;">--</span> <span style="color: #339933;">--</span>prod</pre>
 <p>This command will generate the app files and put them inside <i>www</i> folder. If you now want to install that app in a real device you can run "<i>npx cordova run android</i>" or "<i>npx cordova build ios</i>" (please don't use "<i>npx ionic cordova ...</i>" nor "<i>npm start</i>" because it will override your build files!).
 </p>
-<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+
+<h3><button type="button" id="Troubleshooting" class="collapsible mw-headline">Troubleshooting</button></h3>
+<div>
+<h2><span ></span></h2>
 <h3><span class="mw-headline" id="Strange_NPM_errors">Strange NPM errors</span></h3>
 <p>To get more debug output from npm commands, see <a rel="nofollow" class="external free" href="https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties">https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties</a>. In particular try adding <tt>--loglevel verbose</tt> (or <tt>--loglevel info</tt> or <tt>--loglevel silly</tt>) to the command-line.
 </p>
@@ -309,3 +357,5 @@ npx cordova plugin add cordova-plugin-file@6.0.1
 </p>
 <pre> npx gulp watch &amp; npx ionic-app-scripts serve -b --devapp --address=0.0.0.0
 </pre>
+</div>
+</body>
