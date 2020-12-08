@@ -138,7 +138,7 @@ export interface CoreAppSchema {
  */
 @Injectable()
 export class CoreAppProvider {
-    protected DBNAME = 'MoodleMobile';
+    protected DBNAME = 'AlmsMobile';
     protected db: SQLiteDB;
     protected logger;
     protected ssoAuthenticationPromise: Promise<any>;
