@@ -185,7 +185,7 @@ export type AddonModLabelLabel = {
     course: number; // Course id.
     name: string; // Label name.
     intro: string; // Label contents.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles: CoreWSExternalFile[];
     timemodified: number; // Last time the label was modified.
     section: number; // Course section id.

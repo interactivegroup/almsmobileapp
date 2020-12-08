@@ -35,7 +35,7 @@ export class AddonModFolderModuleHandler implements CoreCourseModuleHandler {
         [CoreConstants.FEATURE_COMPLETION_TRACKS_VIEWS]: true,
         [CoreConstants.FEATURE_GRADE_HAS_GRADE]: false,
         [CoreConstants.FEATURE_GRADE_OUTCOMES]: false,
-        [CoreConstants.FEATURE_BACKUP_MOODLE2]: true,
+        [CoreConstants.FEATURE_BACKUP_ALMS]: true,
         [CoreConstants.FEATURE_SHOW_DESCRIPTION]: true
     };
 

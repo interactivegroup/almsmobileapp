@@ -458,7 +458,7 @@ export type AddonModBookBook = {
     course: number; // Course id.
     name: string; // Book name.
     intro: string; // The Book intro.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles?: CoreWSExternalFile[]; // @since 3.2.
     numbering: number; // Book numbering configuration.
     navstyle: number; // Book navigation style configuration.

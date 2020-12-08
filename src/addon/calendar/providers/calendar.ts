@@ -1911,7 +1911,7 @@ export type AddonCalendarEventBase = {
     id: number; // Id.
     name: string; // Name.
     description?: string; // Description.
-    descriptionformat: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     location?: string; // @since 3.6. Location.
     categoryid?: number; // Categoryid.
     groupid?: number; // Groupid.
@@ -1950,7 +1950,7 @@ export type AddonCalendarEventBase = {
         shortname: string; // Shortname.
         idnumber: string; // Idnumber.
         summary: string; // Summary.
-        summaryformat: number; // Summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+        summaryformat: number; // Summary format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
         startdate: number; // Startdate.
         enddate: number; // Enddate.
         visible: boolean; // @since 3.8. Visible.
@@ -2163,7 +2163,7 @@ export type AddonCalendarGetEventsEvent = {
     id: number; // Event id.
     name: string; // Event name.
     description?: string; // Description.
-    format: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    format: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     courseid: number; // Course id.
     categoryid?: number; // @since 3.4. Category id (only for category events).
     groupid: number; // Group id.

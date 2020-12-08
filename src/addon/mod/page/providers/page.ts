@@ -174,10 +174,10 @@ export type AddonModPagePage = {
     course: number; // Course id.
     name: string; // Page name.
     intro: string; // Summary.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles: CoreWSExternalFile[];
     content: string; // Page content.
-    contentformat: number; // Content format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    contentformat: number; // Content format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     contentfiles: CoreWSExternalFile[];
     legacyfiles: number; // Legacy files flag.
     legacyfileslast: number; // Legacy files last control flag.

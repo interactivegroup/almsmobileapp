@@ -178,7 +178,7 @@ export type AddonModResourceResource = {
     course: number; // Course id.
     name: string; // Page name.
     intro: string; // Summary.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles: CoreWSExternalFile[];
     contentfiles: CoreWSExternalFile[];
     tobemigrated: number; // Whether this resource was migrated.

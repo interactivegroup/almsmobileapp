@@ -39,7 +39,7 @@ export class AddonModH5PActivityModuleHandler implements CoreCourseModuleHandler
         [CoreConstants.FEATURE_MODEDIT_DEFAULT_COMPLETION]: true,
         [CoreConstants.FEATURE_GRADE_HAS_GRADE]: true,
         [CoreConstants.FEATURE_GRADE_OUTCOMES]: true,
-        [CoreConstants.FEATURE_BACKUP_MOODLE2]: true,
+        [CoreConstants.FEATURE_BACKUP_ALMS]: true,
     };
 
     /**

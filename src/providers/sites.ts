@@ -323,7 +323,7 @@ export class CoreSitesProvider {
 
     // Constants to validate a site version.
     protected WORKPLACE_APP = 3;
-    protected MOODLE_APP = 2;
+    protected ALMS_APP = 1;
     protected VALID_VERSION = 1;
     protected INVALID_VERSION = -1;
 
@@ -617,7 +617,7 @@ export class CoreSitesProvider {
 
             if (data === null) {
                 // Cannot connect.
-                return Promise.reject({error: this.translate.instant('core.cannotconnect', {$a: CoreSite.MINIMUM_MOODLE_VERSION})});
+                return Promise.reject({error: this.translate.instant('core.cannotconnect', {$a: CoreSite.MINIMUM_ALMS_VERSION})});
             }
 
             if (data.errorcode && (data.errorcode == 'enablewsdescription' || data.errorcode == 'requirecorrectaccess')) {
@@ -800,7 +800,7 @@ export class CoreSitesProvider {
             translateParams;
 
         switch (result) {
-            case this.MOODLE_APP:
+            case this.ALMS_APP:
                 errorKey = 'core.login.connecttomoodleapp';
                 errorCode = 'connecttomoodleapp';
                 break;
@@ -811,7 +811,7 @@ export class CoreSitesProvider {
             default:
                 errorCode = 'invalidmoodleversion';
                 errorKey = 'core.login.invalidmoodleversion';
-                translateParams = {$a: CoreSite.MINIMUM_MOODLE_VERSION};
+                translateParams = {$a: CoreSite.MINIMUM_ALMS_VERSION};
         }
 
         let promise;
@@ -871,7 +871,7 @@ export class CoreSitesProvider {
      * Check for the minimum required version.
      *
      * @param info Site info.
-     * @return Either VALID_VERSION, WORKPLACE_APP, MOODLE_APP or INVALID_VERSION.
+     * @return Either VALID_VERSION, WORKPLACE_APP, ALMS_APP or INVALID_VERSION.
      */
     protected isValidMoodleVersion(info: any): number {
         if (!info) {
@@ -879,7 +879,7 @@ export class CoreSitesProvider {
         }
 
         const version31 = 2016052300,
-            release31 = CoreSite.MINIMUM_MOODLE_VERSION;
+            release31 = CoreSite.MINIMUM_ALMS_VERSION;
 
         // Try to validate by version.
         if (info.version) {
@@ -904,10 +904,10 @@ export class CoreSitesProvider {
     }
 
     /**
-     * Check if needs to be redirected to specific Workplace App or general Moodle App.
+     * Check if needs to be redirected to specific Workplace App or general ALMS App.
      *
      * @param info Site info.
-     * @return Either VALID_VERSION, WORKPLACE_APP or MOODLE_APP.
+     * @return Either VALID_VERSION, WORKPLACE_APP or ALMS_APP.
      */
     protected validateWorkplaceVersion(info: any): number {
         const isWorkplace = !!info.functions && info.functions.some((func) => {
@@ -924,7 +924,7 @@ export class CoreSitesProvider {
         }
 
         if (this.isWPApp && !isWorkplace) {
-            return this.MOODLE_APP;
+            return this.ALMS_APP;
         }
 
         return this.VALID_VERSION;

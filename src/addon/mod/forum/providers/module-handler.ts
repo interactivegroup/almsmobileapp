@@ -39,7 +39,7 @@ export class AddonModForumModuleHandler implements CoreCourseModuleHandler {
         [CoreConstants.FEATURE_COMPLETION_HAS_RULES]: true,
         [CoreConstants.FEATURE_GRADE_HAS_GRADE]: true,
         [CoreConstants.FEATURE_GRADE_OUTCOMES]: true,
-        [CoreConstants.FEATURE_BACKUP_MOODLE2]: true,
+        [CoreConstants.FEATURE_BACKUP_ALMS]: true,
         [CoreConstants.FEATURE_SHOW_DESCRIPTION]: true,
         [CoreConstants.FEATURE_RATE]: true,
         [CoreConstants.FEATURE_PLAGIARISM]: true

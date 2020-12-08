@@ -520,7 +520,7 @@ export type AddonNotificationsGetMessagesMessage = {
     subject: string; // The message subject.
     text: string; // The message text formated.
     fullmessage: string; // The message.
-    fullmessageformat: number; // Fullmessage format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    fullmessageformat: number; // Fullmessage format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     fullmessagehtml: string; // The message in html.
     smallmessage: string; // The shorten message.
     notification: number; // Is a notification?.
@@ -560,7 +560,7 @@ export type AddonNotificationsPopupNotification = {
     shortenedsubject: string; // The notification subject shortened with ellipsis.
     text: string; // The message text formated.
     fullmessage: string; // The message.
-    fullmessageformat: number; // Fullmessage format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    fullmessageformat: number; // Fullmessage format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     fullmessagehtml: string; // The message in html.
     smallmessage: string; // The shorten message.
     contexturl: string; // Context URL.

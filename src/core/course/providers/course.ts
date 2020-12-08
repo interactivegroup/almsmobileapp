@@ -1171,7 +1171,7 @@ export type CoreCourseSummary = {
     shortname: string; // Shortname.
     idnumber: string; // Idnumber.
     summary: string; // @since 3.3. Summary.
-    summaryformat: number; // @since 3.3. Summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    summaryformat: number; // @since 3.3. Summary format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     startdate: number; // @since 3.3. Startdate.
     enddate: number; // @since 3.3. Enddate.
     visible: boolean; // @since 3.8. Visible.

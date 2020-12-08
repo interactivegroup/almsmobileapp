@@ -337,7 +337,7 @@ export type AddonModImscpImscp = {
     course: number; // Course id.
     name: string; // Activity name.
     intro?: string; // The IMSCP intro.
-    introformat?: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat?: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles?: CoreWSExternalFile[]; // @since 3.2.
     revision?: number; // Revision.
     keepold?: number; // Number of old IMSCP to keep.

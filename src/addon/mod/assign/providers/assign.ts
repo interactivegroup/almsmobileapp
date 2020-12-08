@@ -1337,10 +1337,10 @@ export type AddonModAssignAssign = {
     requiresubmissionstatement: number; // Student must accept submission statement.
     preventsubmissionnotingroup?: number; // @since 3.2. Prevent submission not in group.
     submissionstatement?: string; // @since 3.2. Submission statement formatted.
-    submissionstatementformat?: number; // @since 3.2. Submissionstatement format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    submissionstatementformat?: number; // @since 3.2. Submissionstatement format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     configs: AddonModAssignConfig[]; // Configuration settings.
     intro?: string; // Assignment intro, not allways returned because it deppends on the activity configuration.
-    introformat?: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat?: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles?: CoreWSExternalFile[]; // @since 3.2.
     introattachments?: CoreWSExternalFile[];
 };
@@ -1403,7 +1403,7 @@ export type AddonModAssignPlugin = {
         name: string; // Field name.
         description: string; // Field description.
         text: string; // Field value.
-        format: number; // Text format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+        format: number; // Text format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     }[];
 };
 
@@ -1485,7 +1485,7 @@ export type AddonModAssignParticipant = {
     lastaccess?: number; // Last access to the site (0 if never).
     suspended?: boolean; // @since 3.2. Suspend user account, either false to enable user login or true to disable it.
     description?: string; // User profile description.
-    descriptionformat?: number; // Int format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat?: number; // Int format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     city?: string; // Home city of the user.
     url?: string; // URL of the user.
     country?: string; // Home country code of the user, such as AU or CZ.

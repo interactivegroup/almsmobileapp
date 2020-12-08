@@ -160,7 +160,7 @@ export type AddonModFolderFolder = {
     course: number; // Course id.
     name: string; // Page name.
     intro: string; // Summary.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles: CoreWSExternalFile[];
     revision: number; // Incremented when after each file changes, to avoid cache.
     timemodified: number; // Last time the folder was modified.

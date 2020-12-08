@@ -34,7 +34,7 @@ export class AddonModWorkshopModuleHandler implements CoreCourseModuleHandler {
         [CoreConstants.FEATURE_MOD_INTRO]: true,
         [CoreConstants.FEATURE_COMPLETION_TRACKS_VIEWS]: true,
         [CoreConstants.FEATURE_GRADE_HAS_GRADE]: true,
-        [CoreConstants.FEATURE_BACKUP_MOODLE2]: true,
+        [CoreConstants.FEATURE_BACKUP_ALMS]: true,
         [CoreConstants.FEATURE_SHOW_DESCRIPTION]: true,
         [CoreConstants.FEATURE_PLAGIARISM]: true
     };

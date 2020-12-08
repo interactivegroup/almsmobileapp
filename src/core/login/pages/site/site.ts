@@ -281,9 +281,9 @@ export class CoreLoginSitePage {
             }
         ];
 
-        // @TODO: Remove CoreSite.MINIMUM_MOODLE_VERSION, not used on translations since 3.9.0.
+        // @TODO: Remove CoreSite.MINIMUM_ALMS_VERSION, not used on translations since 3.9.0.
         this.domUtils.showAlertWithOptions({
-            title: this.translate.instant('core.cannotconnect', {$a: CoreSite.MINIMUM_MOODLE_VERSION}),
+            title: this.translate.instant('core.cannotconnect', {$a: CoreSite.MINIMUM_ALMS_VERSION}),
             message,
             buttons,
         });

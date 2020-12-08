@@ -133,7 +133,7 @@ export type AddonBlogPost = {
     coursemoduleid: number; // Course module id where the post was created.
     subject: string; // Post subject.
     summary: string; // Post summary.
-    summaryformat: number; // Summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    summaryformat: number; // Summary format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     content: string; // Post content.
     uniquehash: string; // Post unique hash.
     rating: number; // Post rating.

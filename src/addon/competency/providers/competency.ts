@@ -625,7 +625,7 @@ export class AddonCompetencyProvider {
 export type AddonCompetencyPlan = {
     name: string; // Name.
     description: string; // Description.
-    descriptionformat: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     userid: number; // Userid.
     templateid: number; // Templateid.
     origtemplateid: number; // Origtemplateid.
@@ -669,7 +669,7 @@ export type AddonCompetencyPlan = {
 export type AddonCompetencyTemplate = {
     shortname: string; // Shortname.
     description: string; // Description.
-    descriptionformat: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     duedate: number; // Duedate.
     visible: boolean; // Visible.
     contextid: number; // Contextid.
@@ -693,7 +693,7 @@ export type AddonCompetencyCompetency = {
     shortname: string; // Shortname.
     idnumber: string; // Idnumber.
     description: string; // Description.
-    descriptionformat: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     sortorder: number; // Sortorder.
     parentid: number; // Parentid.
     path: string; // Path.
@@ -826,7 +826,7 @@ export type AddonCompetencyFramework = {
     shortname: string; // Shortname.
     idnumber: string; // Idnumber.
     description: string; // Description.
-    descriptionformat: number; // Description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    descriptionformat: number; // Description format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     visible: boolean; // Visible.
     scaleid: number; // Scaleid.
     scaleconfiguration: string; // Scaleconfiguration.

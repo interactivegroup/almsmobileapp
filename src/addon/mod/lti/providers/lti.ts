@@ -270,7 +270,7 @@ export type AddonModLtiLti = {
     course: number; // Course id.
     name: string; // LTI name.
     intro?: string; // The LTI intro.
-    introformat?: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat?: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles?: CoreWSExternalFile[]; // @since 3.2.
     timecreated?: number; // Time of creation.
     timemodified?: number; // Time of last modification.

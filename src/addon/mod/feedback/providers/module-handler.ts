@@ -36,7 +36,7 @@ export class AddonModFeedbackModuleHandler implements CoreCourseModuleHandler {
         [CoreConstants.FEATURE_COMPLETION_HAS_RULES]: true,
         [CoreConstants.FEATURE_GRADE_HAS_GRADE]: false,
         [CoreConstants.FEATURE_GRADE_OUTCOMES]: false,
-        [CoreConstants.FEATURE_BACKUP_MOODLE2]: true,
+        [CoreConstants.FEATURE_BACKUP_ALMS]: true,
         [CoreConstants.FEATURE_SHOW_DESCRIPTION]: true
     };
 

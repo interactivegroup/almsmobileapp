@@ -427,7 +427,7 @@ export type AddonNotesNote = {
     courseid: number; // Id of the course.
     userid: number; // User id.
     content: string; // The content text formated.
-    format: number; // Content format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    format: number; // Content format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     created: number; // Time created (timestamp).
     lastmodified: number; // Time of last modification (timestamp).
     usermodified: number; // User id of the creator of this note.

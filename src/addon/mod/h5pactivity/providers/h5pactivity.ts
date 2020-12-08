@@ -603,7 +603,7 @@ export type AddonModH5PActivityData = {
     timecreated?: number; // Timestamp of when the instance was added to the course.
     timemodified?: number; // Timestamp of when the instance was last modified.
     intro: string; // H5P activity description.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     grade?: number; // The maximum grade for submission.
     displayoptions: number; // H5P Button display options.
     enabletracking: number; // Enable xAPI tracking.

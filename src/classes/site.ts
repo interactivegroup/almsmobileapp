@@ -210,7 +210,7 @@ export class CoreSite {
         3.6: 2018120300,
         3.7: 2019052000
     };
-    static MINIMUM_ALMS_VERSION = '3.1';
+    static MINIMUM_ALMS_VERSION = '1.0';
 
     // Possible cache update frequencies.
     protected UPDATE_FREQUENCIES = [

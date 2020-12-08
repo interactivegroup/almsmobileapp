@@ -244,7 +244,7 @@ export type AddonModUrlUrl = {
     course: number; // Course id.
     name: string; // URL name.
     intro: string; // Summary.
-    introformat: number; // Intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).
+    introformat: number; // Intro format (1 = HTML, 0 = ALMS, 2 = PLAIN or 4 = MARKDOWN).
     introfiles: CoreWSExternalFile[];
     externalurl: string; // External URL.
     display: number; // How to display the url.
