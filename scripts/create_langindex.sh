@@ -41,7 +41,7 @@ function exists_in_file {
     found=0
 }
 
-#Checks if a key exists on the original local_moodlemobileapp.php
+#Checks if a key exists on the original local_almsmobileapp.php
 function exists_in_mobile {
     local file='local_almsmobileapp'
     exists_in_file $file $key

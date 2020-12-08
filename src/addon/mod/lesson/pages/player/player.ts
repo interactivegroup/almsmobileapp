@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import { CoreDomUtilsProvider } from '@providers/utils/dom';
 import { CoreTimeUtilsProvider } from '@providers/utils/time';
 import { CoreUrlUtilsProvider } from '@providers/utils/url';
 import { CoreUtilsProvider } from '@providers/utils/utils';
-import { MoodleMobileApp } from '../../../../../app/app.component';
+import { AlmsMobileApp } from '../../../../../app/app.component';
 import { AddonModLessonProvider } from '../../providers/lesson';
 import { AddonModLessonOfflineProvider } from '../../providers/lesson-offline';
 import { AddonModLessonSyncProvider } from '../../providers/lesson-sync';
@@ -87,7 +87,7 @@ export class AddonModLessonPlayerPage implements OnInit, OnDestroy {
             protected lessonOfflineProvider: AddonModLessonOfflineProvider, protected cdr: ChangeDetectorRef,
             modalCtrl: ModalController, protected navCtrl: NavController, protected appProvider: CoreAppProvider,
             protected utils: CoreUtilsProvider, protected urlUtils: CoreUrlUtilsProvider, protected fb: FormBuilder,
-            protected mmApp: MoodleMobileApp) {
+            protected mmApp: AlmsMobileApp) {
 
         this.lessonId = navParams.get('lessonId');
         this.courseId = navParams.get('courseId');

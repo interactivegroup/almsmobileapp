@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -214,7 +214,7 @@ export class CoreIframeUtilsProvider {
      * @param event Message event.
      */
     handleIframeMessage(event: MessageEvent): void {
-        if (!event.data || event.data.environment != 'moodleapp' || event.data.context != 'iframe') {
+        if (!event.data || event.data.environment != 'almsmobileapp' || event.data.context != 'iframe') {
             return;
         }
 

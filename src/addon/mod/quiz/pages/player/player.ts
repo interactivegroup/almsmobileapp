@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import { CoreDomUtilsProvider } from '@providers/utils/dom';
 import { CoreTimeUtilsProvider } from '@providers/utils/time';
 import { CoreQuestionHelperProvider } from '@core/question/providers/helper';
 import { CoreQuestionComponent } from '@core/question/components/question/question';
-import { MoodleMobileApp } from '../../../../../app/app.component';
+import { AlmsMobileApp } from '../../../../../app/app.component';
 import { AddonModQuizProvider } from '../../providers/quiz';
 import { AddonModQuizSyncProvider } from '../../providers/quiz-sync';
 import { AddonModQuizHelperProvider } from '../../providers/helper';
@@ -82,7 +82,7 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy {
             protected timeUtils: CoreTimeUtilsProvider, protected quizProvider: AddonModQuizProvider,
             protected quizHelper: AddonModQuizHelperProvider, protected quizSync: AddonModQuizSyncProvider,
             protected questionHelper: CoreQuestionHelperProvider, protected cdr: ChangeDetectorRef,
-            modalCtrl: ModalController, protected navCtrl: NavController,  protected mmApp: MoodleMobileApp) {
+            modalCtrl: ModalController, protected navCtrl: NavController,  protected mmApp: AlmsMobileApp) {
 
         this.quizId = navParams.get('quizId');
         this.courseId = navParams.get('courseId');
