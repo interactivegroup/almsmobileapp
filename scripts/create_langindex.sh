@@ -43,7 +43,7 @@ function exists_in_file {
 
 #Checks if a key exists on the original local_moodlemobileapp.php
 function exists_in_mobile {
-    local file='local_moodlemobileapp'
+    local file='local_almsmobileapp'
     exists_in_file $file $key
 }
 
@@ -82,8 +82,8 @@ function find_matches {
         return
     fi
 
-    print_message "No match found for $key add it to local_moodlemobileapp"
-    save_key $key "local_moodlemobileapp"
+    print_message "No match found for $key add it to local_almsmobileapp"
+    save_key $key "local_almsmobileapp"
 }
 
 function find_single_matches {
@@ -94,7 +94,7 @@ function find_single_matches {
     fi
 
     do_match " = \'$value\'"
-    if [ ! -z $filematch ] && [ $filematch != 'local_moodlemobileapp' ]; then
+    if [ ! -z $filematch ] && [ $filematch != 'local_almsmobileapp' ]; then
         case=2
         print_message "Found some string VALUES for $key in the following paths $filematch"
         tput setaf 6
@@ -121,14 +121,14 @@ function guess_file {
 
     if [ -z "$plainid" ]; then
         plainid=$component
-        component='moodle'
+        component='alms'
     fi
 
     exists_in_file $component $plainid
 
     if [ $found == 0 ]; then
         tempid=`echo $plainid | sed s/^mod_//1`
-        if [ $component == 'moodle' ] && [ "$tempid" != "$plainid" ]; then
+        if [ $component == 'alms' ] && [ "$tempid" != "$plainid" ]; then
             exists_in_file $plainid pluginname
 
             if [ $found != 0 ]; then
@@ -137,7 +137,7 @@ function guess_file {
         fi
     fi
 
-    # Not found in file, try in local_moodlemobileapp
+    # Not found in file, try in local_almsmobileapp
     if [ $found == 0 ]; then
         exists_in_mobile
     fi
@@ -149,7 +149,7 @@ function guess_file {
 
     # Last fallback.
     if [ $found == 0 ]; then
-        exists_in_file 'moodle' $plainid
+        exists_in_file 'alms' $plainid
     fi
 
     if [ $found == 0 ]; then
@@ -200,7 +200,7 @@ function find_better_file {
 
     if [ -z "$plainid" ]; then
         plainid=$component
-        component='moodle'
+        component='alms'
     fi
 
     local currentFile=`echo $current | cut -d'/' -f1`
@@ -228,7 +228,7 @@ function find_better_file {
         return
     fi
 
-    if [ $currentFile == 'local_moodlemobileapp' ]; then
+    if [ $currentFile == 'local_almsmobileapp' ]; then
         exists_in_mobile
     else
         exists_in_file $currentFile $currentStr
@@ -236,10 +236,10 @@ function find_better_file {
 
     if [ $found == 0 ]; then
         print_error "Indexed string '$key' not found on current place '$current'"
-        if [ $currentFile != 'local_moodlemobileapp' ]; then
+        if [ $currentFile != 'local_almsmobileapp' ]; then
             print_error "Execute this on AMOS
-            CPY [$currentStr,$currentFile],[$key,local_moodlemobileapp]"
-            save_key $key "local_moodlemobileapp"
+            CPY [$currentStr,$currentFile],[$key,local_almsmobileapp]"
+            save_key $key "local_almsmobileapp"
         fi
     fi
 }
@@ -262,7 +262,7 @@ function parse_file {
                 exec="jq -r .\"$key\" $1"
                 value=`$exec`
                 find_better_file "$key" "$value" "$found"
-            elif [ "$found" != 'local_moodlemobileapp' ]; then
+            elif [ "$found" != 'local_almsmobileapp' ]; then
                 current_translation_exists "$key" "$found" "$1"
             fi
         fi

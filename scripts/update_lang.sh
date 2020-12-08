@@ -12,12 +12,12 @@ git pull
 popd
 
 print_title 'Getting local mobile langs'
-git clone --depth 1 https://github.com/moodlehq/moodle-local_moodlemobileapp.git ../../moodle-local_moodlemobileapp
+git clone --depth 1 https://github.com/interactivegroup/almsmobileapp.git ../../alms-local_almsmobileapp
 
 if [ -z $forceLang ]; then
-    php -f moodle_to_json.php
+    php -f alms_to_json.php
 else
-    php -f moodle_to_json.php "$forceLang"
+    php -f alms_to_json.php "$forceLang"
 fi
 
 print_ok 'All done!'

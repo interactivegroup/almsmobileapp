@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
-import { MoodleMobileApp } from './app.component';
+import { AlmsMobileApp } from './app.component';
 import { CoreInterceptor } from '@classes/interceptor';
 import { CorePageTransition } from '@classes/page-transition';
 import { CoreModalLateralTransition } from '@classes/modal-lateral-transition';
@@ -201,13 +201,13 @@ export const WP_PROVIDER: any = null;
 
 @NgModule({
     declarations: [
-        MoodleMobileApp
+        AlmsMobileApp
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule, // HttpClient is used to make JSON requests. It fails for HEAD requests because there is no content.
-        IonicModule.forRoot(MoodleMobileApp, {
+        IonicModule.forRoot(AlmsMobileApp, {
             pageTransition: 'core-page-transition'
         }),
         TranslateModule.forRoot({
@@ -311,7 +311,7 @@ export const WP_PROVIDER: any = null;
     ],
     bootstrap: [IonicApp],
     entryComponents: [
-        MoodleMobileApp
+        AlmsMobileApp
     ],
     providers: [
         CoreLoggerProvider,

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,12 +86,12 @@ export interface CoreSiteWSPreSets {
     uniqueCacheKey?: boolean;
 
     /**
-     * Whether to filter WS response (moodlewssettingfilter). Defaults to true.
+     * Whether to filter WS response (almswssettingfilter). Defaults to true.
      */
     filter?: boolean;
 
     /**
-     * Whether to rewrite URLs (moodlewssettingfileurl). Defaults to true.
+     * Whether to rewrite URLs (almswssettingfileurl). Defaults to true.
      */
     rewriteurls?: boolean;
 
@@ -200,8 +200,8 @@ export class CoreSite {
     static WS_CACHE_TABLE = 'wscache';
     static CONFIG_TABLE = 'core_site_config';
 
-    // Versions of Moodle releases.
-    protected MOODLE_RELEASES = {
+    // Versions of alms releases.
+    protected ALMS_RELEASES = {
         3.1: 2016052300,
         3.2: 2016120500,
         3.3: 2017051503,
@@ -210,7 +210,7 @@ export class CoreSite {
         3.6: 2018120300,
         3.7: 2019052000
     };
-    static MINIMUM_MOODLE_VERSION = '3.1';
+    static MINIMUM_ALMS_VERSION = '3.1';
 
     // Possible cache update frequencies.
     protected UPDATE_FREQUENCIES = [
@@ -529,7 +529,7 @@ export class CoreSite {
     }
 
     /**
-     * Fetch site info from the Moodle site.
+     * Fetch site info from the Alms site.
      *
      * @return A promise to be resolved when the site info is retrieved.
      */
@@ -548,7 +548,7 @@ export class CoreSite {
     }
 
     /**
-     * Read some data from the Moodle site using WS. Requests are cached by default.
+     * Read some data from the Alms site using WS. Requests are cached by default.
      *
      * @param method WS method to use.
      * @param data Data to send to the WS.
@@ -571,7 +571,7 @@ export class CoreSite {
     }
 
     /**
-     * Sends some data to the Moodle site using WS. Requests are NOT cached by default.
+     * Sends some data to the Alms site using WS. Requests are NOT cached by default.
      *
      * @param method WS method to use.
      * @param data Data to send to the WS.
@@ -658,8 +658,8 @@ export class CoreSite {
         }
 
         // Enable text filtering by default.
-        data.moodlewssettingfilter = preSets.filter === false ? false : true;
-        data.moodlewssettingfileurl = preSets.rewriteurls === false ? false : true;
+        data.almswssettingfilter = preSets.filter === false ? false : true;
+        data.almswssettingfileurl = preSets.rewriteurls === false ? false : true;
 
         const originalData = data;
 
@@ -684,7 +684,7 @@ export class CoreSite {
             if (preSets.forceOffline) {
                 // Don't call the WS, just fail.
                 return Promise.reject(this.wsProvider.createFakeWSError('core.cannotconnect', true,
-                    {$a: CoreSite.MINIMUM_MOODLE_VERSION}));
+                    {$a: CoreSite.MINIMUM_ALMS_VERSION}));
             }
 
             // Call the WS.
@@ -905,7 +905,7 @@ export class CoreSite {
                 // Separate WS settings from function arguments.
                 Object.keys(request.data).forEach((key) => {
                     let value = request.data[key];
-                    const match = /^moodlews(setting.*)$/.exec(key);
+                    const match = /^almsws(setting.*)$/.exec(key);
                     if (match) {
                         if (match[1] == 'settingfilter' || match[1] == 'settingfileurl') {
                             // Undo special treatment of these settings in CoreWSProvider.convertValuesToString.
@@ -1268,7 +1268,7 @@ export class CoreSite {
     }
 
     /**
-     * Generic function for adding the wstoken to Moodle urls and for pointing to the correct script.
+     * Generic function for adding the wstoken to Alms urls and for pointing to the correct script.
      * Uses CoreUtilsProvider.fixPluginfileURL, passing site's token.
      *
      * @param url The url to be fixed.
@@ -1325,10 +1325,10 @@ export class CoreSite {
     }
 
     /**
-     * Returns the URL to the documentation of the app, based on Moodle version and current language.
+     * Returns the URL to the documentation of the app, based on Alms version and current language.
      *
      * @param page Docs page to go to.
-     * @return Promise resolved with the Moodle docs URL.
+     * @return Promise resolved with the Alms docs URL.
      */
     getDocsUrl(page?: string): Promise<string> {
         const release = this.infos.release ? this.infos.release : undefined;
@@ -1349,7 +1349,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if the local_mobile plugin is installed in the Moodle site.
+     * Check if the local_mobile plugin is installed in the Alms site.
      *
      * @param retrying True if we're retrying the check.
      * @return Promise resolved when the check is done.
@@ -1418,7 +1418,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if local_mobile has been installed in Moodle.
+     * Check if local_mobile has been installed in Alms.
      *
      * @return Whether the App is able to use local_mobile plugin for this site.
      */
@@ -1439,7 +1439,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if local_mobile has been installed in Moodle but the app is not using it.
+     * Check if local_mobile has been installed in Alms but the app is not using it.
      *
      * @return Promise resolved it local_mobile was added, rejected otherwise.
      */
@@ -1518,7 +1518,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser using auto-login in the Moodle site if available.
+     * Open a URL in browser using auto-login in the Alms site if available.
      *
      * @param url The URL to open.
      * @param alertMessage If defined, an alert will be shown before opening the browser.
@@ -1529,7 +1529,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in browser using auto-login in the Alms site if available and the URL belongs to the site.
      *
      * @param url The URL to open.
      * @param alertMessage If defined, an alert will be shown before opening the browser.
@@ -1540,7 +1540,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in inappbrowser using auto-login in the Moodle site if available.
+     * Open a URL in inappbrowser using auto-login in the Alms site if available.
      *
      * @param url The URL to open.
      * @param options Override default options passed to InAppBrowser.
@@ -1552,7 +1552,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in inappbrowser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in inappbrowser using auto-login in the Alms site if available and the URL belongs to the site.
      *
      * @param url The URL to open.
      * @param options Override default options passed to inappbrowser.
@@ -1564,7 +1564,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser or InAppBrowser using auto-login in the Moodle site if available.
+     * Open a URL in browser or InAppBrowser using auto-login in the Alms site if available.
      *
      * @param inApp True to open it in InAppBrowser, false to open in browser.
      * @param url The URL to open.
@@ -1603,7 +1603,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser or InAppBrowser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in browser or InAppBrowser using auto-login in the Alms site if available and the URL belongs to the site.
      *
      * @param inApp True to open it in InAppBrowser, false to open in browser.
      * @param url The URL to open.
@@ -1832,7 +1832,7 @@ export class CoreSite {
 
     /**
      * Get a version number from a release version.
-     * If release version is valid but not found in the list of Moodle releases, it will use the last released major version.
+     * If release version is valid but not found in the list of Alms releases, it will use the last released major version.
      *
      * @param version Release version to convert to version number.
      * @return Version number, 0 if invalid.
@@ -1845,12 +1845,12 @@ export class CoreSite {
             return 0;
         }
 
-        if (typeof this.MOODLE_RELEASES[data.major] == 'undefined') {
+        if (typeof this.ALMS_RELEASES[data.major] == 'undefined') {
             // Major version not found. Use the last one.
-            data.major = Object.keys(this.MOODLE_RELEASES).slice(-1);
+            data.major = Object.keys(this.ALMS_RELEASES).slice(-1);
         }
 
-        return this.MOODLE_RELEASES[data.major] + data.minor;
+        return this.ALMS_RELEASES[data.major] + data.minor;
     }
 
     /**
@@ -1880,7 +1880,7 @@ export class CoreSite {
      */
     protected getNextMajorVersionNumber(version: string): number {
         const data = this.getMajorAndMinor(version),
-            releases = Object.keys(this.MOODLE_RELEASES);
+            releases = Object.keys(this.ALMS_RELEASES);
         let position;
 
         if (!data) {
@@ -1892,10 +1892,10 @@ export class CoreSite {
 
         if (position == -1 || position == releases.length - 1) {
             // Major version not found or it's the last one. Use the last one.
-            return this.MOODLE_RELEASES[releases[position]];
+            return this.ALMS_RELEASES[releases[position]];
         }
 
-        return this.MOODLE_RELEASES[releases[position + 1]];
+        return this.ALMS_RELEASES[releases[position + 1]];
     }
 
     /**

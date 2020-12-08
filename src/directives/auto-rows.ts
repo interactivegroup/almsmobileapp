@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
 
 /**
- * Directive to adapt a textarea rows depending on the input text. It's based on Moodle's data-auto-rows.
+ * Directive to adapt a textarea rows depending on the input text. It's based on Alms's data-auto-rows.
  *
  * @description
  * Usage:

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -69,7 +69,7 @@ export class CoreDelegate {
 
     /**
      * Name of the property to be used to index the handlers. By default, the handler's name will be used.
-     * If your delegate uses a Moodle component name to identify the handlers, please override this property.
+     * If your delegate uses a Alms component name to identify the handlers, please override this property.
      * E.g. CoreCourseModuleDelegate uses 'modName' to index the handlers.
      */
     protected handlerNameProperty = 'name';

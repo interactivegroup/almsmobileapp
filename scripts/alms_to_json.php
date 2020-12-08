@@ -1,29 +1,29 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Alms - http://lms.aldermin.com/
 //
-// Moodle is free software: you can redistribute it and/or modify
+// Alms is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Moodle is distributed in the hope that it will be useful,
+// Alms is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with Alms.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Script for converting moodle strings to json.
+ * Script for converting alms strings to json.
  */
 
 // Check we are in CLI.
 if (isset($_SERVER['REMOTE_ADDR'])) {
     exit(1);
 }
-define('MOODLE_INTERNAL', 1);
-define('LANGPACKSFOLDER', '../../moodle-langpacks');
+define('ALMS_INTERNAL', 1);
+define('LANGPACKSFOLDER', '../../alms-langpacks');
 define('ASSETSPATH', '../src/assets/lang/');
 define('CONFIG', '../src/config.json');
 define('OVERRIDE_LANG_SUFIX', false);

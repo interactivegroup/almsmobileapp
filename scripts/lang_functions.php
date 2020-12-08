@@ -11,11 +11,16 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
-// You should have received a copy of the GNU General Public License
+// You should have r eceived a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Helper functions converting moodle strings to json.
+ * Script for getting the PHP structure of a WS returns or params.
+ *
+ * The first parameter (required) is the path to the Alms installation to use.
+ * The second parameter (required) is the name to the WS to convert.
+ * The third parameter (optional) is a number: 1 to convert the params structure,
+ * 0 to convert the returns structure. Defaults to 0.
  */
 
 function detect_languages($languages, $keys) {
@@ -65,7 +70,7 @@ function get_langindex_keys() {
 
     foreach ($keys as $key => $value) {
         $map = new StdClass();
-        if ($value == 'local_moodlemobileapp') {
+        if ($value == 'local_almsmobileapp') {
             $map->file = $value;
             $map->string = $key;
             $local++;
@@ -216,12 +221,12 @@ function build_lang($lang, $keys) {
             continue;
         }
 
-        if (!isset($string[$value->string]) || ($lang == 'en' && $value->file == 'local_moodlemobileapp')) {
+        if (!isset($string[$value->string]) || ($lang == 'en' && $value->file == 'local_almsmobileapp')) {
             // Not yet translated. Do not override.
             if ($langFile && is_array($langFile) && isset($langFile[$key])) {
                 $translations[$key] = $langFile[$key];
 
-                if ($value->file == 'local_moodlemobileapp') {
+                if ($value->file == 'local_almsmobileapp') {
                     $local++;
                 }
             }
@@ -233,15 +238,15 @@ function build_lang($lang, $keys) {
             $text = $string[$value->string];
         }
 
-        if ($value->file != 'local_moodlemobileapp') {
+        if ($value->file != 'local_almsmobileapp') {
             $text = str_replace('$a->', '$a.', $text);
             $text = str_replace('{$a', '{{$a', $text);
             $text = str_replace('}', '}}', $text);
             // Prevent double.
             $text = str_replace(array('{{{', '}}}'), array('{{', '}}'), $text);
         } else {
-            // @TODO: Remove that line when core.cannotconnect and core.login.invalidmoodleversion are completelly changed to use $a
-            if (($key == 'core.cannotconnect' || $key == 'core.login.invalidmoodleversion') && strpos($text, '2.4') != false) {
+            // @TODO: Remove that line when core.cannotconnect and core.login.invalidalmsversion are completelly changed to use $a
+            if (($key == 'core.cannotconnect' || $key == 'core.login.invalidalmsversion') && strpos($text, '2.4') != false) {
                 $text = str_replace('2.4', '{{$a}}', $text);
             }
             $local++;
@@ -269,7 +274,7 @@ function build_lang($lang, $keys) {
     echo "\t\t$success of $total -> $percentage% $bar ($local local)\n";
 
     if ($lang == 'en') {
-        generate_local_moodlemobileapp($keys, $translations);
+        generate_local_almsmobileapp($keys, $translations);
         override_component_lang_files($keys, $translations);
     }
 
@@ -321,7 +326,7 @@ function detect_lang($lang, $keys) {
             $text = $string[$value->string];
         }
 
-        if ($value->file == 'local_moodlemobileapp') {
+        if ($value->file == 'local_almsmobileapp') {
             $local++;
         }
 
@@ -366,14 +371,14 @@ function override_component_lang_files($keys, $translations) {
             $component = $exp[1];
             $plainid = $exp[2];
         } else {
-            $component = 'moodle';
+            $component = 'alms';
             $plainid = $exp[1];
         }
         switch($type) {
             case 'core':
             case 'addon':
                 switch($component) {
-                    case 'moodle':
+                    case 'alms':
                         $path .= 'lang';
                         break;
                     default:
@@ -394,41 +399,41 @@ function override_component_lang_files($keys, $translations) {
 }
 
 /**
- * Generates local moodle mobile app file to update languages in AMOS.
+ * Generates local alms mobile app file to update languages in AMOS.
  *
  * @param  [array] $keys         Translation keys.
  * @param  [array] $translations English translations.
  */
-function generate_local_moodlemobileapp($keys, $translations) {
-    echo "Generate local_moodlemobileapp.\n";
+function generate_local_almsmobileapp($keys, $translations) {
+    echo "Generate local_almsmobileapp.\n";
     $string = '<?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Alms - http://lms.aldermin.com/
 //
-// Moodle is free software: you can redistribute it and/or modify
+// Alms is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Moodle is distributed in the hope that it will be useful,
+// Alms is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with Alms.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * Version details.
  *
  * @package    local
- * @subpackage moodlemobileapp
+ * @subpackage almsmobileapp
  * @copyright  2014 Juan Leyva <juanleyvadelgado@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string[\'appstoredescription\'] = \'NOTE: This official Moodle Mobile app will ONLY work with Moodle sites that have been set up to allow it.  Please talk to your Moodle administrator if you have any problems connecting.
+$string[\'appstoredescription\'] = \'NOTE: This official Alms Mobile app will ONLY work with Alms sites that have been set up to allow it.  Please talk to your Alms administrator if you have any problems connecting.
 
-If your Moodle site has been configured correctly, you can use this app to:
+If your Alms site has been configured correctly, you can use this app to:
 
 - browse the content of your courses, even when offline
 - receive instant notifications of messages and other events
@@ -437,22 +442,22 @@ If your Moodle site has been configured correctly, you can use this app to:
 - view your course grades
 - and more!
 
-Please see http://docs.moodle.org/en/Mobile_app for all the latest information.
+Please see https://interactivegroup.github.io/almsmobileapp/ for all the latest information.
 
 We’d really appreciate any good reviews about the functionality so far, and your suggestions on what else you want this app to do!
 
 The app requires the following permissions:
-Record audio - For recording audio to upload to Moodle
+Record audio - For recording audio to upload to Alms
 Read and modify the contents of your SD card - Contents are downloaded to the SD Card so you can see them offline
-Network access - To be able to connect with your Moodle site and check if you are connected or not to switch to offline mode
+Network access - To be able to connect with your Alms site and check if you are connected or not to switch to offline mode
 Run at startup - So you receive local notifications even when the app is running in the background
 Prevent phone from sleeping - So you can receive push notifications anytime\';'."\n";
     foreach ($keys as $key => $value) {
-        if (isset($translations[$key]) && $value->file == 'local_moodlemobileapp') {
+        if (isset($translations[$key]) && $value->file == 'local_almsmobileapp') {
             $string .= '$string[\''.$key.'\'] = \''.str_replace("'", "\'", $translations[$key]).'\';'."\n";
         }
     }
-    $string .= '$string[\'pluginname\'] = \'Moodle Mobile language strings\';'."\n";
+    $string .= '$string[\'pluginname\'] = \'Alms Mobile language strings\';'."\n";
 
-    file_put_contents('../../moodle-local_moodlemobileapp/lang/en/local_moodlemobileapp.php', $string."\n");
+    file_put_contents('../../alms-local_almsmobileapp/lang/en/local_almsmobileapp.php', $string."\n");
 }

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 Interactive Group Pvt Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import { CoreLoginSitesPage } from '@core/login/pages/sites/sites';
 @Component({
     templateUrl: 'app.html'
 })
-export class MoodleMobileApp implements OnInit {
+export class AlmsMobileApp implements OnInit {
     // Use page name (string) because the page is lazy loaded (Ionic feature). That way we can load pages without importing them.
     // The downside is that each page needs to implement a ngModule.
     rootPage: any = 'CoreLoginInitPage';

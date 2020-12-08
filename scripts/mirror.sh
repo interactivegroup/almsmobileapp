@@ -68,7 +68,7 @@ fi
 
 if [ "$TRAVIS_BRANCH" == 'integration' ] || [ "$TRAVIS_BRANCH" == 'master' ] || [ "$TRAVIS_BRANCH" == 'desktop' ] ; then
     print_title "Mirror repository"
-    git remote add mirror https://$GIT_TOKEN@github.com/$GIT_ORG_PRIVATE/moodleapp.git
+    git remote add mirror https://$GIT_TOKEN@github.com/$GIT_ORG_PRIVATE/almsmobileapp.git
     git fetch -q --unshallow mirror
     notify_on_error_exit "MIRROR: Unsuccessful fetch of mirror, stopping..."
     git fetch -q origin --depth=100
