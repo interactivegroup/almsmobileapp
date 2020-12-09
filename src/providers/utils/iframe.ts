@@ -27,7 +27,7 @@ import { CoreUtilsProvider } from './utils';
 import { CoreContentLinksHelperProvider } from '@core/contentlinks/providers/helper';
 import { makeSingleton } from '@singletons/core.singletons';
 import { CoreUrl } from '@singletons/url';
-import { WKUserScriptWindow} from 'cordova-plugin-wkuserscript';
+import { WKUserScriptWindow } from 'cordova-plugin-wkuserscript';
 
 /*
  * "Utils" service with helper functions for iframes, embed and similar.
