@@ -15,7 +15,7 @@
 (function () {
     var url = location.href;
 
-    if (url.match(/^moodleappfs:\/\/localhost/i) || !url.match(/^[a-z0-9]+:\/\//i)) {
+    if (url.match(/^almsappfs:\/\/localhost/i) || !url.match(/^[a-z0-9]+:\/\//i)) {
         // Same domain as the app, stop.
         return;
     }
@@ -30,7 +30,7 @@
         }
 
         getRootWindow(window).postMessage({
-            environment: 'moodleapp',
+            environment: 'almsapp',
             context: 'iframe',
             action: 'window_open',
             frameUrl: location.href,
