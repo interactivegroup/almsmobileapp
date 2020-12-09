@@ -1,7 +1,7 @@
 ALMS Mobile
 =================
 
-This is the primary repository of source code for the official Moodle Mobile app.
+This is the primary repository of source code for the official ALMS Mobile app.
 
 * [User documentation](http://lms.aldermin.com/)
 * [Development environment setup](https://interactivegroup.github.io/almsmobileapp/)

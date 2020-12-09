@@ -60,6 +60,9 @@
     },
     "wsservice": "alms_mobile_app",
     "wsextservice": "local_mobile",
+    "sites": {
+        "url": "https:\/\/lms.aldermin.com"
+    },    
     "demo_sites": {
         "student": {
             "url": "https:\/\/school.moodledemo.net",

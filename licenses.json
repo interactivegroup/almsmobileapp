@@ -1122,13 +1122,13 @@
   "cordova-plugin-wkuserscript@1.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/interactivegroup/almsmobileapp/cordova-plugin-wkuserscript",
-    "publisher": "Moodle Pty Ltd",
+    "publisher": "Interactive Group Pvt Ltd",
     "licenseFile": "LICENSE"
   },
   "cordova-plugin-wkwebview-cookies@1.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/interactivegroup/almsmobileapp/cordova-plugin-wkwebview-cookies",
-    "publisher": "Moodle Pty Ltd",
+    "publisher": "Interactive Group Pvt Ltd",
     "licenseFile": "LICENSE"
   },
   "cordova-plugin-zip@3.1.0": {
@@ -2862,8 +2862,8 @@
   "almsmobileapp@1.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/interactivegroup/almsmobileapp",
-    "publisher": "Moodle Pty Ltd.",
-    "email": "mobile@moodle.com",
+    "publisher": "Interactive Group Pvt Ltd.",
+    "email": "support@interactivegrp.com",
     "licenseFile": "LICENSE",
     "noticeFile": "NOTICE"
   },

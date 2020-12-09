@@ -149,7 +149,7 @@
         return scheme == 'cdvfile' ||
                 scheme == 'file' ||
                 scheme == 'filesystem' ||
-                scheme == 'moodleappfs';
+                scheme == 'almsappfs';
     }
 
     /**

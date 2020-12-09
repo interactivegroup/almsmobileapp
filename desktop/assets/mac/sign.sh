@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Name of your app.
-APP="Moodle Desktop"
+APP="ALMS Desktop"
 # The path of your app to sign.
-APP_PATH="desktop/dist/mas/Moodle Desktop.app"
+APP_PATH="desktop/dist/mas/ALMS Desktop.app"
 # The path to the location you want to put the signed package.
 RESULT_PATH="desktop/dist/mas/$APP.pkg"
 # The name of certificates you requested.
-APP_KEY="3rd Party Mac Developer Application: Moodle Pty Ltd (2NU57U5PAW)"
-INSTALLER_KEY="3rd Party Mac Developer Installer: Moodle Pty Ltd (2NU57U5PAW)"
+APP_KEY="3rd Party Mac Developer Application: Interactive Group Pvt Ltd (2NU57U5PAW)"
+INSTALLER_KEY="3rd Party Mac Developer Installer: Interactive Group Pvt Ltd (2NU57U5PAW)"
 # The path of your plist files.
 CHILD_PLIST="desktop/assets/mac/child.plist"
 PARENT_PLIST="desktop/assets/mac/parent.plist"
