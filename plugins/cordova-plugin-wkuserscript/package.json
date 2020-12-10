@@ -1,0 +1,60 @@
+{
+  "_from": "git+https://github.com/interactivegroup/cordova-plugin-wkuserscript.git",
+  "_id": "cordova-plugin-wkuserscript@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-wkuserscript",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/interactivegroup/cordova-plugin-wkuserscript",
+    "rawSpec": "https://github.com/interactivegroup/cordova-plugin-wkuserscript",
+    "saveSpec": "git+https://github.com/interactivegroup/cordova-plugin-wkuserscript.git",
+    "fetchSpec": "https://github.com/interactivegroup/cordova-plugin-wkuserscript.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/interactivegroup/cordova-plugin-wkuserscript.git#7ff22084250cf7007268b04b8fe95d826871ec6c",
+  "_spec": "https://github.com/interactivegroup/cordova-plugin-wkuserscript",
+  "_where": "/Users/zee/Documents/GitHub/almsmobileapp",
+  "author": {
+    "name": "InteractiveGroup Pvt Ltd"
+  },
+  "bugs": {
+    "url": "https://github.com/interactivegroup/cordova-plugin-wkuserscript/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-wkuserscript",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova WKUserScript Plugin",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/interactivegroup/cordova-plugin-wkuserscript#readme",
+  "keywords": [
+    "cordova",
+    "wkuserscript",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-wkuserscript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interactivegroup/cordova-plugin-wkuserscript.git"
+  },
+  "types": "./types/index.d.ts",
+  "version": "1.0.0"
+}

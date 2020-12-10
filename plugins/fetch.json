@@ -1,0 +1,10 @@
+{
+  "cordova-plugin-wkuserscript": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/interactivegroup/cordova-plugin-wkuserscript"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
