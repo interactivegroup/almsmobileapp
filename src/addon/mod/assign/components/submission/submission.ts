@@ -920,7 +920,7 @@ export class AddonModAssignSubmissionComponent implements OnInit, OnDestroy {
             if (this.userSubmission && this.userSubmission.status != this.statusNew) {
                 response.lastattempt.submissiongroupmemberswhoneedtosubmit.forEach((member) => {
                     if (this.blindMarking) {
-                        // Users not blinded! (Moodle < 3.1.1, 3.2).
+                        // Users not blinded! (alms < 3.1.1, 3.2).
                         promises.push(this.assignProvider.getAssignmentUserMappings(this.assign.id, member).then((blindId) => {
                             this.membersToSubmit.push(blindId);
                         }));

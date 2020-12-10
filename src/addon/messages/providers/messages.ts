@@ -54,7 +54,7 @@ export class AddonMessagesProvider {
     static LIMIT_INITIAL_USER_SEARCH = 3;
     static LIMIT_SEARCH = 50;
 
-    static NOTIFICATION_PREFERENCES_KEY = 'message_provider_moodle_instantmessage';
+    static NOTIFICATION_PREFERENCES_KEY = 'message_provider_alms_instantmessage';
 
     protected logger;
 
@@ -71,7 +71,7 @@ export class AddonMessagesProvider {
      * @param userId User ID of the person to add.
      * @param siteId Site ID. If not defined, use current site.
      * @return Resolved when done.
-     * @deprecated since Moodle 3.6
+     * @deprecated since alms 3.6
      */
     addContact(userId: number, siteId?: string): Promise<any> {
         return this.sitesProvider.getSite(siteId).then((site) => {
@@ -96,7 +96,7 @@ export class AddonMessagesProvider {
         return this.sitesProvider.getSite(siteId).then((site) => {
             let promise;
             if (site.wsAvailable('core_message_block_user')) {
-                // Since Moodle 3.6
+                // Since alms 3.6
                 const params = {
                     userid: site.getUserId(),
                     blockeduserid: userId,
@@ -540,7 +540,7 @@ export class AddonMessagesProvider {
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with the WS data.
-     * @deprecated since Moodle 3.6
+     * @deprecated since alms 3.6
      */
     getAllContacts(siteId?: string): Promise<AddonMessagesGetContactsResult> {
         siteId = siteId || this.sitesProvider.getCurrentSiteId();
@@ -589,7 +589,7 @@ export class AddonMessagesProvider {
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with the WS data.
-     * @deprecated since Moodle 3.6
+     * @deprecated since alms 3.6
      */
     getContacts(siteId?: string): Promise<AddonMessagesGetContactsResult> {
         return this.sitesProvider.getSite(siteId).then((site) => {
@@ -979,7 +979,7 @@ export class AddonMessagesProvider {
     }
 
     /**
-     * Get the discussions of a certain user. This function is used in Moodle sites higher than 3.6.
+     * Get the discussions of a certain user. This function is used in alms sites higher than 3.6.
      * If the site is older than 3.6, please use getDiscussions.
      *
      * @param type Filter by type.
@@ -1175,7 +1175,7 @@ export class AddonMessagesProvider {
     }
 
     /**
-     * Get the discussions of the current user. This function is used in Moodle sites older than 3.6.
+     * Get the discussions of the current user. This function is used in alms sites older than 3.6.
      * If the site is 3.6 or higher, please use getConversations.
      *
      * @param siteId Site ID. If not defined, current site.
@@ -2761,7 +2761,7 @@ export class AddonMessagesProvider {
         return this.sitesProvider.getSite(siteId).then((site) => {
             let promise;
             if (site.wsAvailable('core_message_unblock_user')) {
-                // Since Moodle 3.6
+                // Since alms 3.6
                 const params = {
                     userid: site.getUserId(),
                     unblockeduserid: userId,

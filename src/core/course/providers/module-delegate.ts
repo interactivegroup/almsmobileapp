@@ -34,7 +34,7 @@ export interface CoreCourseModuleHandler extends CoreDelegateHandler {
 
     /**
      * List of supported features. The keys should be the name of the feature.
-     * This is to replicate the "plugin_supports" function of Moodle.
+     * This is to replicate the "plugin_supports" function of alms.
      * If you need some dynamic checks please implement the supportsFeature function.
      */
     supportedFeatures?: {[name: string]: any};

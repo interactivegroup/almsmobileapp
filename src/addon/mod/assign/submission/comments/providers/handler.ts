@@ -33,7 +33,7 @@ export class AddonModAssignSubmissionCommentsHandler implements AddonModAssignSu
 
     /**
      * Whether the plugin can be edited in offline for existing submissions. In general, this should return false if the
-     * plugin uses Moodle filters. The reason is that the app only prefetches filtered data, and the user should edit
+     * plugin uses alms filters. The reason is that the app only prefetches filtered data, and the user should edit
      * unfiltered data.
      *
      * @param assign The assignment.
@@ -93,7 +93,7 @@ export class AddonModAssignSubmissionCommentsHandler implements AddonModAssignSu
 
         return this.commentsProvider.getComments('module', assign.cmid, 'assignsubmission_comments', submission.id,
                 'submission_comments', 0, siteId).catch(() => {
-            // Fail silently (Moodle < 3.1.1, 3.2)
+            // Fail silently (alms < 3.1.1, 3.2)
         });
     }
 }

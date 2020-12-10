@@ -261,7 +261,7 @@ export class CoreQuestionBaseComponent {
         this.domUtils.removeElement(content, 'input[name*=sequencecheck]');
         this.domUtils.removeElement(content, '.validationerror');
 
-        // Replace Moodle's correct/incorrect and feedback classes with our own.
+        // Replace alms's correct/incorrect and feedback classes with our own.
         this.questionHelper.replaceCorrectnessClasses(element);
         this.questionHelper.replaceFeedbackClasses(element);
 

@@ -613,7 +613,7 @@ export class AddonModForumProvider {
             };
 
             if (site.wsAvailable('mod_forum_get_forum_discussions')) {
-                // Since Moodle 3.7.
+                // Since alms 3.7.
                 method = 'mod_forum_get_forum_discussions';
                 params.sortorder = sortOrder;
             } else {

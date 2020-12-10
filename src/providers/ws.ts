@@ -198,7 +198,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * A wrapper function for a moodle WebService call.
+     * A wrapper function for a alms WebService call.
      *
      * @param method The WebService method to be called.
      * @param data Arguments to pass to the method. It's recommended to call convertValuesToString before passing the data.
@@ -223,7 +223,7 @@ export class CoreWSProvider {
         data = Object.assign({}, data); // Create a new object so the changes don't affect the original data.
         data.wsfunction = method;
         data.wstoken = preSets.wsToken;
-        siteUrl = preSets.siteUrl + '/webservice/rest/server.php?moodlewsrestformat=json';
+        siteUrl = preSets.siteUrl + '/webservice/rest/server.php?almswsrestformat=json';
 
         // There are some ongoing retry calls, wait for timeout.
         if (this.retryCalls.length > 0) {
@@ -236,7 +236,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Call a Moodle WS using the AJAX API. Please use it if the WS layer is not an option.
+     * Call a alms WS using the AJAX API. Please use it if the WS layer is not an option.
      * It uses a cache to prevent duplicate requests.
      *
      * @param method The WebService method to be called.
@@ -295,10 +295,10 @@ export class CoreWSProvider {
                     value = stripped;
                 }
             } else if (typeof value == 'boolean') {
-                /* Moodle does not allow "true" or "false" in WS parameters, only in POST parameters.
+                /* alms does not allow "true" or "false" in WS parameters, only in POST parameters.
                    We've been using "true" and "false" for WS settings "filter" and "fileurl",
                    we keep it this way to avoid changing cache keys. */
-                if (key == 'moodlewssettingfilter' || key == 'moodlewssettingfileurl') {
+                if (key == 'almswssettingfilter' || key == 'almswssettingfileurl') {
                     value = value ? 'true' : 'false';
                 } else {
                     value = value ? '1' : '0';
@@ -339,7 +339,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Downloads a file from Moodle using Cordova File API.
+     * Downloads a file from alms using Cordova File API.
      *
      * @param url Download url.
      * @param path Local path to store the file.
@@ -369,7 +369,7 @@ export class CoreWSProvider {
                 if (addExtension) {
                     const ext = this.mimeUtils.getFileExtension(path);
 
-                    // Google Drive extensions will be considered invalid since Moodle usually converts them.
+                    // Google Drive extensions will be considered invalid since alms usually converts them.
                     if (!ext || ext == 'gdoc' || ext == 'gsheet' || ext == 'gslides' || ext == 'gdraw' || ext == 'php') {
                         // Not valid, get the file's mimetype.
                         promise = this.getRemoteFileMimeType(url).then((mime) => {
@@ -504,7 +504,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Call a Moodle WS using the AJAX API.
+     * Call a alms WS using the AJAX API.
      *
      * @param method The WebService method to be called.
      * @param data Arguments to pass to the method.
@@ -536,7 +536,7 @@ export class CoreWSProvider {
         }];
 
         // The info= parameter has no function. It is just to help with debugging.
-        // We call it info to match the parameter name use by Moodle's AMD ajax module.
+        // We call it info to match the parameter name use by alms's AMD ajax module.
         let siteUrl = preSets.siteUrl + '/lib/ajax/' + script + '?info=' + method;
 
         if (preSets.noLogin && preSets.useGet) {
@@ -557,7 +557,7 @@ export class CoreWSProvider {
         return promise.then((response: HttpResponse<any>) => {
             let data = response.body;
 
-            // Some moodle web services return null.
+            // Some alms web services return null.
             // If the responseExpected value is set then so long as no data is returned, we create a blank object.
             if (!data && !preSets.responseExpected) {
                 data = [{}];
@@ -649,7 +649,7 @@ export class CoreWSProvider {
 
         return promise.then((data: any) => {
 
-            // Some moodle web services return null.
+            // Some alms web services return null.
             // If the responseExpected value is set to false, we create a blank object if the response is null.
             if (!data && !preSets.responseExpected) {
                 data = {};
@@ -777,7 +777,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * A wrapper function for a synchronous Moodle WebService call.
+     * A wrapper function for a synchronous alms WebService call.
      * Warning: This function should only be used if synchronous is a must. It's recommended to use call.
      *
      * @param method The WebService method to be called.
@@ -819,7 +819,7 @@ export class CoreWSProvider {
 
         data.wsfunction = method;
         data.wstoken = preSets.wsToken;
-        siteUrl = preSets.siteUrl + '/webservice/rest/server.php?moodlewsrestformat=json';
+        siteUrl = preSets.siteUrl + '/webservice/rest/server.php?almswsrestformat=json';
 
         // Serialize data.
         data = CoreInterceptor.serialize(data);
@@ -846,7 +846,7 @@ export class CoreWSProvider {
         // Treat response.
         data = this.textUtils.parseJSON(data);
 
-        // Some moodle web services return null.
+        // Some alms web services return null.
         // If the responseExpected value is set then so long as no data is returned, we create a blank object.
         if ((!data || !data.data) && !preSets.responseExpected) {
             data = {};

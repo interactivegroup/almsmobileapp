@@ -291,7 +291,7 @@ export class AddonModAssignSyncProvider extends CoreSyncBaseProvider {
             submission = this.assignProvider.getSubmissionObjectFromAttempt(assign, status.lastattempt);
 
             if (submission.timemodified != offlineData.onlinetimemodified) {
-                // The submission was modified in Moodle, discard the submission.
+                // The submission was modified in alms, discard the submission.
                 discardError = this.translate.instant('addon.mod_assign.warningsubmissionmodified');
 
                 return;
@@ -378,7 +378,7 @@ export class AddonModAssignSyncProvider extends CoreSyncBaseProvider {
             const timemodified = status.feedback && (status.feedback.gradeddate || status.feedback.grade.timemodified);
 
             if (timemodified > offlineData.timemodified) {
-                // The submission grade was modified in Moodle, discard it.
+                // The submission grade was modified in alms, discard it.
                 discardError = this.translate.instant('addon.mod_assign.warningsubmissiongrademodified');
 
                 return;

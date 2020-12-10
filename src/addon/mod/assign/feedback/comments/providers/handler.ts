@@ -184,7 +184,7 @@ export class AddonModAssignFeedbackCommentsHandler implements AddonModAssignFeed
      */
     isEnabled(): boolean | Promise<boolean> {
         // In here we should check if comments is not disabled in site.
-        // But due to this is not a common comments place and it can be disabled separately into Moodle (disabling the plugin).
+        // But due to this is not a common comments place and it can be disabled separately into alms (disabling the plugin).
         // We are leaving it always enabled. It's also a teacher's feature.
         return true;
     }

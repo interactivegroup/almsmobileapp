@@ -512,7 +512,7 @@ export class CoreQuestionHelperProvider {
      * @param component The component to link the files to. If not defined, question component.
      * @param componentId An ID to use in conjunction with the component. If not defined, question ID.
      * @param siteId Site ID. If not defined, current site.
-     * @param usageId Usage ID. Required in Moodle 3.7+.
+     * @param usageId Usage ID. Required in alms 3.7+.
      * @return Promise resolved when all the files have been downloaded.
      */
     prefetchQuestionFiles(question: any, component?: string, componentId?: string | number, siteId?: string, usageId?: number)
@@ -569,7 +569,7 @@ export class CoreQuestionHelperProvider {
     }
 
     /**
-     * Replace Moodle's correct/incorrect classes with the Mobile ones.
+     * Replace alms's correct/incorrect classes with the Mobile ones.
      *
      * @param element DOM element.
      */
@@ -581,7 +581,7 @@ export class CoreQuestionHelperProvider {
     }
 
     /**
-     * Replace Moodle's feedback classes with the Mobile ones.
+     * Replace alms's feedback classes with the Mobile ones.
      *
      * @param element DOM element.
      */

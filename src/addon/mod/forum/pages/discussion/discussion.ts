@@ -444,7 +444,7 @@ export class AddonModForumDiscussionPage implements OnDestroy {
             this.syncIcon = 'sync';
 
             if (forceMarkAsRead || (hasUnreadPosts && this.trackPosts)) {
-                // // Add log in Moodle and mark unread posts as readed.
+                // // Add log in alms and mark unread posts as readed.
                 this.forumProvider.logDiscussionView(this.discussionId, this.forumId || -1, this.forum.name).catch(() => {
                     // Ignore errors.
                 }).finally(() => {

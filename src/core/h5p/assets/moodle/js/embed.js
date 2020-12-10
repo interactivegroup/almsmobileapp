@@ -1,17 +1,17 @@
-// This file is part of Moodle - http://moodle.org/
+// This file is part of alms - http://alms.org/
 //
-// Moodle is free software: you can redistribute it and/or modify
+// alms is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Moodle is distributed in the hope that it will be useful,
+// alms is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with alms.  If not, see <http://www.gnu.org/licenses/>.
 
 /* global H5PEmbedCommunicator:true */
 /**
@@ -80,7 +80,7 @@ H5PEmbedCommunicator = (function() {
          */
         self.post = function(component, statements) {
             window.parent.postMessage({
-                environment: 'moodleapp',
+                environment: 'almsapp',
                 context: 'h5p',
                 action: 'xapi_post_statement',
                 component: component,
@@ -168,8 +168,8 @@ document.onreadystatechange = function() {
 
     // Get emitted xAPI data.
     H5P.externalDispatcher.on('xAPI', function(event) {
-        var moodlecomponent = H5P.getMoodleComponent();
-        if (moodlecomponent == undefined) {
+        var almscomponent = H5P.getalmsComponent();
+        if (almscomponent == undefined) {
             return;
         }
         // Skip malformed events.
@@ -194,7 +194,7 @@ document.onreadystatechange = function() {
 
         if (isCompleted && !isChild) {
             var statements = H5P.getXAPIStatements(this.contentId, statement);
-            H5PEmbedCommunicator.post(moodlecomponent, statements);
+            H5PEmbedCommunicator.post(almscomponent, statements);
         }
     });
 

@@ -38,7 +38,7 @@ if (window.H5PIntegration && window.H5PIntegration.contents && location.search) 
                 console.error('Error parsing display options', decodeURIComponent(nameAndValue[1]));
             }
         } else if (nameAndValue[0] == 'component') {
-            window.H5PIntegration.moodleComponent = nameAndValue[1];
+            window.H5PIntegration.almsComponent = nameAndValue[1];
         } else if (nameAndValue[0] == 'trackingUrl' && contentData) {
             contentData.url = nameAndValue[1];
         }

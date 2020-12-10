@@ -220,7 +220,7 @@ export class AddonMessagesSyncProvider extends CoreSyncBaseProvider {
                             return this.messagesOffline.deleteMessage(userId, message.smallmessage, message.timecreated, siteId);
                         }
                     }).then(() => {
-                        // In some Moodle versions, wait 1 second to make sure timecreated is different.
+                        // In some alms versions, wait 1 second to make sure timecreated is different.
                         // This is because there was a bug where messages with the same timecreated had a wrong order.
                         if (!groupMessagingEnabled && index < messages.length - 1) {
                             return new Promise((resolve, reject): any => {

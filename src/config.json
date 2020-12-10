@@ -65,14 +65,10 @@
     },    
     "demo_sites": {
         "student": {
-            "url": "https:\/\/school.moodledemo.net",
-            "username": "student",
-            "password": "moodle"
+            "url": "https:\/\/alms.aldermin.com"
         },
         "teacher": {
-            "url": "https:\/\/school.moodledemo.net",
-            "username": "teacher",
-            "password": "moodle"
+            "url": "https:\/\/alms.aldermin.com"
         }
     },
     "font_sizes": [

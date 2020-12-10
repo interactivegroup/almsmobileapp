@@ -95,11 +95,11 @@ export interface AddonModLessonGrade {
 /**
  * Service that provides some features for lesson.
  *
- * Lesson terminology is a bit confusing and ambiguous in Moodle. For that reason, in the app it has been decided to use
+ * Lesson terminology is a bit confusing and ambiguous in alms. For that reason, in the app it has been decided to use
  * the following terminology:
- *     - Retake: An attempt in a lesson. In Moodle it's sometimes called "attempt", "try" or "retry".
+ *     - Retake: An attempt in a lesson. In alms it's sometimes called "attempt", "try" or "retry".
  *     - Attempt: An attempt in a page inside a retake. In the app, this includes content pages.
- *     - Content page: A page with only content (no question). In Moodle it's sometimes called "branch table".
+ *     - Content page: A page with only content (no question). In alms it's sometimes called "branch table".
  *     - Page answers: List of possible answers for a page (configured by the teacher). NOT the student answer for the page.
  *
  * This terminology sometimes won't match with WebServices names, params or responses.
@@ -356,7 +356,7 @@ export class AddonModLessonProvider {
 
     /**
      * Calculate the progress of the current user in the lesson.
-     * Based on Moodle's calculate_progress.
+     * Based on alms's calculate_progress.
      *
      * @param lessonId Lesson ID.
      * @param accessInfo Result of get access info.
@@ -420,7 +420,7 @@ export class AddonModLessonProvider {
 
     /**
      * Check if the answer provided by the user is correct or not and return the result object.
-     * This method is based on the check_answer implementation of all page types (Moodle).
+     * This method is based on the check_answer implementation of all page types (alms).
      *
      * @param lesson Lesson.
      * @param pageData Result of getPageData for the page to process.
@@ -1020,7 +1020,7 @@ export class AddonModLessonProvider {
                 });
             }).then((gradeInfo: AddonModLessonGrade) => {
                 // Retake marked, now return the response. We won't return all the possible data.
-                // This code is based in Moodle's process_eol_page.
+                // This code is based in alms's process_eol_page.
                 const result = {
                         data: {},
                         messages: [],
@@ -1364,7 +1364,7 @@ export class AddonModLessonProvider {
 
     /**
      * Get the last page seen.
-     * Based on Moodle's get_last_page_seen.
+     * Based on alms's get_last_page_seen.
      *
      * @param lessonId Lesson ID.
      * @param retake Retake number.
@@ -1850,7 +1850,7 @@ export class AddonModLessonProvider {
     /**
      * Get different informative messages when processing a lesson page.
      * Please try to use WS response messages instead of this function if possible.
-     * Based on Moodle's add_messages_on_page_process.
+     * Based on alms's add_messages_on_page_process.
      *
      * @param lesson Lesson.
      * @param accessInfo Result of get access info.
@@ -1916,7 +1916,7 @@ export class AddonModLessonProvider {
     /**
      * Get different informative messages when viewing a lesson page.
      * Please try to use WS response messages instead of this function if possible.
-     * Based on Moodle's add_messages_on_page_view.
+     * Based on alms's add_messages_on_page_view.
      *
      * @param lesson Lesson.
      * @param accessInfo Result of get access info. Required if offline is true.
@@ -2098,7 +2098,7 @@ export class AddonModLessonProvider {
     }
 
     /**
-     * Get the overview of retakes in a lesson (named "attempts overview" in Moodle).
+     * Get the overview of retakes in a lesson (named "attempts overview" in alms).
      *
      * @param lessonId Lesson ID.
      * @param groupId The group to get. If not defined, all participants.
@@ -2174,7 +2174,7 @@ export class AddonModLessonProvider {
     /**
      * Finds all pages that appear to be a subtype of the provided pageId until an end point specified within "ends" is
      * encountered or no more pages exist.
-     * Based on Moodle's get_sub_pages_of.
+     * Based on alms's get_sub_pages_of.
      *
      * @param pages Index of lesson pages, indexed by page ID. See createPagesIndex.
      * @param pageId Page ID to get subpages of.
@@ -2434,7 +2434,7 @@ export class AddonModLessonProvider {
 
     /**
      * Check if a jump is correct.
-     * Based in Moodle's jumpto_is_correct.
+     * Based in alms's jumpto_is_correct.
      *
      * @param pageId ID of the page from which you are jumping from.
      * @param jumpTo The jumpto number.
@@ -2839,7 +2839,7 @@ export class AddonModLessonProvider {
 
     /**
      * Checks to see if a LESSON_CLUSTERJUMP or a LESSON_UNSEENBRANCHPAGE is used in a lesson.
-     * Based on Moodle's lesson_display_teacher_warning.
+     * Based on alms's lesson_display_teacher_warning.
      *
      * @param jumps Result of get pages possible jumps.
      * @return Whether the lesson uses one of those jumps.
@@ -2866,7 +2866,7 @@ export class AddonModLessonProvider {
 
     /**
      * Calculates a user's grade for a lesson.
-     * Based on Moodle's lesson_grade.
+     * Based on alms's lesson_grade.
      *
      * @param lesson Lesson.
      * @param retake Retake number.
@@ -3143,7 +3143,7 @@ export class AddonModLessonProvider {
 
     /**
      * Records an attempt on a certain page.
-     * Based on Moodle's record_attempt.
+     * Based on alms's record_attempt.
      *
      * @param lesson Lesson.
      * @param courseId Course ID the lesson belongs to.
@@ -3166,7 +3166,7 @@ export class AddonModLessonProvider {
         // Processes inmediate jumps.
         if (result.inmediatejump) {
             if (pageData.page.qtype == AddonModLessonProvider.LESSON_PAGE_BRANCHTABLE) {
-                // Store the content page data. In Moodle this is stored in a separate table, during checkAnswer.
+                // Store the content page data. In alms this is stored in a separate table, during checkAnswer.
                 return this.lessonOfflineProvider.processPage(lesson.id, courseId, retake, pageData.page, data,
                             result.newpageid, result.answerid, false, result.userresponse, siteId).then(() => {
                     return result;
@@ -3362,7 +3362,7 @@ export class AddonModLessonProvider {
     /**
      * Function to determine if a page is a valid page. It will add the page to validPages if valid. It can also
      * modify the list of viewedPagesIds for cluster pages.
-     * Based on Moodle's valid_page_and_view.
+     * Based on alms's valid_page_and_view.
      *
      * @param pages Index of lesson pages, indexed by page ID. See createPagesIndex.
      * @param page Page to check.

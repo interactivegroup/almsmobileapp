@@ -74,7 +74,7 @@ export class CoreRecaptchaModalComponent implements OnDestroy {
      * @return Promise resolved when done.
      */
     protected async onIframeMessage(event: MessageEvent): Promise<void> {
-        if (!event.data || event.data.environment != 'moodleapp' || event.data.context != 'recaptcha') {
+        if (!event.data || event.data.environment != 'almsapp' || event.data.context != 'recaptcha') {
             return;
         }
 

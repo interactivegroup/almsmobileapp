@@ -41,7 +41,7 @@ export class AddonModAssignSubmissionOnlineTextHandler implements AddonModAssign
 
     /**
      * Whether the plugin can be edited in offline for existing submissions. In general, this should return false if the
-     * plugin uses Moodle filters. The reason is that the app only prefetches filtered data, and the user should edit
+     * plugin uses alms filters. The reason is that the app only prefetches filtered data, and the user should edit
      * unfiltered data.
      *
      * @param assign The assignment.
@@ -51,7 +51,7 @@ export class AddonModAssignSubmissionOnlineTextHandler implements AddonModAssign
      */
     canEditOffline(assign: AddonModAssignAssign, submission: AddonModAssignSubmission,
             plugin: AddonModAssignPlugin): boolean | Promise<boolean> {
-        // This plugin uses Moodle filters, it cannot be edited in offline.
+        // This plugin uses alms filters, it cannot be edited in offline.
         return false;
     }
 
@@ -221,7 +221,7 @@ export class AddonModAssignSubmissionOnlineTextHandler implements AddonModAssign
      * @return Whether or not the handler is enabled for edit on a site level.
      */
     isEnabledForEdit(): boolean | Promise<boolean> {
-        // There's a bug in Moodle 3.1.0 that doesn't allow submitting HTML, so we'll disable this plugin in that case.
+        // There's a bug in alms 3.1.0 that doesn't allow submitting HTML, so we'll disable this plugin in that case.
         // Bug was fixed in 3.1.1 minor release and in 3.2.
         const currentSite = this.sitesProvider.getCurrentSite();
 

@@ -65,7 +65,7 @@ export class AddonQtypeDdMarkerHandler implements CoreQuestionHandler {
      * @return 1 if complete, 0 if not complete, -1 if cannot determine.
      */
     isCompleteResponse(question: any, answers: any): number {
-        // If 1 dragitem is set we assume the answer is complete (like Moodle does).
+        // If 1 dragitem is set we assume the answer is complete (like alms does).
         for (const name in answers) {
             if (answers[name]) {
                 return 1;
@@ -119,7 +119,7 @@ export class AddonQtypeDdMarkerHandler implements CoreQuestionHandler {
         this.questionHelper.extractQuestionScripts(question, usageId);
 
         if (question.amdArgs && typeof question.amdArgs[1] !== 'undefined') {
-            // Moodle 3.6+.
+            // alms 3.6+.
             return [question.amdArgs[1]];
         }
 

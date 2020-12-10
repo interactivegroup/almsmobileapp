@@ -744,7 +744,7 @@ export class CoreTextUtilsProvider {
      * Add quotes to HTML characters.
      *
      * Returns text with HTML characters (like "<", ">", etc.) properly quoted.
-     * Based on Moodle's s() function.
+     * Based on alms's s() function.
      *
      * @param text Text to treat.
      * @return Treated text.

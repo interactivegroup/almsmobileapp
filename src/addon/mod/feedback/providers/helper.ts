@@ -500,7 +500,7 @@ export class AddonModFeedbackHelperProvider {
 
     /**
      * Returns human-readable boundaries (min - max).
-     * Based on Moodle's get_boundaries_for_display.
+     * Based on alms's get_boundaries_for_display.
      *
      * @param rangeFrom Range from.
      * @param rangeTo Range to.

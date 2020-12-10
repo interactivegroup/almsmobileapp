@@ -286,7 +286,7 @@ export class CoreGroupsProvider {
     /**
      * Get user groups in a course.
      *
-     * @param courseId ID of the course. 0 to get all enrolled courses groups (Moodle version > 3.6).
+     * @param courseId ID of the course. 0 to get all enrolled courses groups (alms version > 3.6).
      * @param siteId Site to get the groups from. If not defined, use current site.
      * @param userId ID of the user. If not defined, use ID related to siteid.
      * @return Promise resolved when the groups are retrieved.
@@ -419,7 +419,7 @@ export class CoreGroupsProvider {
     /**
      * Invalidates user groups in course.
      *
-     * @param courseId ID of the course. 0 to get all enrolled courses groups (Moodle version > 3.6).
+     * @param courseId ID of the course. 0 to get all enrolled courses groups (alms version > 3.6).
      * @param siteId Site ID. If not defined, current site.
      * @param userId User ID. If not defined, use current user.
      * @return Promise resolved when the data is invalidated.

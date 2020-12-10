@@ -461,7 +461,7 @@ export class CoreUserProvider {
     }
 
     /**
-     * Log User Profile View in Moodle.
+     * Log User Profile View in alms.
      * @param userId User ID.
      * @param courseId Course ID.
      * @param name Name of the user.
@@ -483,7 +483,7 @@ export class CoreUserProvider {
     }
 
     /**
-     * Log Participants list view in Moodle.
+     * Log Participants list view in alms.
      * @param courseId Course ID.
      * @return Promise resolved when done.
      */

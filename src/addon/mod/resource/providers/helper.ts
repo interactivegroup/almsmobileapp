@@ -31,7 +31,7 @@ import { CoreTextUtilsProvider } from '@providers/utils/text';
 @Injectable()
 export class AddonModResourceHelperProvider {
 
-    /* Constants to determine how a resource should be displayed in Moodle. */
+    /* Constants to determine how a resource should be displayed in alms. */
     // Try the best way.
     protected DISPLAY_AUTO = 0;
     // Display using object tag.

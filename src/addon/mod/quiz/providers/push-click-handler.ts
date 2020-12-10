@@ -42,7 +42,7 @@ export class AddonModQuizPushClickHandler implements CorePushNotificationsClickH
      * @return Whether the notification click is handled by this handler
      */
     handles(notification: any): boolean | Promise<boolean> {
-        return this.utils.isTrueOrOne(notification.notif) && notification.moodlecomponent == 'mod_quiz' &&
+        return this.utils.isTrueOrOne(notification.notif) && notification.almscomponent == 'mod_quiz' &&
                 this.SUPPORTED_NAMES.indexOf(notification.name) != -1;
     }
 

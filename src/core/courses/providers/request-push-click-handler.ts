@@ -44,7 +44,7 @@ export class CoreCoursesRequestPushClickHandler implements CorePushNotifications
      */
     handles(notification: any): boolean | Promise<boolean> {
         // Don't support 'courserequestrejected', that way the app will open the notifications page.
-        return this.utils.isTrueOrOne(notification.notif) && notification.moodlecomponent == 'moodle' &&
+        return this.utils.isTrueOrOne(notification.notif) && notification.almscomponent == 'alms' &&
                 (notification.name == 'courserequested' || notification.name == 'courserequestapproved');
     }
 

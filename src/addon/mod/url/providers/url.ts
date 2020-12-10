@@ -40,7 +40,7 @@ export class AddonModUrlProvider {
     }
 
     /**
-     * Get the final display type for a certain URL. Based on Moodle's url_get_final_display_type.
+     * Get the final display type for a certain URL. Based on alms's url_get_final_display_type.
      *
      * @param url URL data.
      * @return Final display type.
@@ -61,11 +61,11 @@ export class AddonModUrlProvider {
             return url.display;
         }
 
-        // Detect links to local moodle pages.
+        // Detect links to local alms pages.
         const currentSite = this.sitesProvider.getCurrentSite();
         if (currentSite && currentSite.containsUrl(url.externalurl)) {
             if (url.externalurl.indexOf('file.php') == -1 && url.externalurl.indexOf('.php') != -1) {
-                // Most probably our moodle page with navigation.
+                // Most probably our alms page with navigation.
                 return CoreConstants.RESOURCELIB_DISPLAY_OPEN;
             }
         }
@@ -150,7 +150,7 @@ export class AddonModUrlProvider {
     }
 
     /**
-     * Guess the icon for a certain URL. Based on Moodle's url_guess_icon.
+     * Guess the icon for a certain URL. Based on alms's url_guess_icon.
      *
      * @param url URL to check.
      * @return Icon, empty if it should use the default icon.

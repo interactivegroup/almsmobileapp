@@ -142,7 +142,7 @@ export class AddonModChoiceOfflineProvider {
     }
 
     /**
-     * Offline version for sending a response to a choice to Moodle.
+     * Offline version for sending a response to a choice to alms.
      *
      * @param choiceId Choice ID.
      * @param name Choice name.

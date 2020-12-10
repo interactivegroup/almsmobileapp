@@ -215,7 +215,7 @@ export class AddonModScormDataModel12 {
                         if (this.dataModel[this.scoId][element].mod != 'r') {
 
                             const el = {
-                                // Moodle stores the organizations and interactions using _n. instead .n.
+                                // alms stores the organizations and interactions using _n. instead .n.
                                 element: element.replace(expression, '_$1.'),
                                 value: this.getEl(element)
                             };
@@ -407,7 +407,7 @@ export class AddonModScormDataModel12 {
                 // This check for an indexed element. cmi.objectives.1.id or cmi.objectives_1.id.
                 if (element.match(expression)) {
                     // Normalize to the expected value according the standard.
-                    // Moodle stores this values using _n. instead .n.
+                    // alms stores this values using _n. instead .n.
                     elementDotFormat = element.replace(expression, '.$1.');
                     this.currentUserData[scoId][elementDotFormat] = this.defExtra[scoId][element];
 

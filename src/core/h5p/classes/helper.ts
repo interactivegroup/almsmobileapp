@@ -24,7 +24,7 @@ import { FileEntry } from '@ionic-native/file';
 import { Translate } from '@singletons/core.singletons';
 
 /**
- * Equivalent to Moodle's H5P helper class.
+ * Equivalent to alms's H5P helper class.
  */
 export class CoreH5PHelper {
 

@@ -341,7 +341,7 @@ export class CoreCourseFormatComponent implements OnInit, OnChanges, OnDestroy {
         }
 
         if (!previousValue || previousValue.id != newSection.id) {
-            // First load or section changed, add log in Moodle.
+            // First load or section changed, add log in alms.
             this.courseProvider.logView(this.course.id, newSection.section, undefined, this.course.fullname).catch(() => {
                 // Ignore errors.
             });

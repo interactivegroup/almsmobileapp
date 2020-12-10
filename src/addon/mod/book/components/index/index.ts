@@ -138,7 +138,7 @@ export class AddonModBookIndexComponent extends CoreCourseModuleMainResourceComp
             this.displayNavBar = book.navstyle != AddonModBookNavStyle.TOC_ONLY;
             this.displayTitlesInNavBar = book.navstyle == AddonModBookNavStyle.TEXT;
         }).catch(() => {
-            // Ignore errors since this WS isn't available in some Moodle versions.
+            // Ignore errors since this WS isn't available in some alms versions.
         }));
 
         // Get module status to determine if it needs to be downloaded.

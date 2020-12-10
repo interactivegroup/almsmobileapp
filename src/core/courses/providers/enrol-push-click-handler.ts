@@ -37,7 +37,7 @@ export class CoreCoursesEnrolPushClickHandler implements CorePushNotificationsCl
      * @return Whether the notification click is handled by this handler
      */
     handles(notification: any): boolean | Promise<boolean> {
-        return this.utils.isTrueOrOne(notification.notif) && notification.moodlecomponent.indexOf('enrol_') === 0 &&
+        return this.utils.isTrueOrOne(notification.notif) && notification.almscomponent.indexOf('enrol_') === 0 &&
                 notification.name == 'expiry_notification';
     }
 

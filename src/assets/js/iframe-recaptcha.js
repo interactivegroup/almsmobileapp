@@ -23,7 +23,7 @@
     // Define recaptcha callbacks.
     window.recaptchacallback = function(value) {
         window.parent.postMessage({
-            environment: 'moodleapp',
+            environment: 'almsapp',
             context: 'recaptcha',
             action: 'callback',
             frameUrl: location.href,
@@ -33,7 +33,7 @@
 
     window.recaptchaexpiredcallback = function() {
         window.parent.postMessage({
-            environment: 'moodleapp',
+            environment: 'almsapp',
             context: 'recaptcha',
             action: 'expired',
             frameUrl: location.href,

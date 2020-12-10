@@ -181,7 +181,7 @@ export class CoreH5PContentValidator {
      * @return True if all files are valid.
      */
     validateContentFiles(contentPath: string, isLibrary: boolean = false): boolean {
-        // Nothing to do, already checked by Moodle.
+        // Nothing to do, already checked by alms.
         return true;
     }
 

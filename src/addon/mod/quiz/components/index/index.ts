@@ -64,7 +64,7 @@ export class AddonModQuizIndexComponent extends CoreCourseModuleMainActivityComp
     protected options: any; // Combined review options.
     protected bestGrade: any; // Best grade data.
     protected gradebookData: {grade: number, feedback?: string}; // The gradebook grade and feedback.
-    protected overallStats: boolean; // Equivalent to overallstats in mod_quiz_view_object in Moodle.
+    protected overallStats: boolean; // Equivalent to overallstats in mod_quiz_view_object in alms.
     protected finishedObserver: any; // It will observe attempt finished events.
     protected hasPlayed = false; // Whether the user has gone to the quiz player (attempted).
 
@@ -330,7 +330,7 @@ export class AddonModQuizIndexComponent extends CoreCourseModuleMainActivityComp
 
             if (this.bestGrade.grade > this.gradebookData.grade && this.gradebookData.grade == this.quizData.grade) {
                 // The best grade is higher than the max grade for the quiz.
-                // We'll do like Moodle web and show the best grade instead of the gradebook grade.
+                // We'll do like alms web and show the best grade instead of the gradebook grade.
                 this.gradeOverridden = false;
                 gradeToShow = formattedBestGrade;
             }

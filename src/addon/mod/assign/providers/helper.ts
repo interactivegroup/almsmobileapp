@@ -396,7 +396,7 @@ export class AddonModAssignHelperProvider {
 
                 let promise;
                 if (submission.userid > 0 && blind) {
-                    // Blind but not blinded! (Moodle < 3.1.1, 3.2).
+                    // Blind but not blinded! (alms < 3.1.1, 3.2).
                     delete submission.userid;
 
                     promise = this.assignProvider.getAssignmentUserMappings(assign.id, submission.submitid, ignoreCache, siteId).

@@ -661,7 +661,7 @@ export class AddonModAssignProvider {
 
         return this.sitesProvider.getSite(siteId).then((site) => {
             if (!site.wsAvailable('mod_assign_list_participants')) {
-                // Silently fail if is not available. (needs Moodle version >= 3.2)
+                // Silently fail if is not available. (needs alms version >= 3.2)
                 return Promise.reject(null);
             }
 
@@ -884,7 +884,7 @@ export class AddonModAssignProvider {
     }
 
     /**
-     * Check if a submission is open. This function is based on Moodle's submissions_open.
+     * Check if a submission is open. This function is based on alms's submissions_open.
      *
      * @param assign Assignment instance.
      * @param submissionStatus Submission status returned by getSubmissionStatus.

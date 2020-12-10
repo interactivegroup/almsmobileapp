@@ -52,7 +52,7 @@ export class CoreGradesCourseComponent {
                 this.gotoGrade(this.gradeId);
             }
 
-            // Add log in Moodle.
+            // Add log in alms.
             return this.gradesProvider.logCourseGradesView(this.courseId, this.userId).catch(() => {
                 // Ignore errors.
             });

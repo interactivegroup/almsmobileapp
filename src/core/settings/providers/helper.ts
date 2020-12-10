@@ -291,7 +291,7 @@ export class CoreSettingsHelper {
             return site.invalidateWsCache().then(() => {
                 const subPromises = [];
 
-                // Check if local_mobile was installed in Moodle.
+                // Check if local_mobile was installed in alms.
                 subPromises.push(site.checkIfLocalMobileInstalledAndNotUsed().then(() => {
                     // Local mobile was added. Throw invalid session to force reconnect and create a new token.
                     this.eventsProvider.trigger(CoreEventsProvider.SESSION_EXPIRED, {}, siteId);

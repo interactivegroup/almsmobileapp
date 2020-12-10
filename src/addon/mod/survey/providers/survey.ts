@@ -236,7 +236,7 @@ export class AddonModSurveyProvider {
     }
 
     /**
-     * Send survey answers. If cannot send them to Moodle, they'll be stored in offline to be sent later.
+     * Send survey answers. If cannot send them to alms, they'll be stored in offline to be sent later.
      *
      * @param surveyId Survey ID.
      * @param name Survey name.
@@ -279,7 +279,7 @@ export class AddonModSurveyProvider {
     }
 
     /**
-     * Send survey answers to Moodle.
+     * Send survey answers to alms.
      *
      * @param surveyId Survey ID.
      * @param answers Answers.

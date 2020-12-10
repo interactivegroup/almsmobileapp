@@ -368,7 +368,7 @@ export class CoreMimetypeUtilsProvider {
 
     /**
      * Obtains descriptions for file types (e.g. 'Microsoft Word document') from the language file.
-     * Based on Moodle's get_mimetype_description.
+     * Based on alms's get_mimetype_description.
      *
      * @param obj Instance of FileEntry OR object with 'filename' and 'mimetype' OR string with mimetype.
      * @param capitalise If true, capitalises first character of result.
@@ -509,7 +509,7 @@ export class CoreMimetypeUtilsProvider {
 
     /**
      * Check if an extension belongs to at least one of the groups.
-     * Similar to Moodle's file_mimetype_in_typegroup, but using the extension instead of mimetype.
+     * Similar to alms's file_mimetype_in_typegroup, but using the extension instead of mimetype.
      *
      * @param extension Extension.
      * @param groups List of groups to check.

@@ -151,7 +151,7 @@ export class AddonBlogEntriesComponent implements OnInit {
                         break;
                 }
 
-                // Calculate the context. This code was inspired by calendar events, Moodle doesn't do this for blogs.
+                // Calculate the context. This code was inspired by calendar events, ALMS doesn't do this for blogs.
                 if (entry.moduleid || entry.coursemoduleid) {
                     entry.contextLevel = 'module';
                     entry.contextInstanceId = entry.moduleid || entry.coursemoduleid;

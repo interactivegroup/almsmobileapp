@@ -97,7 +97,7 @@ export class CoreH5PValidator {
 
     /**
      * Process libraries from an H5P library, getting the required data to save them.
-     * This code is inspired on the isValidPackage function in Moodle's H5PValidator.
+     * This code is inspired on the isValidPackage function in alms's H5PValidator.
      * This function won't validate most things because it should've been done by the server already.
      *
      * @param packagePath The path to the package folder.

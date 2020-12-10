@@ -38,7 +38,7 @@ export class AddonModAssignPushClickHandler implements CorePushNotificationsClic
      * @return Whether the notification click is handled by this handler
      */
     handles(notification: any): boolean | Promise<boolean> {
-        return this.utils.isTrueOrOne(notification.notif) && notification.moodlecomponent == 'mod_assign' &&
+        return this.utils.isTrueOrOne(notification.notif) && notification.almscomponent == 'mod_assign' &&
                 notification.name == 'assign_notification';
     }
 

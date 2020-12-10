@@ -110,13 +110,13 @@ export class CoreUrl {
     }
 
     /**
-     * Guess the Moodle domain from a site url.
+     * Guess the alms domain from a site url.
      *
      * @param url Site url.
-     * @return Guessed Moodle domain.
+     * @return Guessed alms domain.
      */
-    static guessMoodleDomain(url: string): string | null {
-        // Add protocol if it was missing. Moodle can only be served through http or https, so this is a fair assumption to make.
+    static guessalmsDomain(url: string): string | null {
+        // Add protocol if it was missing. alms can only be served through http or https, so this is a fair assumption to make.
         if (!url.match(/^https?:\/\//)) {
             url = `https://${url}`;
         }
@@ -143,11 +143,11 @@ export class CoreUrl {
     }
 
     /**
-     * Returns the pattern to check if the URL is a valid Moodle Url.
+     * Returns the pattern to check if the URL is a valid alms Url.
      *
      * @return {RegExp} Desired RegExp.
      */
-    static getValidMoodleUrlPattern(): RegExp {
+    static getValidalmsUrlPattern(): RegExp {
         // Regular expression based on RFC 3986: https://tools.ietf.org/html/rfc3986#appendix-B.
         // Improved to not admit spaces.
         return new RegExp(/^(([^:/?# ]+):)?(\/\/([^/?# ]*))?([^?# ]*)(\?([^#]*))?(#(.*))?$/);
@@ -159,8 +159,8 @@ export class CoreUrl {
      * @param  {string}  url Url to check.
      * @return {boolean}     True if valid, false otherwise.
      */
-    static isValidMoodleUrl(url: string): boolean {
-        const patt = CoreUrl.getValidMoodleUrlPattern();
+    static isValidalmsUrl(url: string): boolean {
+        const patt = CoreUrl.getValidalmsUrlPattern();
 
         return patt.test(url.trim());
     }

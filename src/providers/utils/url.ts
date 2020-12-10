@@ -153,8 +153,8 @@ export class CoreUrlUtilsProvider {
     }
 
     /**
-     * Generic function for adding the wstoken to Moodle urls and for pointing to the correct script.
-     * For download remote files from Moodle we need to use the special /webservice/pluginfile passing
+     * Generic function for adding the wstoken to alms urls and for pointing to the correct script.
+     * For download remote files from alms we need to use the special /webservice/pluginfile passing
      * the ws token as a get parameter.
      *
      * @param url The url to be fixed.
@@ -200,7 +200,7 @@ export class CoreUrlUtilsProvider {
         } else {
             url += '?';
         }
-        // Always send offline=1 (for external repositories). It shouldn't cause problems for local files or old Moodles.
+        // Always send offline=1 (for external repositories). It shouldn't cause problems for local files or old almss.
         url += 'token=' + token + '&offline=1';
 
         // Some webservices returns directly the correct download url, others not.
@@ -237,21 +237,21 @@ export class CoreUrlUtilsProvider {
     }
 
     /**
-     * Returns the URL to the documentation of the app, based on Moodle version and current language.
+     * Returns the URL to the documentation of the app, based on alms version and current language.
      *
-     * @param release Moodle release.
+     * @param release alms release.
      * @param page Docs page to go to.
-     * @return Promise resolved with the Moodle docs URL.
+     * @return Promise resolved with the alms docs URL.
      */
     getDocsUrl(release?: string, page: string = 'Mobile_app'): Promise<string> {
-        let docsUrl = 'https://docs.moodle.org/en/' + page;
+        let docsUrl = 'https://docs.alms.org/en/' + page;
 
         if (typeof release != 'undefined') {
             const version = release.substr(0, 3).replace('.', '');
             // Check is a valid number.
             if (parseInt(version) >= 24) {
                 // Append release number.
-                docsUrl = docsUrl.replace('https://docs.moodle.org/', 'https://docs.moodle.org/' + version + '/');
+                docsUrl = docsUrl.replace('https://docs.alms.org/', 'https://docs.alms.org/' + version + '/');
             }
         }
 

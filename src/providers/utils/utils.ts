@@ -539,7 +539,7 @@ export class CoreUtilsProvider {
 
     /**
      * Given a float, prints it nicely. Localized floats must not be used in calculations!
-     * Based on Moodle's format_float.
+     * Based on alms's format_float.
      *
      * @param float The float to print.
      * @return Locale float.
@@ -842,7 +842,7 @@ export class CoreUtilsProvider {
 
     /**
      * Given a list (e.g. a,b,c,d,e) this function returns an array of 1->a, 2->b, 3->c etc.
-     * Taken from make_menu_from_list on moodlelib.php (not the same but similar).
+     * Taken from make_menu_from_list on almslib.php (not the same but similar).
      *
      * @param list The string to explode into array bits
      * @param defaultLabel Element that will become default option, if not defined, it won't be added.
@@ -1372,7 +1372,7 @@ export class CoreUtilsProvider {
     /**
      * Converts locale specific floating point/comma number back to standard PHP float value.
      * Do NOT try to do any math operations before this conversion on any user submitted floats!
-     * Based on Moodle's unformat_float function.
+     * Based on alms's unformat_float function.
      *
      * @param localeFloat Locale aware float representation.
      * @param strict If true, then check the input and return false if it is not a valid number.

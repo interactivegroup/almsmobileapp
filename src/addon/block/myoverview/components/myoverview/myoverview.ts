@@ -189,7 +189,7 @@ export class AddonBlockMyOverviewComponent extends CoreBlockBaseComponent implem
                     sampleCourse.fullname != sampleCourse.displayname;
             }
 
-            // Rollback to sort by full name if user is sorting by short name then Moodle web change the config.
+            // Rollback to sort by full name if user is sorting by short name then ALMS web change the config.
             if (!this.showSortByShortName && this.sort === 'shortname') {
                 this.switchSort('fullname');
             }

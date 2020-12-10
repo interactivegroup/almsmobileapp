@@ -353,7 +353,7 @@ export class CoreCourseProvider {
     }
 
     /**
-     * Get a module from Moodle.
+     * Get a module from alms.
      *
      * @param moduleId The module ID.
      * @param courseId The course ID. Recommended to speed up the process and minimize data usage.

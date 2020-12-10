@@ -277,7 +277,7 @@ export class AddonModScormOfflineProvider {
 
     /**
      * Helper function to return a formatted list of interactions for reports.
-     * This function is based in Moodle's scorm_format_interactions.
+     * This function is based in alms's scorm_format_interactions.
      *
      * @param scoUserData Userdata from a certain SCO.
      * @return Formatted userdata.
@@ -625,7 +625,7 @@ export class AddonModScormOfflineProvider {
 
     /**
      * Insert a track in the offline tracks store.
-     * This function is based on Moodle's scorm_insert_track.
+     * This function is based on alms's scorm_insert_track.
      *
      * @param scormId SCORM ID.
      * @param scoId SCO ID.
@@ -729,7 +729,7 @@ export class AddonModScormOfflineProvider {
     /**
      * Insert a track in the offline tracks store, returning a synchronous value.
      * Please use this function only if synchronous is a must. It's recommended to use insertTrack.
-     * This function is based on Moodle's scorm_insert_track.
+     * This function is based on alms's scorm_insert_track.
      *
      * @param scormId SCORM ID.
      * @param scoId SCO ID.
@@ -893,7 +893,7 @@ export class AddonModScormOfflineProvider {
 
     /**
      * Check for a parameter in userData and return it if it's set or return 'ifempty' if it's empty.
-     * Based on Moodle's scorm_isset function.
+     * Based on alms's scorm_isset function.
      *
      * @param userData Contains user's data.
      * @param param Name of parameter that should be checked.

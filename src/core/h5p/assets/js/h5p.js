@@ -267,7 +267,7 @@ H5P.init = function (target) {
 
           // Note:  Force layout reflow
           //        This fixes a flickering bug for embedded content on iPads
-          //        @see https://github.com/h5p/h5p-moodle-plugin/issues/237
+          //        @see https://github.com/h5p/h5p-alms-plugin/issues/237
           iframe.getBoundingClientRect();
 
           // Reset iframe height, in case content has shrinked.
@@ -2042,7 +2042,7 @@ H5P.libraryFromString = function (library) {
  */
 H5P.getLibraryPath = function (library) {
   if (H5PIntegration.urlLibraries !== undefined) {
-    // This is an override for those implementations that has a different libraries URL, e.g. Moodle
+    // This is an override for those implementations that has a different libraries URL, e.g. alms
     return H5PIntegration.urlLibraries + '/' + library;
   }
   else {

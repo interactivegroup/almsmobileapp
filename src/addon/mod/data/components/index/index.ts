@@ -353,7 +353,7 @@ export class AddonModDataIndexComponent extends CoreCourseModuleMainActivityComp
         this.search.page = page;
 
         return this.fetchEntriesData().then(() => {
-            // Log activity view for coherence with Moodle web.
+            // Log activity view for coherence with alms web.
             return this.logView();
         }).catch((message) => {
             this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
@@ -386,7 +386,7 @@ export class AddonModDataIndexComponent extends CoreCourseModuleMainActivityComp
         this.search.page = 0;
 
         return this.fetchEntriesData().then(() => {
-            // Log activity view for coherence with Moodle web.
+            // Log activity view for coherence with alms web.
             return this.logView();
         }).catch((message) => {
             this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);

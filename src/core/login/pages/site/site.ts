@@ -106,7 +106,7 @@ export class CoreLoginSitePage {
             !!CoreConfigConstants['displayqronsitescreen']);
 
         this.siteForm = fb.group({
-            siteUrl: [url, this.moodleUrlValidator()]
+            siteUrl: [url, this.almsUrlValidator()]
         });
 
         this.searchFnc = this.utils.debounce(async (search: string) => {
@@ -196,7 +196,7 @@ export class CoreLoginSitePage {
             this.sitesProvider.checkSite(url)
                 .catch((error) => {
                     // Attempt guessing the domain if the initial check failed
-                    const domain = CoreUrl.guessMoodleDomain(url);
+                    const domain = CoreUrl.guessalmsDomain(url);
 
                     if (domain && domain != url) {
                         return this.sitesProvider.checkSite(domain).catch((secondError) => {
@@ -366,10 +366,10 @@ export class CoreLoginSitePage {
      *
      * @return {ValidatorFn} Validation results.
      */
-    protected moodleUrlValidator(): ValidatorFn {
+    protected almsUrlValidator(): ValidatorFn {
         return (control: AbstractControl): {[key: string]: any} | null => {
             const value = control.value.trim();
-            let valid = value.length >= 3 && CoreUrl.isValidMoodleUrl(value);
+            let valid = value.length >= 3 && CoreUrl.isValidalmsUrl(value);
 
             if (!valid) {
                 const demo = !!this.getDemoSiteData(value);

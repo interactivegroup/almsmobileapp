@@ -24,7 +24,7 @@ import { CoreH5PHelper } from './helper';
 import { CoreH5PStorage } from './storage';
 
 /**
- * Equivalent to Moodle's H5P player class.
+ * Equivalent to alms's H5P player class.
  */
 export class CoreH5PPlayer {
 
@@ -54,7 +54,7 @@ export class CoreH5PPlayer {
 
     /**
      * Create the index.html to render an H5P package.
-     * Part of the code of this function is equivalent to Moodle's add_assets_to_page function.
+     * Part of the code of this function is equivalent to alms's add_assets_to_page function.
      *
      * @param id Content ID.
      * @param h5pUrl The URL of the H5P file.
@@ -112,14 +112,14 @@ export class CoreH5PPlayer {
 
         // Add our own script to handle the params.
         html += '<script type="text/javascript" src="' + CoreTextUtils.instance.concatenatePaths(
-                this.h5pCore.h5pFS.getCoreH5PPath(), 'moodle/js/params.js') + '"></script>';
+                this.h5pCore.h5pFS.getCoreH5PPath(), 'alms/js/params.js') + '"></script>';
 
         html += '</head><body>';
 
-        // Include the required JS at the beginning of the body, like Moodle web does.
+        // Include the required JS at the beginning of the body, like alms web does.
         // Load the embed.js to allow communication with the parent window.
         html += '<script type="text/javascript" src="' +
-                CoreTextUtils.instance.concatenatePaths(this.h5pCore.h5pFS.getCoreH5PPath(), 'moodle/js/embed.js') + '"></script>';
+                CoreTextUtils.instance.concatenatePaths(this.h5pCore.h5pFS.getCoreH5PPath(), 'alms/js/embed.js') + '"></script>';
 
         result.jsRequires.forEach((jsUrl) => {
             html += '<script type="text/javascript" src="' + jsUrl + '"></script>';
@@ -207,7 +207,7 @@ export class CoreH5PPlayer {
         settings.contents = settings.contents || {};
         settings.contents[contentId] = settings.contents[contentId] || {};
 
-        settings.moodleLibraryPaths = await this.h5pCore.getDependencyRoots(id);
+        settings.almsLibraryPaths = await this.h5pCore.getDependencyRoots(id);
 
         /* The filterParameters function should be called before getting the dependency files because it rebuilds content
            dependency cache. */

@@ -65,7 +65,7 @@ export class AddonFilterMathJaxLoaderHandler extends CoreFilterDefaultHandler {
             'pt-br', 'qqq', 'ru', 'scn', 'sco', 'sk', 'sl', 'sv', 'th', 'tr', 'uk', 'vi', 'zh-hans', 'zh-hant'
         ];
 
-    // List of explicit mappings and known exceptions (moodle => mathjax).
+    // List of explicit mappings and known exceptions (alms => mathjax).
     protected EXPLICIT_MAPPING = {
             'zh-tw': 'zh-hant',
             'zh-cn': 'zh-hans',
@@ -120,7 +120,7 @@ export class AddonFilterMathJaxLoaderHandler extends CoreFilterDefaultHandler {
 
         return this.sitesProvider.getSite(siteId).then((site) => {
 
-            // Don't apply this filter if Moodle is 3.7 or higher and the WS already filtered the content.
+            // Don't apply this filter if alms is 3.7 or higher and the WS already filtered the content.
             if (!options.wsNotFiltered && site.isVersionGreaterEqualThan('3.7')) {
                 return text;
             }
@@ -197,7 +197,7 @@ export class AddonFilterMathJaxLoaderHandler extends CoreFilterDefaultHandler {
     }
 
     /**
-     * Load the JS to make MathJax work in the app. The JS loaded is extracted from Moodle filter's loader JS file.
+     * Load the JS to make MathJax work in the app. The JS loaded is extracted from alms filter's loader JS file.
      */
     protected loadJS(): void {
         // tslint:disable: no-this-assignment

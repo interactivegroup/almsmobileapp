@@ -300,7 +300,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider {
 
         return timePromise.then((timemodified) => {
             if (timemodified < 0 || timemodified >= submissionActions[0].timemodified) {
-                // The entry was not found in Moodle or the entry has been modified, discard the action.
+                // The entry was not found in alms or the entry has been modified, discard the action.
                 result.updated = true;
                 discardError = this.translate.instant('addon.mod_workshop.warningsubmissionmodified');
 
@@ -411,7 +411,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider {
 
         return timePromise.then((timemodified) => {
             if (timemodified < 0 || timemodified >= assessmentData.timemodified) {
-                // The entry was not found in Moodle or the entry has been modified, discard the action.
+                // The entry was not found in alms or the entry has been modified, discard the action.
                 result.updated = true;
                 discardError = this.translate.instant('addon.mod_workshop.warningassessmentmodified');
 
@@ -489,7 +489,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider {
 
         return timePromise.then((timemodified) => {
             if (timemodified < 0 || timemodified >= evaluate.timemodified) {
-                // The entry was not found in Moodle or the entry has been modified, discard the action.
+                // The entry was not found in alms or the entry has been modified, discard the action.
                 result.updated = true;
                 discardError = this.translate.instant('addon.mod_workshop.warningsubmissionmodified');
 
@@ -548,7 +548,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider {
 
         return timePromise.then((timemodified) => {
             if (timemodified < 0 || timemodified >= evaluate.timemodified) {
-                // The entry was not found in Moodle or the entry has been modified, discard the action.
+                // The entry was not found in alms or the entry has been modified, discard the action.
                 result.updated = true;
                 discardError = this.translate.instant('addon.mod_workshop.warningassessmentmodified');
 

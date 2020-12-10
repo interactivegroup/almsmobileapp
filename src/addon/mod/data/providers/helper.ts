@@ -405,7 +405,7 @@ export class AddonModDataHelperProvider {
     /**
      * Returns the default template of a certain type.
      *
-     * Based on Moodle function data_generate_default_template.
+     * Based on alms function data_generate_default_template.
      *
      * @param type Type of template.
      * @param fields List of database fields.

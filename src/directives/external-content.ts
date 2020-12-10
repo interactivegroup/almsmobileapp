@@ -249,7 +249,7 @@ export class CoreExternalContentDirective implements AfterViewInit, OnChanges {
         if (!this.urlUtils.isLocalFileUrl(finalUrl)) {
             /* In iOS, if we use the same URL in embedded file and background download then the download only
                downloads a few bytes (cached ones). Add a hash to the URL so both URLs are different. */
-            finalUrl = finalUrl + '#moodlemobile-embedded';
+            finalUrl = finalUrl + '#almsmobile-embedded';
         }
 
         this.logger.debug('Using URL ' + finalUrl + ' for ' + url);

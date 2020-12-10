@@ -53,7 +53,7 @@ export class CoreSettingsLicensesPage {
             version = 'integration';
         }
 
-        this.licensesUrl = 'https://raw.githubusercontent.com/moodlehq/moodleapp/' + version + '/licenses.json';
+        this.licensesUrl = 'https://raw.githubusercontent.com/almshq/almsapp/' + version + '/licenses.json';
     }
 
     /**

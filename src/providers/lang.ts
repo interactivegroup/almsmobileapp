@@ -69,7 +69,7 @@ export class CoreLangProvider {
      * @param prefix A prefix to add to all keys.
      */
     addSitePluginsStrings(lang: string, strings: any, prefix?: string): void {
-        lang = lang.replace(/_/g, '-'); // Use the app format instead of Moodle format.
+        lang = lang.replace(/_/g, '-'); // Use the app format instead of alms format.
 
         // Initialize structure if it doesn't exist.
         if (!this.sitePluginsStrings[lang]) {
@@ -338,7 +338,7 @@ export class CoreLangProvider {
                 return;
             }
 
-            lang = values[2].replace(/_/g, '-'); // Use the app format instead of Moodle format.
+            lang = values[2].replace(/_/g, '-'); // Use the app format instead of alms format.
 
             if (lang == this.currentLanguage) {
                 currentLangChanged = true;
@@ -406,7 +406,7 @@ export class CoreLangProvider {
      * @param value String value.
      */
     loadString(langObject: any, lang: string, key: string, value: string): void {
-        lang = lang.replace(/_/g, '-'); // Use the app format instead of Moodle format.
+        lang = lang.replace(/_/g, '-'); // Use the app format instead of alms format.
 
         if (this.translate.translations[lang]) {
             // The language is loaded.

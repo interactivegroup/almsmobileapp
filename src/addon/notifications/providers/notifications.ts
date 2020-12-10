@@ -63,7 +63,7 @@ export class AddonNotificationsProvider {
                 notification.mobiletext = notification.fullmessage;
             }
 
-            notification.moodlecomponent = notification.component;
+            notification.almscomponent = notification.component;
             notification.notification = 1;
             notification.notif = 1;
             if (typeof read != 'undefined') {
@@ -609,7 +609,7 @@ export type AddonNotificationsMarkNotificationReadResult = {
  */
 export type AddonNotificationsNotificationCalculatedData = {
     mobiletext?: string; // Calculated in the app. Text to display for the notification.
-    moodlecomponent?: string; // Calculated in the app. Moodle's component.
+    almscomponent?: string; // Calculated in the app. alms's component.
     notif?: number; // Calculated in the app. Whether it's a notification.
     notification?: number; // Calculated in the app in some cases. Whether it's a notification.
     read?: boolean; // Calculated in the app. Whether the notifications is read.

@@ -231,7 +231,7 @@ export class AddonModWorkshopProvider {
 
                 return Promise.reject(null);
             }).then((workshop) => {
-                // Set submission types for Moodle 3.5 and older.
+                // Set submission types for alms 3.5 and older.
                 if (typeof workshop.submissiontypetext == 'undefined') {
                     if (workshop.nattachments > 0) {
                         workshop.submissiontypetext = AddonModWorkshopProvider.SUBMISSION_TYPE_AVAILABLE;

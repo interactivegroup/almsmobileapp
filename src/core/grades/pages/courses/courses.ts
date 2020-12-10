@@ -54,7 +54,7 @@ export class CoreGradesCoursesPage {
                 this.gotoCourseGrades(this.grades[0].courseid);
             }
 
-            // Add log in Moodle.
+            // Add log in alms.
             return this.gradesProvider.logCoursesGradesView().catch(() => {
                 // Ignore errors.
             });

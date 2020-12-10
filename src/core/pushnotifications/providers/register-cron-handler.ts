@@ -17,7 +17,7 @@ import { CoreCronHandler } from '@providers/cron';
 import { CorePushNotificationsProvider } from './pushnotifications';
 
 /**
- * Cron handler to force a register on a Moodle site when a site is manually synchronized.
+ * Cron handler to force a register on a alms site when a site is manually synchronized.
  */
 @Injectable()
 export class CorePushNotificationsRegisterCronHandler implements CoreCronHandler {
@@ -42,13 +42,13 @@ export class CorePushNotificationsRegisterCronHandler implements CoreCronHandler
      * @return Promise resolved when done, rejected if failure.
      */
     execute(siteId?: string): Promise<any> {
-        if (!siteId || !this.pushNotificationsProvider.canRegisterOnMoodle()) {
+        if (!siteId || !this.pushNotificationsProvider.canRegisterOnalms()) {
             // It's not a specific site, don't do anything.
             return Promise.resolve();
         }
 
         // Register the device again.
-        return this.pushNotificationsProvider.registerDeviceOnMoodle(siteId, true);
+        return this.pushNotificationsProvider.registerDeviceOnalms(siteId, true);
     }
 
     /**

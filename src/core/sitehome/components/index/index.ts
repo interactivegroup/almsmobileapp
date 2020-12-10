@@ -138,7 +138,7 @@ export class CoreSiteHomeIndexComponent implements OnInit {
                         undefined, true) || this.hasContent;
             }
 
-            // Add log in Moodle.
+            // Add log in alms.
             this.courseProvider.logView(this.siteHomeId, undefined, undefined,
                     this.currentSite && this.currentSite.getInfo().sitename).catch(() => {
                 // Ignore errors.

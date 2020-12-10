@@ -398,7 +398,7 @@ export class AddonModChoiceProvider {
     }
 
     /**
-     * Send a response to a choice to Moodle.
+     * Send a response to a choice to alms.
      *
      * @param choiceId Choice ID.
      * @param name Choice name.
@@ -439,7 +439,7 @@ export class AddonModChoiceProvider {
     }
 
     /**
-     * Send a response to a choice to Moodle. It will fail if offline or cannot connect.
+     * Send a response to a choice to alms. It will fail if offline or cannot connect.
      *
      * @param choiceId Choice ID.
      * @param responses IDs of selected options.

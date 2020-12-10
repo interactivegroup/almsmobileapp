@@ -37,7 +37,7 @@ import { CoreFilterProvider } from '@core/filter/providers/filter';
 import { CoreFilterDelegate } from '@core/filter/providers/delegate';
 
 /**
- * Data needed to register a device in a Moodle site.
+ * Data needed to register a device in a alms site.
  */
 export interface CorePushNotificationsRegisterData {
     /**
@@ -204,11 +204,11 @@ export class CorePushNotificationsProvider {
     }
 
     /**
-     * Check whether the device can be registered in Moodle to receive push notifications.
+     * Check whether the device can be registered in alms to receive push notifications.
      *
-     * @return Whether the device can be registered in Moodle.
+     * @return Whether the device can be registered in alms.
      */
-    canRegisterOnMoodle(): boolean {
+    canRegisterOnalms(): boolean {
         return this.pushID && this.appProvider.isMobile();
     }
 
@@ -311,7 +311,7 @@ export class CorePushNotificationsProvider {
     }
 
     /**
-     * Get data to register the device in Moodle.
+     * Get data to register the device in alms.
      *
      * @return Data.
      */
@@ -381,10 +381,10 @@ export class CorePushNotificationsProvider {
             : Promise<any> {
         data = data || {};
 
-        // Add "moodle" to the name of all extra params.
-        data = this.utils.prefixKeys(data, 'moodle');
-        data['moodleaction'] = wsName;
-        data['moodlesiteid'] = siteId || this.sitesProvider.getCurrentSiteId();
+        // Add "alms" to the name of all extra params.
+        data = this.utils.prefixKeys(data, 'alms');
+        data['almsaction'] = wsName;
+        data['almssiteid'] = siteId || this.sitesProvider.getCurrentSiteId();
 
         if (itemId) {
             data['item_id'] = itemId;
@@ -411,10 +411,10 @@ export class CorePushNotificationsProvider {
     logViewListEvent(itemCategory: string, wsName: string, data?: any, siteId?: string): Promise<any> {
         data = data || {};
 
-        // Add "moodle" to the name of all extra params.
-        data = this.utils.prefixKeys(data, 'moodle');
-        data['moodleaction'] = wsName;
-        data['moodlesiteid'] = siteId || this.sitesProvider.getCurrentSiteId();
+        // Add "alms" to the name of all extra params.
+        data = this.utils.prefixKeys(data, 'alms');
+        data['almsaction'] = wsName;
+        data['almssiteid'] = siteId || this.sitesProvider.getCurrentSiteId();
 
         if (itemCategory) {
             data['item_category'] = itemCategory;
@@ -538,19 +538,19 @@ export class CorePushNotificationsProvider {
     }
 
     /**
-     * Unregisters a device from a certain Moodle site.
+     * Unregisters a device from a certain alms site.
      *
      * @param site Site to unregister from.
      * @return Promise resolved when device is unregistered.
      */
-    async unregisterDeviceOnMoodle(site: CoreSite): Promise<any> {
+    async unregisterDeviceOnalms(site: CoreSite): Promise<any> {
         if (!site || !this.appProvider.isMobile()) {
             return Promise.reject(null);
         }
 
         await this.dbReady;
 
-        this.logger.debug(`Unregister device on Moodle: '${site.id}'`);
+        this.logger.debug(`Unregister device on alms: '${site.id}'`);
 
         const data = {
             appid: CoreConfigConstants.app_id,
@@ -707,7 +707,7 @@ export class CorePushNotificationsProvider {
                     this.zone.run(() => {
                         this.pushID = data.registrationId;
                         if (this.sitesProvider.isLoggedIn()) {
-                            this.registerDeviceOnMoodle().catch((error) => {
+                            this.registerDeviceOnalms().catch((error) => {
                                 this.logger.warn('Can\'t register device', error);
                             });
                         }
@@ -730,16 +730,16 @@ export class CorePushNotificationsProvider {
     }
 
     /**
-     * Registers a device on a Moodle site if needed.
+     * Registers a device on a alms site if needed.
      *
      * @param siteId Site ID. If not defined, current site.
      * @param forceUnregister Whether to force unregister and register.
      * @return Promise resolved when device is registered.
      */
-    async registerDeviceOnMoodle(siteId?: string, forceUnregister?: boolean): Promise<void> {
-        this.logger.debug('Register device on Moodle.');
+    async registerDeviceOnalms(siteId?: string, forceUnregister?: boolean): Promise<void> {
+        this.logger.debug('Register device on alms.');
 
-        if (!this.canRegisterOnMoodle()) {
+        if (!this.canRegisterOnalms()) {
             return Promise.reject(null);
         }
 
@@ -761,7 +761,7 @@ export class CorePushNotificationsProvider {
 
             if (result.unregister) {
                 // Unregister the device first.
-                await this.unregisterDeviceOnMoodle(site).catch(() => {
+                await this.unregisterDeviceOnalms(site).catch(() => {
                     // Ignore errors.
                 });
             }
@@ -828,7 +828,7 @@ export class CorePushNotificationsProvider {
             const tmpSite = this.sitesFactory.makeSite(result.siteid, result.siteurl, result.token,
                     this.textUtils.parseJSON(result.info, {}));
 
-            return this.unregisterDeviceOnMoodle(tmpSite);
+            return this.unregisterDeviceOnalms(tmpSite);
         }));
     }
 

@@ -715,7 +715,7 @@ export class CoreSitesProvider {
         let isNewSite = true;
 
         return candidateSite.fetchSiteInfo().then((info) => {
-            const result = this.isValidMoodleVersion(info);
+            const result = this.isValidalmsVersion(info);
             if (result == this.VALID_VERSION) {
                 const siteId = this.createSiteID(info.siteurl, info.username);
 
@@ -787,9 +787,9 @@ export class CoreSitesProvider {
     }
 
     /**
-     * Having the result of isValidMoodleVersion, it treats the error message to be shown.
+     * Having the result of isValidalmsVersion, it treats the error message to be shown.
      *
-     * @param result Result returned by isValidMoodleVersion function.
+     * @param result Result returned by isValidalmsVersion function.
      * @param siteUrl The site url.
      * @param siteId If site is already added, it will invalidate the token.
      * @return A promise rejected with the error info.
@@ -801,16 +801,16 @@ export class CoreSitesProvider {
 
         switch (result) {
             case this.ALMS_APP:
-                errorKey = 'core.login.connecttomoodleapp';
-                errorCode = 'connecttomoodleapp';
+                errorKey = 'core.login.connecttoalmsapp';
+                errorCode = 'connecttoalmsapp';
                 break;
             case this.WORKPLACE_APP:
                 errorKey = 'core.login.connecttoworkplaceapp';
                 errorCode = 'connecttoworkplaceapp';
                 break;
             default:
-                errorCode = 'invalidmoodleversion';
-                errorKey = 'core.login.invalidmoodleversion';
+                errorCode = 'invalidalmsversion';
+                errorKey = 'core.login.invalidalmsversion';
                 translateParams = {$a: CoreSite.MINIMUM_ALMS_VERSION};
         }
 
@@ -873,7 +873,7 @@ export class CoreSitesProvider {
      * @param info Site info.
      * @return Either VALID_VERSION, WORKPLACE_APP, ALMS_APP or INVALID_VERSION.
      */
-    protected isValidMoodleVersion(info: any): number {
+    protected isValidalmsVersion(info: any): number {
         if (!info) {
             return this.INVALID_VERSION;
         }
@@ -953,9 +953,9 @@ export class CoreSitesProvider {
      */
     protected validateSiteInfo(info: any): any {
         if (!info.firstname || !info.lastname) {
-            const moodleLink = `<a core-link href="${info.siteurl}">${info.siteurl}</a>`;
+            const almsLink = `<a core-link href="${info.siteurl}">${info.siteurl}</a>`;
 
-            return { error: 'core.requireduserdatamissing', params: { $a: moodleLink } };
+            return { error: 'core.requireduserdatamissing', params: { $a: almsLink } };
         }
 
         return true;
@@ -1007,8 +1007,8 @@ export class CoreSitesProvider {
                 const storesConfig: CoreStoreConfig = {
                     android: config.tool_mobile_androidappid || false,
                     ios: config.tool_mobile_iosappid || false,
-                    desktop: config.tool_mobile_setuplink || 'https://download.moodle.org/desktop/',
-                    mobile: config.tool_mobile_setuplink || 'https://download.moodle.org/mobile/',
+                    desktop: config.tool_mobile_setuplink || 'https://download.alms.org/desktop/',
+                    mobile: config.tool_mobile_setuplink || 'https://download.alms.org/mobile/',
                     default: config.tool_mobile_setuplink,
                 };
 
@@ -1092,7 +1092,7 @@ export class CoreSitesProvider {
                 return false;
             }
 
-            // Check if local_mobile was installed to Moodle.
+            // Check if local_mobile was installed to alms.
             return site.checkIfLocalMobileInstalledAndNotUsed().then(() => {
                 // Local mobile was added. Throw invalid session to force reconnect and create a new token.
                 this.eventsProvider.trigger(CoreEventsProvider.SESSION_EXPIRED, {
@@ -1571,9 +1571,9 @@ export class CoreSitesProvider {
             const info = await site.fetchSiteInfo();
             site.setInfo(info);
 
-            const versionCheck = this.isValidMoodleVersion(info);
+            const versionCheck = this.isValidalmsVersion(info);
             if (versionCheck != this.VALID_VERSION) {
-                // The Moodle version is not supported, reject.
+                // The alms version is not supported, reject.
                 return this.treatInvalidAppVersion(versionCheck, site.getURL(), site.getId());
             }
 
@@ -1777,10 +1777,10 @@ export class CoreSitesProvider {
      * Check if a site is a legacy site by its info.
      *
      * @param info The site info.
-     * @return Whether it's a legacy Moodle.
+     * @return Whether it's a legacy alms.
      * @deprecated since 3.7.1
      */
-    isLegacyMoodleByInfo(info: any): boolean {
+    isLegacyalmsByInfo(info: any): boolean {
         return false;
     }
 

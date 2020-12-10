@@ -597,7 +597,7 @@ export class CoreGradesHelperProvider {
      * Creates an array that represents all the current grades that can be chosen using the given grading type.
      * Negative numbers are scales, zero is no grade, and positive numbers are maximum grades.
      *
-     * Taken from make_grades_menu on moodlelib.php
+     * Taken from make_grades_menu on almslib.php
      *
      * @param gradingType If positive, max grade you can provide. If negative, scale Id.
      * @param moduleId Module ID. Used to retrieve the scale items when they are not passed as parameter.

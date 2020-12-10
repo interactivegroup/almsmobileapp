@@ -622,7 +622,7 @@ export class CoreCourseHelperProvider {
                 if (!CoreUrlUtils.instance.isLocalFileUrl(result.path)) {
                     /* In iOS, if we use the same URL in embedded browser and background download then the download only
                        downloads a few bytes (cached ones). Add a hash to the URL so both URLs are different. */
-                    result.path = result.path + '#moodlemobile-embedded';
+                    result.path = result.path + '#almsmobile-embedded';
 
                     return this.utils.openOnlineFile(result.path).catch((error) => {
                         // Error opening the file, some apps don't allow opening online files.

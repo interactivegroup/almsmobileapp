@@ -40,7 +40,7 @@ export class AddonModFeedbackPushClickHandler implements CorePushNotificationsCl
      * @return Whether the notification click is handled by this handler
      */
     handles(notification: any): boolean | Promise<boolean> {
-        if (this.utils.isTrueOrOne(notification.notif) && notification.moodlecomponent == 'mod_feedback' &&
+        if (this.utils.isTrueOrOne(notification.notif) && notification.almscomponent == 'mod_feedback' &&
                 (notification.name == 'submission' || notification.name == 'message')) {
 
             return this.feedbackProvider.isPluginEnabled(notification.site);

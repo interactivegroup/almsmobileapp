@@ -594,7 +594,7 @@ export class AddonModH5PActivityProvider {
 export class AddonModH5PActivity extends makeSingleton(AddonModH5PActivityProvider) {}
 
 /**
- * Basic data for an H5P activity, exported by Moodle class h5pactivity_summary_exporter.
+ * Basic data for an H5P activity, exported by alms class h5pactivity_summary_exporter.
  */
 export type AddonModH5PActivityData = {
     id: number; // The primary key of the record.

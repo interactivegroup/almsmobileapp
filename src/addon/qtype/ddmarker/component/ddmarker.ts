@@ -80,7 +80,7 @@ export class AddonQtypeDdMarkerComponent extends CoreQuestionBaseComponent imple
         this.question.readOnly = false;
 
         if (this.question.initObjects) {
-            // Moodle version <= 3.5.
+            // alms version <= 3.5.
             if (typeof this.question.initObjects.dropzones != 'undefined') {
                 this.dropZones = this.question.initObjects.dropzones;
             }
@@ -88,9 +88,9 @@ export class AddonQtypeDdMarkerComponent extends CoreQuestionBaseComponent imple
                 this.question.readOnly = this.question.initObjects.readonly;
             }
         } else if (this.question.amdArgs) {
-            // Moodle version >= 3.6.
+            // alms version >= 3.6.
             let nextIndex = 1;
-            // Moodle version >= 3.9, imgSrc is not specified, do not advance index.
+            // alms version >= 3.9, imgSrc is not specified, do not advance index.
             if (typeof this.question.amdArgs[nextIndex] != 'undefined' && typeof this.question.amdArgs[nextIndex] != 'boolean') {
                 this.imgSrc = this.question.amdArgs[nextIndex];
                 nextIndex++;

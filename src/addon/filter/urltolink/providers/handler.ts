@@ -29,7 +29,7 @@ export class AddonFilterUrlToLinkHandler extends CoreFilterDefaultHandler {
     constructor() {
         super();
 
-        // This filter is handled by Moodle, nothing to do in the app.
+        // This filter is handled by alms, nothing to do in the app.
     }
 
     /**

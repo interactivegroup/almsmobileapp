@@ -356,7 +356,7 @@ export class AddonModAssignPrefetchHandler extends CoreCourseActivityPrefetchHan
                             return this.assignHelper.getParticipants(assign, group.id, false, siteId).then((participants) => {
                                 return this.userProvider.prefetchUserAvatars(participants, 'profileimageurl', siteId);
                             }).catch(() => {
-                                // Fail silently (Moodle < 3.2).
+                                // Fail silently (alms < 3.2).
                             });
                         }));
                     });

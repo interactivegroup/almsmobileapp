@@ -149,7 +149,7 @@ export class AddonModAssignSubmissionListPage implements OnInit, OnDestroy {
         this.haveAllParticipants = true;
 
         if (!this.sitesProvider.getCurrentSite().wsAvailable('mod_assign_list_participants')) {
-            // Submissions are not displayed in Moodle 3.1 without the local plugin, see MOBILE-2968.
+            // Submissions are not displayed in alms 3.1 without the local plugin, see MOBILE-2968.
             this.haveAllParticipants = false;
             this.submissions = [];
 

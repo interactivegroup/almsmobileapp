@@ -206,7 +206,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
                 // Ignore errors.
             });
         }).then(() => {
-            // Check if an attempt was finished in Moodle.
+            // Check if an attempt was finished in alms.
             if (initialCount) {
                 // Get attempt count again to check if an attempt was finished.
                 return this.scormProvider.getAttemptCount(scorm.id, undefined, false, siteId).then((attemptsData) => {
@@ -398,7 +398,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
 
     /**
      * Compares an attempt's snapshot with the data retrieved from the site.
-     * It only compares elements with dot notation. This means that, if some SCO has been added to Moodle web
+     * It only compares elements with dot notation. This means that, if some SCO has been added to alms web
      * but the user hasn't generated data for it, then the snapshot will be detected as equal.
      *
      * @param snapshot Attempt's snapshot.
@@ -656,7 +656,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
                 lastOnlineWasFinished = !incomplete;
 
                 if (!collisions.length && !incomplete) {
-                    // No collisions and last attempt is complete. Send offline attempts to Moodle.
+                    // No collisions and last attempt is complete. Send offline attempts to alms.
                     const promises = [];
 
                     attemptsData.offline.forEach((attempt) => {

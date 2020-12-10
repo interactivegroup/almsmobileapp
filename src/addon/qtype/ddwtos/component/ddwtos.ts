@@ -52,7 +52,7 @@ export class AddonQtypeDdwtosComponent extends CoreQuestionBaseComponent impleme
 
         const element = this.domUtils.convertToElement(this.question.html);
 
-        // Replace Moodle's correct/incorrect and feedback classes with our own.
+        // Replace alms's correct/incorrect and feedback classes with our own.
         this.questionHelper.replaceCorrectnessClasses(element);
         this.questionHelper.replaceFeedbackClasses(element);
 

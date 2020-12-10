@@ -29,13 +29,13 @@
        DisplayName="ALMS Desktop"
        Square150x150Logo="assets\Square150x150Logo.png"
        Square44x44Logo="assets\Square44x44Logo.png"
-       Description="Moodle Desktop: The official desktop app for Moodle.">
+       Description="ALMS Desktop: The official desktop app for ALMS.">
         <uap:DefaultTile Wide310x150Logo="assets\Wide310x150Logo.png" />
       </uap:VisualElements>
       <Extensions>
         <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="moodlemobile">
-            <uap:DisplayName>Moodle Mobile URI Scheme</uap:DisplayName>
+          <uap:Protocol Name="almsmobile">
+            <uap:DisplayName>ALMS Mobile URI Scheme</uap:DisplayName>
           </uap:Protocol>
         </uap:Extension>
       </Extensions>

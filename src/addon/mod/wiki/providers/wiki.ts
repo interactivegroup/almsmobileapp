@@ -176,7 +176,7 @@ export class AddonModWikiProvider {
                 params.section = section;
             }
 
-            // This parameter requires Moodle 3.2. It saves network usage.
+            // This parameter requires alms 3.2. It saves network usage.
             if (lockOnly && site.isVersionGreaterEqualThan('3.2')) {
                 params.lockonly = 1;
             }

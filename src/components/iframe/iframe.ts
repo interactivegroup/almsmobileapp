@@ -114,7 +114,7 @@ export class CoreIframeComponent implements OnChanges {
 
                     if (urlParts.domain) {
                         await win.WKWebViewCookies.setCookie({
-                            name: 'MoodleAppCookieForWKWebView',
+                            name: 'almsAppCookieForWKWebView',
                             value: '1',
                             domain: urlParts.domain,
                         });

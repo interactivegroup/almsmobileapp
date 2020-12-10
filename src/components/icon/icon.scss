@@ -33,7 +33,7 @@
 // Slash
 
 @font-face {
-  font-family: "Moodle Slash Icon";
+  font-family: "alms Slash Icon";
   font-style: normal;
   font-weight: 400;
   src: url("#{$font-path}/slash-icon.woff") format("woff");
@@ -45,7 +45,7 @@
 
 .icon-slash::after {
   content: "/";
-  font-family: "Moodle Slash Icon";
+  font-family: "alms Slash Icon";
   font-size: 0.75em;
   margin-top: 0.125em;
   position: absolute;

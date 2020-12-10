@@ -24,10 +24,10 @@ import { CorePushNotificationsProvider } from '@core/pushnotifications/providers
 @Injectable()
 export class CoreGradesProvider {
 
-    static TYPE_NONE = 0; // Moodle's GRADE_TYPE_NONE.
-    static TYPE_VALUE = 1; // Moodle's GRADE_TYPE_VALUE.
-    static TYPE_SCALE = 2; // Moodle's GRADE_TYPE_SCALE.
-    static TYPE_TEXT = 3; // Moodle's GRADE_TYPE_TEXT.
+    static TYPE_NONE = 0; // alms's GRADE_TYPE_NONE.
+    static TYPE_VALUE = 1; // alms's GRADE_TYPE_VALUE.
+    static TYPE_SCALE = 2; // alms's GRADE_TYPE_SCALE.
+    static TYPE_TEXT = 3; // alms's GRADE_TYPE_TEXT.
 
     protected ROOT_CACHE_KEY = 'mmGrades:';
 
@@ -84,7 +84,7 @@ export class CoreGradesProvider {
 
     /**
      * Get the grade items for a certain module. Keep in mind that may have more than one item to include outcomes and scales.
-     * Fallback function only used if 'gradereport_user_get_grade_items' WS is not avalaible Moodle < 3.2.
+     * Fallback function only used if 'gradereport_user_get_grade_items' WS is not avalaible alms < 3.2.
      *
      * @param courseId ID of the course to get the grades from.
      * @param userId ID of the user to get the grades from. If not defined use site's current user.
@@ -278,7 +278,7 @@ export class CoreGradesProvider {
      *
      * @param siteId Site ID. If not defined, current site.
      * @return Resolve with true if plugin is enabled, false otherwise.
-     * @since  Moodle 3.2
+     * @since  alms 3.2
      */
     isCourseGradesEnabled(siteId?: string): Promise<boolean> {
         return this.sitesProvider.getSite(siteId).then((site) => {
@@ -314,7 +314,7 @@ export class CoreGradesProvider {
      *
      * @param siteId Site ID. If not defined, current site.
      * @return True if ws is avalaible, false otherwise.
-     * @since  Moodle 3.2
+     * @since  alms 3.2
      */
     isGradeItemsAvalaible(siteId?: string): Promise<boolean> {
         return this.sitesProvider.getSite(siteId).then((site) => {
@@ -323,7 +323,7 @@ export class CoreGradesProvider {
     }
 
     /**
-     * Log Course grades view in Moodle.
+     * Log Course grades view in alms.
      *
      * @param courseId Course ID.
      * @param userId User ID.
@@ -352,7 +352,7 @@ export class CoreGradesProvider {
     }
 
     /**
-     * Log Courses grades view in Moodle.
+     * Log Courses grades view in alms.
      *
      * @param courseId Course ID. If not defined, site Home ID.
      * @return Promise resolved when done.

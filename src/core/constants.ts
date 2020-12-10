@@ -68,7 +68,7 @@ export class CoreConstants {
     static OUTDATED = 'outdated';
     static NOT_DOWNLOADABLE = 'notdownloadable';
 
-    // Constants from Moodle's resourcelib.
+    // Constants from alms's resourcelib.
     static RESOURCELIB_DISPLAY_AUTO = 0; // Try the best way.
     static RESOURCELIB_DISPLAY_EMBED = 1; // Display using object tag.
     static RESOURCELIB_DISPLAY_FRAME = 2; // Display inside frame.
@@ -94,7 +94,7 @@ export class CoreConstants {
     static FEATURE_MODEDIT_DEFAULT_COMPLETION = 'modedit_default_completion'; // True if module has default completion.
     static FEATURE_COMMENT = 'comment';
     static FEATURE_RATE = 'rate';
-    static FEATURE_BACKUP_ALMS = 'backup_alms'; // True if module supports backup/restore of moodle2 format.
+    static FEATURE_BACKUP_ALMS = 'backup_alms'; // True if module supports backup/restore of alms2 format.
     static FEATURE_SHOW_DESCRIPTION = 'showdescription'; // True if module can show description on course main page.
     static FEATURE_USES_QUESTIONS = 'usesquestions'; // True if module uses the question bank.
 

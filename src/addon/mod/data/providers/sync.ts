@@ -265,7 +265,7 @@ export class AddonModDataSyncProvider extends CoreSyncBaseProvider {
 
         return timePromise.then((timemodified) => {
             if (timemodified < 0 || timemodified >= entryActions[0].timemodified) {
-                // The entry was not found in Moodle or the entry has been modified, discard the action.
+                // The entry was not found in alms or the entry has been modified, discard the action.
                 result.updated = true;
                 discardError = this.translate.instant('addon.mod_data.warningsubmissionmodified');
 

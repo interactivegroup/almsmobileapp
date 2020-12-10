@@ -585,7 +585,7 @@ export class AddonModQuizProvider {
 
     /**
      * Determine the correct number of decimal places required to format a grade.
-     * Based on Moodle's quiz_get_grade_format.
+     * Based on alms's quiz_get_grade_format.
      *
      * @param quiz Quiz.
      * @return Number of decimals.
@@ -1712,7 +1712,7 @@ export class AddonModQuizProvider {
     }
 
     /**
-     * Check if it's a graded quiz. Based on Moodle's quiz_has_grades.
+     * Check if it's a graded quiz. Based on alms's quiz_has_grades.
      *
      * @param quiz Quiz.
      * @return Whether quiz is graded.
@@ -1723,7 +1723,7 @@ export class AddonModQuizProvider {
 
     /**
      * Convert the raw grade into a grade out of the maximum grade for this quiz.
-     * Based on Moodle's quiz_rescale_grade.
+     * Based on alms's quiz_rescale_grade.
      *
      * @param rawGrade The unadjusted grade, for example attempt.sumgrades.
      * @param quiz Quiz.

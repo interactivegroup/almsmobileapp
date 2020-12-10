@@ -403,14 +403,14 @@ export class AddonFilesProvider {
     }
 
     /**
-     * Check the Moodle version in order to check if upload files is working.
+     * Check the alms version in order to check if upload files is working.
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with true if WS is working, false otherwise.
      */
     versionCanUploadFiles(siteId?: string): Promise<boolean> {
         return this.sitesProvider.getSite(siteId).then((site) => {
-            // Upload private files doesn't work for Moodle 3.1.0 due to a bug.
+            // Upload private files doesn't work for alms 3.1.0 due to a bug.
             return site.isVersionGreaterEqualThan('3.1.1');
         });
     }

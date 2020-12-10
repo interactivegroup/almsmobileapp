@@ -23,7 +23,7 @@ import { CorePushNotificationsProvider } from '@core/pushnotifications/providers
 import { makeSingleton } from '@singletons/core.singletons';
 
 /**
- * Helper to manage logging to Moodle.
+ * Helper to manage logging to alms.
  */
 @Injectable()
 export class CoreCourseLogHelperProvider {

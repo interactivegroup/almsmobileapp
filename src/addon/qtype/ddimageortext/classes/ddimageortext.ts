@@ -207,7 +207,7 @@ export class AddonQtypeDdImageOrTextQuestion {
                 dragItems.remove();
             }
 
-            // 3.6+ site, transform HTML so it has the same structure as in Moodle 3.5.
+            // 3.6+ site, transform HTML so it has the same structure as in alms 3.5.
             const ddArea = topNode.querySelector('div.ddarea');
 
             // Move div.dropzones to div.ddarea.

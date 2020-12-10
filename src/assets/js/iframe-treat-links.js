@@ -183,7 +183,7 @@
         }
 
         getRootWindow(window).postMessage({
-            environment: 'moodleapp',
+            environment: 'almsapp',
             context: 'iframe',
             action: 'link_clicked',
             frameUrl: location.href,

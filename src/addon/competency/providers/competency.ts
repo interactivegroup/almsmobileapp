@@ -941,7 +941,7 @@ export type AddonCompetencyCourseCompetency = {
 export type AddonCompetencyDataForPlansPageResult = {
     userid: number; // The learning plan user id.
     plans: AddonCompetencyPlan[];
-    pluginbaseurl: string; // Url to the tool_lp plugin folder on this Moodle site.
+    pluginbaseurl: string; // Url to the tool_lp plugin folder on this ALMS site.
     navigation: string[];
     canreaduserevidence: boolean; // Can the current user view the user's evidence.
     canmanageuserplans: boolean; // Can the current user manage the user's plans.

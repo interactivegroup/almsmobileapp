@@ -66,7 +66,7 @@ export class AddonModBookPrefetchHandler extends CoreCourseResourcePrefetchHandl
 
         promises.push(super.downloadOrPrefetch(module, courseId, prefetch));
         promises.push(this.bookProvider.getBook(courseId, module.id).catch(() => {
-            // Ignore errors since this WS isn't available in some Moodle versions.
+            // Ignore errors since this WS isn't available in some alms versions.
         }));
 
         return Promise.all(promises);

@@ -1193,21 +1193,21 @@ export class CoreLoginHelperProvider {
      * @param message The warning message.
      */
     protected showWorkplaceNoticeModal(message: string): void {
-        const link = this.appProvider.getAppStoreUrl({android: 'com.moodle.workplace', ios: 'id1470929705' });
+        const link = this.appProvider.getAppStoreUrl({android: 'com.alms.workplace', ios: 'id1470929705' });
 
         this.showDownloadAppNoticeModal(message, link);
     }
 
     /**
-     * Show a modal warning the user that he should use the current Moodle app.
+     * Show a modal warning the user that he should use the current alms app.
      *
      * @param message The warning message.
      */
-    protected showMoodleAppNoticeModal(message: string): void {
+    protected showalmsAppNoticeModal(message: string): void {
         const storesConfig: CoreStoreConfig = CoreConfigConstants.appstores;
-        storesConfig.desktop = 'https://download.moodle.org/desktop/';
-        storesConfig.mobile = 'https://download.moodle.org/mobile/';
-        storesConfig.default = 'https://download.moodle.org/mobile/';
+        storesConfig.desktop = 'https://download.alms.org/desktop/';
+        storesConfig.mobile = 'https://download.alms.org/mobile/';
+        storesConfig.default = 'https://download.alms.org/mobile/';
 
         const link = this.appProvider.getAppStoreUrl(storesConfig);
 
@@ -1353,8 +1353,8 @@ export class CoreLoginHelperProvider {
             this.openChangePassword(siteUrl, this.textUtils.getErrorMessageFromError(error));
         } else if (error.errorcode == 'usernotconfirmed') {
             this.showNotConfirmedModal(siteUrl, undefined, username, password);
-        } else if (error.errorcode == 'connecttomoodleapp') {
-            this.showMoodleAppNoticeModal(this.textUtils.getErrorMessageFromError(error));
+        } else if (error.errorcode == 'connecttoalmsapp') {
+            this.showalmsAppNoticeModal(this.textUtils.getErrorMessageFromError(error));
         } else if (error.errorcode == 'connecttoworkplaceapp') {
             this.showWorkplaceNoticeModal(this.textUtils.getErrorMessageFromError(error));
         } else {

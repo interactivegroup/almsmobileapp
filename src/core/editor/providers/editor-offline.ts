@@ -47,7 +47,7 @@ export class CoreEditorOfflineProvider {
                         type: 'TEXT',
                     },
                     {
-                        name: 'extraparams', // Moodle web uses a page hash built with URL. App will use some params stringified.
+                        name: 'extraparams', // alms web uses a page hash built with URL. App will use some params stringified.
                         type: 'TEXT',
                     },
                     {

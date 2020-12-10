@@ -756,7 +756,7 @@ export class AddonCalendarProvider {
     }
 
     /**
-     * Return the representation day. Equivalent to Moodle's calendar_day_representation.
+     * Return the representation day. Equivalent to ALMS's calendar_day_representation.
      *
      * @param time Timestamp to get the day from.
      * @param useCommonWords Whether to use common words like "Today", "Yesterday", etc.
@@ -838,7 +838,7 @@ export class AddonCalendarProvider {
     }
 
     /**
-     * Get a calendar event by ID. This function returns more data than getEvent, but it isn't available in all Moodles.
+     * Get a calendar event by ID. This function returns more data than getEvent, but it isn't available in all ALMS.
      *
      * @param id Event ID.
      * @param siteId ID of the site. If not defined, use current site.
@@ -1181,7 +1181,7 @@ export class AddonCalendarProvider {
                 month: month
             };
 
-            // This parameter requires Moodle 3.5.
+            // This parameter requires ALMS 3.5.
             if (site.isVersionGreaterEqualThan('3.5')) {
                 // Set mini to 1 to prevent returning the course selector HTML.
                 data.mini = 1;

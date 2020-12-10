@@ -23,7 +23,7 @@ import { CoreH5PCore, CoreH5PDependencyAsset, CoreH5PContentDependencyData, Core
 import { CoreH5PLibrariesCachedAssetsDBData } from './framework';
 
 /**
- * Equivalent to Moodle's implementation of H5PFileStorage.
+ * Equivalent to alms's implementation of H5PFileStorage.
  */
 export class CoreH5PFileStorage {
 
