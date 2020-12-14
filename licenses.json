@@ -1775,7 +1775,7 @@
     "url": "http://blog.izs.me/",
     "licenseFile": "LICENSE"
   },
-  "fsevents@1.2.12": {
+  "fsevents@2.2.1": {
     "licenses": "MIT",
     "repository": "https://github.com/strongloop/fsevents",
     "publisher": "Philipp Dunkel",
